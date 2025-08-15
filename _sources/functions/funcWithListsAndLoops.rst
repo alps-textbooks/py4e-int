@@ -9,7 +9,8 @@ in groups on activities and each member has an assigned role.  For more informat
    If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
 
-**Learning Objectives**
+Learning Objectives
+===============================
 
 Students will know and be able to do the following.
 
@@ -76,10 +77,10 @@ There are several built-in functions in Python that work on lists such as ``max`
     ~~~~
     # function definition
     def list_func(my_list):
-        print(max(my_list))
-        print(min(my_list))
-        print(len(my_list))
-        print(sum(my_list))
+        print("max", max(my_list))
+        print("min", min(my_list))
+        print("len", len(my_list))
+        print("sum", sum(my_list))
 
     # function definition
     def main():
@@ -328,6 +329,10 @@ the built-in ``range`` function to do this.
 
     # function call
     main()
+
+.. note::
+
+    The function ``range(start, end, by)`` will return a range object (an iterator) that allows you to loop from ``start`` (inclusive) to ``end`` (exclusive) and add the value of ``by`` after each execution of the loop.
 
 .. parsonsprob:: flal_pp_total_at_odd_indices
    :numbered: left

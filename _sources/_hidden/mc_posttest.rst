@@ -1,49 +1,5 @@
-Posttest
-========
-
-.. raw:: html
-
-    <script>
-
-        function triggerSaveClicks(callback) {
-                console.log("Triggering all Save and Save & Run clicks...");
-
-                let saveButtons = document.querySelectorAll('button');
-                let saveCount = 0;
-
-                saveButtons.forEach(button => {
-                    if (button.innerText.includes('Save') || button.innerText.includes('Save & Run')) {
-                        console.log(`Clicking button: ${button.innerText}`);
-                        button.click();  // Simulate button click
-                        saveCount++;
-                    }
-                });
-
-                // Ensure logging is complete before proceeding
-                setTimeout(() => {
-                    console.log(`Triggered ${saveCount} Save clicks. Proceeding...`);
-                    if (callback) callback();
-                }, 1000);  // Wait 1 second for logging to process
-        
-
-        document.addEventListener("DOMContentLoaded", function() {
-            let introLink = document.getElementById('thank_you');  // Change ID if needed
-            if (introLink) {
-                introLink.addEventListener("click", function(event) {
-                    event.preventDefault(); // Stop immediate navigation
-
-                    console.log("User clicked the Introduction link. Saving first...");
-
-                    // Trigger Save clicks, then navigate
-                    triggerSaveClicks(() => {
-                        window.location.href = introLink.href;  // Navigate after saving
-                    });
-                });
-            }
-        });
-
-    </script>
-
+Wrap-Up Check
+==============
 
 Please answer the following questions.
 ::
@@ -73,10 +29,10 @@ Please answer the following questions.
     - Recommended Time: Spend at most 2 minutes - Put "I am not sure" and click "Save" if unsure of the answer.
 
     For the code piece above, fill in the missing two lines to print each employee's name along with their skills using a nested loop.
-
+    
+    Note: Be sure to indent the second line correctly.
 
 .. activecode:: posttest-2-mooc_nested
-    :language: python3
     :autograde: unittest
     :nocodelens:
 
@@ -117,23 +73,21 @@ Please answer the following questions.
 
 
     ====
+
     from unittest.gui import TestCaseGui
+    
+    class myTests(TestCaseGui):
+        def testOne(self):
+            self.assertEqual(happy_hour_specials([("Classic", "Burger", True, 12), ("Veggie", "Burger", True, 14), ("Fish", "Burger", True, 16), ("Cheese", "Pizza", False, 20)]), {"Burger": {"Classic": 12, "Veggie": 14}})
+            self.assertEqual(happy_hour_specials([("Mango", "Smoothie", True, 8), ("Green", "Smoothie", True, 12), ("Chocolate", "Milkshake", False, 15), ("Vanilla", "Milkshake", False, 18)]), {"Smoothie": {"Mango": 8, "Green": 12}})
+            self.assertEqual(happy_hour_specials([("Spaghetti", "Pasta", True, 10), ("Alfredo", "Pasta", True, 12), ("Bolognese", "Pasta", False, 14), ("Seafood", "Pasta", True, 18)]), {"Pasta": {"Spaghetti": 10, "Alfredo": 12}})
+            self.assertEqual(happy_hour_specials([("Margherita", "Pizza", True, 15), ("Pepperoni", "Pizza", False, 22), ("Hawaiian", "Pizza", True, 10), ("Caesar", "Salad", True, 10)]), {"Pizza": {"Margherita": 15, "Hawaiian": 10}, "Salad": {"Caesar": 10}})
 
-        class myTests(TestCaseGui):
-
-            def testOne(self):
-
-                self.assertEqual(happy_hour_specials([("Classic", "Burger", True, 12), ("Veggie", "Burger", True, 14), ("Fish", "Burger", True, 16), ("Cheese", "Pizza", False, 20)]), {"Burger": {"Classic": 12, "Veggie": 14}})
-                self.assertEqual(happy_hour_specials([("Mango", "Smoothie", True, 8), ("Green", "Smoothie", True, 12), ("Chocolate", "Milkshake", False, 15), ("Vanilla", "Milkshake", False, 18)]), {"Smoothie": {"Mango": 8, "Green": 12}})
-                self.assertEqual(happy_hour_specials([("Spaghetti", "Pasta", True, 10), ("Alfredo", "Pasta", True, 12), ("Bolognese", "Pasta", False, 14), ("Seafood", "Pasta", True, 18)]), {"Pasta": {"Spaghetti": 10, "Alfredo": 12}})
-                self.assertEqual(happy_hour_specials([("Margherita", "Pizza", True, 15), ("Pepperoni", "Pizza", False, 22), ("Hawaiian", "Pizza", True, 10), ("Caesar", "Salad", True, 10)]), {"Pizza": {"Margherita": 15, "Hawaiian": 10}, "Salad": {"Caesar": 10}})
-
-        myTests().main()
+    myTests().main()
 
 
 
 .. activecode:: posttest-3-mooc_nested 
-    :language: python3
     :autograde: unittest
     :nocodelens:
 
@@ -188,7 +142,7 @@ What to do next
 ================
 .. raw:: html
 
-    <p>Click on the following link to the final page: <b><a id="post_survey"> <font size="+1">Thank you!</font></a></b></p>
+    <p>Click on the following link to the final page: <b><a id="thank_you"> <font size="+1">Thank you!</font></a></b></p>
 
 .. raw:: html
 
@@ -196,8 +150,8 @@ What to do next
 
       window.onload = function() {
 
-        a = document.getElementById("post_survey")
-        a.href = "mc_post_survey.html"
+        a = document.getElementById("thank_you")
+        a.href = "mc_thank_you.html"
       };
 
     </script>

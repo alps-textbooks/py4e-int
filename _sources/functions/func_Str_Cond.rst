@@ -8,7 +8,8 @@ in groups on activities and each member has an assigned role.  For more informat
 
    If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
 
-**Learning Objectives**
+Learning Objectives
+====================
 
 Students will know and be able to do the following.
 
@@ -36,6 +37,8 @@ Students will know and be able to do the following.
 
 Function Example
 ==================
+
+A function is a name for one or more lines of code. You first define a function using the ``def`` keyword and then execute it using ``function_name(arguments)``.
 
 .. fillintheblank:: fsc_fitb_print_test_first_line_v3
 
@@ -85,12 +88,10 @@ Run the Python code below and then answer the following questions.
     - :2: Since the value of b was not specified it defaults to 2 (it was set to 2 as a default in the function definition)
       :.*: What is the default value specified for b in the function definition?
 
-Delete the last line of the test function above and run the code again.
-
 .. fillintheblank:: fsc_fitb_return_None
     :practice: T
 
-    What value is returned from a function that doesn't have a return keyword?
+    Delete the last line of the ``test`` function above and run the code again. What value is returned from a function that doesn't have a ``return`` keyword?
 
     - :None: A function without a return still returns the keyword None
       :.*: What is the last thing that is printed when you run the code above after deleting the return from the test function?
@@ -131,6 +132,8 @@ a string covers more than one line.
 String Indices
 ==================
 
+You can get a character from a string at an index (position) using ``string[index]``.
+
 .. fillintheblank:: fsc_fitb_pogil_initials_v2
 
     What is the last thing that will be printed when the code below runs?
@@ -141,7 +144,7 @@ String Indices
 .. activecode:: fsc_ac_pogil_initials_v2
     :caption: get_initials
 
-    Run the code below to see what it prints.  Then fix it to pass the given test.  It should return a string with the
+    Run the code below to see what it prints.  Then fix it to pass the test shown below the code.  It should return a string with the
     first character of the first name and first character of the last name.
     ~~~~
     # function definition
@@ -160,6 +163,7 @@ String Indices
     # function call
     main()
 
+    ====
     from unittest.gui import TestCaseGui
     class myTests(TestCaseGui):
 
@@ -172,12 +176,14 @@ String Indices
 
 .. note::
 
-   Use [index] to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).  
+   Use ``string[index]`` to get a character from a string.  The first character in a string is at index 0 and the last is at the length of the string minus 1 (also know as index -1 in Python).  
 
 Fix the function ``get_initials`` above to return a string with the first letter of the first name followed by the first letter of the last name.
 
 String Slices
 ==================
+
+You can get a copy of part or all of a string using ``str_name[start:end]``.
 
 .. fillintheblank:: fsc_fitb_pogil_short_name
 
@@ -207,7 +213,7 @@ String Slices
 
 .. note::
 
-   Use the slice ``[start:end]`` operator to get a slice (substring) from a string. It will return a new string starting at the start and including all the characters up to just before the end (end - 1).
+   Use the slice ``[start:end]`` operator to get a slice (substring) from a string. It will return a new string starting at the ``start`` index and include all the characters up to just before the ``end`` (the last character will be from index ``end`` - 1).
    If ``start`` is missing the default is 0 and if ``end`` is missing the default value is the length of the string.
 
 .. fillintheblank:: fsc_fitb_three_char_slice
@@ -217,9 +223,19 @@ String Slices
     - :dna\[0\:3\]|\[:3\]: This will return a new string with the characters from index 0 to 2.
       :.*: Look at the note above and try again.
 
+.. fillintheblank:: fsc_fitb_len_string
+    :practice: T
+
+    What built-in function tells you the number of characters in a string?
+
+    - :len: The len function takes a string and returns the number of characters in it.
+      :.*: Look at the example code above.
+
 
 Basic Conditionals and Tests
 ============================
+
+You can execute code only when a condition is true using ``if``. You can execute one block of code when a condition is true (using ``if``) or false (using ``else``). You can even speicfy more than two outcomes as shown in the code below.
 
 .. fillintheblank:: fsc_fitb_return_temp_first_line
 
@@ -237,13 +253,13 @@ Basic Conditionals and Tests
     # function definition
     def get_temp_desc(temp):
         if temp < 32:
-            return "Baby, its cold outside!"
+            return "Baby, its cold outside! The temp is " + str(temp)
         elif temp < 70:
-            return "Wear a coat"
+            return "Wear a coat The temp is " + str(temp)
         elif temp < 80:
-            return "Feels great!"
+            return "Feels great! The temp is " + str(temp)
         else:
-            return "Too hot to handle!"
+            return "Too hot to handle!  The temp is " + str(temp)
 
     # function definition
     def main():
@@ -252,6 +268,10 @@ Basic Conditionals and Tests
 
     # function call
     main()
+
+.. note::
+
+   You must first convert a number to a string using ``str(nun)`` if you want to add it to a string using ``+``.
 
 .. fillintheblank:: fsc_fitb_pogil_elif
 
@@ -286,9 +306,6 @@ Basic Conditionals and Tests
     # function call
     main()
 
-.. note::
-
-   You must first convert a number to a string using ``str(nun)`` if you want to add it to a string using ``+``.
 
 .. parsonsprob:: fsc_pogil_check-guess-Parsons-v2
    :numbered: left
@@ -427,6 +444,33 @@ The logical operators in Python are ``and``, ``or``, and ``not``. These can be u
             self.assertEqual(either6(3,-6),False, "either6(3,6)")
 
     myTests().main()
+
+.. activecode:: fsc_ac_or_complex_cond
+    :caption: complex conditional
+
+    Modify this code to use a complex conditional instead.  It should still pass all tests. It should only take four lines of code or less.
+    ~~~~
+    # function definition
+    def either6(a,b):
+        if a == 6:
+            return True
+        if b == 6:
+            return True
+        return False
+
+    ====
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(either6(5,2),False,"either6(5,2)")
+            self.assertEqual(either6(6,3),True, "either6(6,3)")
+            self.assertEqual(either6(3,6),True, "either6(3,6)")
+            self.assertEqual(either6(3,-6),False, "either6(3,6)")
+
+    myTests().main()
+
 
 
 If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.

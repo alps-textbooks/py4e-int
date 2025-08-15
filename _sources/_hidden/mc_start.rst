@@ -2,7 +2,7 @@ Python 3 with Nested Dictionaries
 =====================================
 Welcome to the Python 3 with Nested Dictionaries study! 
 This study is part of a research project at the University of Michigan, and your participation will contribute to our understanding of how students learn programming concepts.
-We are researchers at University of Michigan who are trying to improve the teaching and learning of programming.
+We are researchers at the University of Michigan who are trying to improve the teaching and learning of programming.
 
 Purpose of this Study
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -17,7 +17,7 @@ The five parts are:
    - Pre survey (3 mins) - a self-efficacy survey for computing (6 questions) and 5 self-evaluation questions about your familiarity with nested dictionaries.
    - Introduction to the Practice Types (3 mins) - An introduction to the type of practice problems you may see during practice.
    - Practice (32 mins) - Complete 4 write-code practice problems, followed by a survey question if applicable.
-   - Posttest (12 mins) - Help is not available during the posttest. It includes 1 short answer, and 2 write-code problems.
+   - Wrap-Up Check (12 mins) - Help is not available during the wrap-up check. It includes 1 short answer, and 2 write-code problems.
 
 Participant Requirements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,9 +74,9 @@ What to do next
          reviewLink.href = "#"; // Prevent default navigation for now
 
          reviewLink.onclick = function(event) {
-            const consent = document.getElementById('consent');
+            const consent_sent = document.getElementById('consent_sent');
 
-            if (!consent) {
+            if (!consent_sent) {
             alert('Please check the consent form before moving to the next.');
             event.preventDefault();
             return false;
