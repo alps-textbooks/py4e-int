@@ -237,7 +237,7 @@ of debugging. Here are some common pitfalls and ways to avoid them:
     look at the first word:
 
     .. activecode:: listDebug_file
-        :available_files: mboxShort1
+        :datafile: mboxShort1.txt
 
         fhand = open('mboxShort1.txt')
         count = 0
