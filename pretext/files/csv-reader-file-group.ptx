@@ -201,12 +201,12 @@
 3-Jan-89,2168.39,2350.18,2127.14,2342.32</pre>
     </hint>
     <p>We can write Python code to read the data using a csv reader and find the date with the highest value at the close.</p>
-    <exercise label="csv_reader_file_stocks_find_date_with_highest_close_ac">
+    <activity label="csv_reader_file_stocks_find_date_with_highest_close_ac">
       <statement>
         <p>Run the code below to find the date with the highest value at the close.</p>
       </statement>
       <program xml:id="csv_reader_file_stocks_find_date_with_highest_close_ac_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import csv
 
 # get the lines from the file
@@ -231,12 +231,12 @@ for row in csv_file:
 
 inFile.close()
 print(f"Max close {max_close} on {max_date}")
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="csv_reader_type_of_row">
+    </activity>
+    <activity label="csv_reader_type_of_row">
       <statement>
-        <p>Q-2: What type of thing is <c>row</c> in the code above?</p>
+        <p>What type of thing is <c>row</c> in the code above?</p>
       </statement>
       <choices>
         <choice>
@@ -272,10 +272,10 @@ print(f"Max close {max_close} on {max_date}")
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="csv_reader_steps_mcq">
+    </activity>
+    <activity label="csv_reader_steps_mcq">
       <statement>
-        <p>Q-3: Which of these must you do to use a csv reader to read a csv file?</p>
+        <p>Which of these must you do to use a csv reader to read a csv file?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -311,7 +311,7 @@ print(f"Max close {max_close} on {max_date}")
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="files_reading-comma-separated-values-csv-files-with-a-header-row">
     <title>Reading Comma-Separated Values (CSV) Files with a Header Row</title>
@@ -332,12 +332,12 @@ print(f"Max close {max_close} on {max_date}")
 "DEC",  337,  405,  432</pre>
     </hint>
     <p>We can read the data from the file and store it in a nested dictionary. In this case the outer dictionary will use the month as the key and the inner dictionary will use the years as the keys.  It will use the data from the header row for the year keys.</p>
-    <exercise label="csv_reader_airtravel_get_toal_for_year_ac">
+    <activity label="csv_reader_airtravel_get_toal_for_year_ac">
       <statement>
         <p>Run the code below.  It is supposed to print the nested dictionary and then the total number of passengers (in thousands) for 1958, but there are errors.  Fix the errors so that all tests pass.</p>
       </statement>
       <program xml:id="csv_reader_airtravel_get_toal_for_year_ac_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import csv
 
 def get_dict(file):
@@ -394,34 +394,31 @@ class myTests(unittest.TestCase):
       self.assertEqual(get_total_for_year(travel_d, "1960"), 5714, 'get_total_for_year(travel_d, "1960")')
 
 unittest.main()
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="csv_reader_read_one_row">
+    </activity>
+    <activity label="csv_reader_read_one_row">
       <statement>
-        <p>Q-5: What function can you use to read just one row from a csv reader? <var/>  </p>
+        <p>What function can you use to read just one row from a csv reader? <fillin width="20" mode="string" answer="next"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="next\(?\)?">
-            <feedback>
-              <p>Use the function <c>next</c> to read a single row</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the code above. How do we read the header row?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
-    <exercise label="csv_reader_airtravel_get_max_month_ac">
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp>next\(?\)?</strcmp>
+                      <feedback><p>Use the function <c>next</c> to read a single row</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the code above. How do we read the header row?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
+    </activity>
+    <activity label="csv_reader_airtravel_get_max_month_ac">
       <statement>
         <p>Fix the code below to work correctly.  It should print the month with the highest number of passengers in 1958.</p>
       </statement>
       <program xml:id="csv_reader_airtravel_get_max_month_ac_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 def get_dict(file):
 
     d = {}
@@ -477,9 +474,9 @@ class myTests(unittest.TestCase):
       self.assertEqual(get_max_month(travel_d, "1960")[0], "JUL", 'get_max_month(travel_d, "1960")[0]')
 
 unittest.main()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="files_writing-a-comma-separated-values-csv-file-with-csv-writer">
     <title>Writing a Comma-Separated Values (CSV) File with CSV Writer</title>
@@ -577,12 +574,12 @@ unittest.main()
 89, 2016, 26, "Brie Larson", "Room"</pre>
     </hint>
     <p>We can read the data from the file and store it in a list of dictionaires where the keys in the dictionary are &#x2018;year', &#x2018;age', &#x2018;name', and &#x2018;movie'.</p>
-    <exercise label="csv_reader_oscar_actress_age_dictionary">
+    <activity label="csv_reader_oscar_actress_age_dictionary">
       <statement>
         <p>Fix the code below.  It should read all the data into a list of dictionaries.  Then it should create a new dictionary where the key is the age and the value is the number of actresses who won at that age. It should sort the items in the dictionary by the number of winners descending and return the top five tuples. Then it will write the data to a csv file using a csv writer.</p>
       </statement>
       <program xml:id="csv_reader_oscar_actress_age_dictionary_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import csv
 
 def get_list(file):
@@ -657,12 +654,12 @@ class myTests(unittest.TestCase):
 
 
 unittest.main()
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="csv_reader_what_can_be_spec">
+    </activity>
+    <activity label="csv_reader_what_can_be_spec">
       <statement>
-        <p>Q-8: What type of things can be specified when you create the csv reader?</p>
+        <p>What type of things can be specified when you create the csv reader?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -698,10 +695,10 @@ unittest.main()
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="csv_write_diff_with_file_writer">
+    </activity>
+    <activity label="csv_write_diff_with_file_writer">
       <statement>
-        <p>Q-9: How is a csv writer different from a file writer?</p>
+        <p>How is a csv writer different from a file writer?</p>
       </statement>
       <choices>
         <choice>
@@ -737,7 +734,7 @@ unittest.main()
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>You can read more about the CSV module at <url href="https://docs.python.org/3/library/csv.html" visual="https://docs.python.org/3/library/csv.html">https://docs.python.org/3/library/csv.html</url>.</p>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
     <raw format="html" xml:space="preserve">

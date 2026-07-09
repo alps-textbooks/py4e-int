@@ -2,7 +2,7 @@
 <section xml:id="dictionaries_advanced-text-parsing">
   <title>Advanced Text Parsing</title>
   <program xml:id="fileOpen2" interactive="activecode" language="python">
-    <input>
+    <code>
 with open("romeo2.txt", "r") as filename:
     lines = filename.readlines()
     counts = {}
@@ -13,7 +13,7 @@ with open("romeo2.txt", "r") as filename:
             else:
                 counts[word] += 1
 print(counts)
-        </input>
+        </code>
   </program>
   <p>In the above example using the file <em>romeo.txt</em>, we made the
             file as simple as possible by removing all punctuation by hand. The
@@ -45,9 +45,9 @@ Who is already sick and pale with grief,</pre>
             <c>deletestr</c> parameter to delete all of the punctuation. We
             will even let Python tell us the list of characters that it considers
             <q>punctuation</q>:</p>
-  <exercise label="question9_5_1">
+  <activity label="question9_5_1">
     <statement>
-      <p>Q-2: Which line of code correctly uses the .translate() method?</p>
+      <p> Which line of code correctly uses the .translate() method?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -75,20 +75,20 @@ Who is already sick and pale with grief,</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; import string
 &gt;&gt;&gt; string.punctuation
 '!"#$%&amp;\'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~'
-</input>
+</code>
   </program>
   <note>
     <p>The parameters used by <c>translate</c> were different in Python 2.0.</p>
   </note>
   <p>We make the following modifications to our program:</p>
   <program xml:id="fileOpen3_v2" interactive="activecode" language="python3">
-    <input>
+    <code>
 import string
 
 with open("romeo-full.txt", "r") as fhand:
@@ -103,11 +103,11 @@ for line in lines:
         else:
             counts[word] += 1
 print(counts)
-        </input>
+        </code>
   </program>
-  <exercise label="question9_5_2">
+  <activity label="question9_5_2">
     <statement>
-      <p>Q-4: Which line(s) in the above activecode remove the punctuation from the text?</p>
+      <p> Which line(s) in the above activecode remove the punctuation from the text?</p>
     </statement>
     <choices>
       <choice>
@@ -143,7 +143,7 @@ print(counts)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Part of learning the <q>Art of Python</q> or <q>Thinking Pythonically</q> is
             realizing that Python often has built-in capabilities for many common
             data analysis problems. Over time, you will see enough example code and

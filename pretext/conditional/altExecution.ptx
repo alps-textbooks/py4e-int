@@ -22,14 +22,14 @@
             condition determines which one gets executed. The syntax looks like
             this:</p>
   <program xml:id="cndtnlMod" interactive="codelens" language="python">
-    <input>
+    <code>
 x = 8
 if x % 2 == 0 :
     print('x is even')
 else :
     print('x is odd')
 print('All done.')
-    </input>
+    </code>
   </program>
   <p>If the remainder when <c>x</c> is divided by 2 is 0, then we know
             that <c>x</c> is even, and the program displays a message to that
@@ -44,16 +44,16 @@ print('All done.')
             alternatives will be executed. The alternatives are called <em>branches</em>,
             because they are branches in the flow of execution.</p>
           
-  <exercise label="cndtnl-altex-mc-print">
+  <activity label="cndtnl-altex-mc-print">
     <statement>
-      <p>Q-2: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 if 4 + 5 == 10:
     print("WEIRD")
 else:
     print("GREAT")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -90,18 +90,18 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   
-  <exercise label="cndtnl-altex-mc-negative">
+  <activity label="cndtnl-altex-mc-negative">
     <statement>
-      <p>Q-3: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 x = -10
 if x &lt; 0:
     print("The negative number ",  x, " is not valid here.")
 print("This is always printed")
-</input>
+</code>
       </program>
       <pre>a.
 This is always printed
@@ -147,13 +147,13 @@ The negative number -10 is not valid here</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 
-  <exercise label="cndtnl-altex-mc-error">
+  <activity label="cndtnl-altex-mc-error">
     <statement>
-      <p>Q-4: Will the following code cause an error?</p>
+      <p> Will the following code cause an error?</p>
       <program language="python">
-        <input>
+        <code>
 x = -10
 if x &lt; 0:
     print("The negative number ",  x, " is not valid here.")
@@ -161,7 +161,7 @@ else:
     print(x, " is a positive number")
 else:
     print("This is always printed")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -182,13 +182,13 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="cndtnl-altex-pp-even" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="cndtnl-altex-pp-even" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>The following program should print out <q>x is even</q> if the remainder of x divided by 2 is 0 and <q>x is odd</q>
             otherwise, but the code is mixed up. Be sure to indent correctly!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>x = 92</cline>
       </block>
@@ -205,5 +205,5 @@ else:
         <cline>    print("x is odd")</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

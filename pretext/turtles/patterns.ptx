@@ -8,12 +8,12 @@
   <note>
     <p>The outer <c>for</c> loop in the code below on line 8 executes 20 times and the inner <c>for</c> loop on line 13 executes 5 times <em>for each</em> of the outer loop values, 5 times when the outer loop value is 0, 5 times when the outer loop value is 1, 5 times when the outer loop value is 2, and so on.  The inner loop is executed a total of 20 * 5 = 100 times.  The turtle can take a long time to finish drawing this pattern.  Normally code in the browser is limited to only running in 10 seconds or less.  But, we can use the <c>sys</c> library (short for system) <c>setExecutionLimit(milliseconds)</c> procedure which will let the code run for up to the specified number of milliseconds.  One second is 1,000 milliseconds, so 50,0000 milliseconds is 50 seconds.</p>
   </note>
-  <exercise label="Turtle_Spirograph1">
+  <activity label="Turtle_Spirograph1">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
     <program xml:id="Turtle_Spirograph1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *     # use the turtle library
 from sys import *        # use the system library
 setExecutionLimit(50000) # let this take up to 50 seconds
@@ -30,16 +30,16 @@ for repeats in range(20):     # draw the pattern 20 times
     for sides in range(5):    # repeat 5 times
         zoe.forward(50)       # move forward by 50 unit
         zoe.right(72)         # turn by 72 degrees
-        </input>
+        </code>
     </program>
-  </exercise>
+  </activity>
   <p>By setting the pen color differently, we can distinguish the part that draws the shape, from the part that draws <em>between</em> the shapes.</p>
-  <exercise label="Turtle_Spirograph2">
+  <activity label="Turtle_Spirograph2">
     <statement>
       <p>Run the code to see what it draws.</p>
     </statement>
     <program xml:id="Turtle_Spirograph2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *     # use the turtle library
 from sys import *        # use the system library
 setExecutionLimit(50000) # let this take up to 50 seconds
@@ -58,16 +58,16 @@ for repeats in range(20):   # 20 times to draw the pattern
     for sides in range(5):    # repeat 5 times
         zoe.forward(50)         # move forward 50 units
         zoe.right(72)           # turn by 72 degrees
-        </input>
+        </code>
     </program>
-  </exercise>
+  </activity>
   <p>You can use the coloring in the picture below to help you figure out the correct order of the lines below.</p>
-  <exercise label="turtle_3_1_Turtle_Spiro" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="turtle_3_1_Turtle_Spiro" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>There is a way of arranging the statements below such that this image is created. The turtle will draw many triangles.  Move the needed pieces of the program from the left into the space on the right.  Indent lines as needed.</p>
       <image source="turtles/Figures/BlueTrianglesRedCircle.png" width="200px%"/>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="9">
         <cline>from turtle import *</cline>
         <cline>from sys import *</cline>
@@ -107,14 +107,14 @@ for repeats in range(20):   # 20 times to draw the pattern
         <cline>        mateo.right(120)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
   <p>You can use the coloring in the picture below to help you figure out the correct order of the lines below.</p>
-  <exercise label="turtle_3_2_Turtle_Spiro_Blue_Red" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="turtle_3_2_Turtle_Spiro_Blue_Red" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>There is a way of arranging the statements below such that this image is created. The turtle will draw many triangles. Move the needed pieces of the program from the left into the space on the right.  Indent lines as needed.</p>
       <image source="turtles/Figures/RedTrianglesBlueCircle.png" width="200px%"/>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>from turtle import *</cline>
         <cline>from sys import *</cline>
@@ -153,13 +153,13 @@ for repeats in range(20):   # 20 times to draw the pattern
         <cline>        mateo.right(60) </cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="Turtle_Nested_Error1">
+  </activity>
+  <activity label="Turtle_Nested_Error1">
     <statement>
       <p>The following example has 4 errors.  Can you fix the errors so that the code compiles and runs?</p>
     </statement>
     <program xml:id="Turtle_Nested_Error1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *    # use the turtle library
 from sys import *
 setExecutionLimit(50000)
@@ -177,15 +177,15 @@ for repeats in range(20)
         mateo.Color("blue")
         mateo.forward(50)
         mateo.Right(120)
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="Turtle_Nested_Error2">
+  </activity>
+  <activity label="Turtle_Nested_Error2">
     <statement>
       <p>The following example has 4 errors.  Can you fix the errors so that the code compiles and runs?</p>
     </statement>
     <program xml:id="Turtle_Nested_Error2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 from turtle import *    # use the turtle library
 from sys import *
 setExecutionLimit(50000)
@@ -203,7 +203,7 @@ for repeats in range(20):
         mateo.color("blue")
         mateo.Forward(50)
         mateo.right(120)
-        </input>
+        </code>
     </program>
-  </exercise>
+  </activity>
 </section>

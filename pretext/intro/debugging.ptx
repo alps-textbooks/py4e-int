@@ -67,9 +67,9 @@
             feel better, copy your program into another file before you start
             stripping it down. Then you can paste the pieces back in a little bit at
             a time.</p>
-  <exercise label="intro-debug-mc-definition">
+  <activity label="intro-debug-mc-definition">
     <statement>
-      <p>Q-1: What is debugging?</p>
+      <p> What is debugging?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -105,10 +105,10 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="intro-debug-mc-randomwalk">
+  </activity>
+  <activity label="intro-debug-mc-randomwalk">
     <statement>
-      <p>Q-2: What is <q>random walk programming?</q></p>
+      <p> What is <q>random walk programming?</q></p>
     </statement>
     <choices>
       <choice>
@@ -144,31 +144,31 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="intro-debug-dnd-terms">
+  </activity>
+  <activity label="intro-debug-dnd-terms">
     <statement>
       <p>Match each term with its meaning.</p>
     </statement>
     <feedback>
       <p>Look above for these terms.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>Reading</premise>
         <response>Examine your code, read it back to yourself, and check that it says what you meant to say.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>Running</premise>
         <response>Experiment by making changes and running different versions.</response>
       </match>
-      <match order="3">
+      <match>
         <premise>Ruminating</premise>
         <response>Take some time to think! What kind of error is it and how can you interpret the error or output?</response>
       </match>
-      <match order="4">
+      <match>
         <premise>Retreating</premise>
         <response>At some point, the best thing to do is back off, undoing recent changes, until you get back to a program that works and that you understand.</response>
       </match>
-    </matches>
-  </exercise>
+    </cardsort>
+  </activity>
 </section>

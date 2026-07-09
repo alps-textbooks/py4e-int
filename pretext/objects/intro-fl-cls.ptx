@@ -8,12 +8,12 @@
             called when you print an object of the class.</p>
   <subsection xml:id="objects_a-book-class">
     <title>A Book Class</title>
-    <exercise label="class_book_ac1_v2_fl">
+    <activity label="class_book_ac1_v2_fl">
       <statement>
         <p>Run the following code</p>
       </statement>
       <program xml:id="class_book_ac1_v2_fl_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Book:
     """ Represents a book object """
 
@@ -31,19 +31,19 @@ def main():
      print(b1)
 
 main()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="objects_creating-more-objects">
     <title>Creating More Objects</title>
     <p>Once you have defined a class you can use it to create many objects.</p>
-    <exercise label="class_person_ac2_fl">
+    <activity label="class_person_ac2_fl">
       <statement>
         <p>Change the following main function to add a person object with your first and last name.</p>
       </statement>
       <program xml:id="class_person_ac2_fl_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Person:
     """ Represents a person object """
 
@@ -59,9 +59,9 @@ def main():
     print(p1)
 
 main()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="objects_add-a-method-to-a-class">
     <title>Add a Method to a Class</title>
@@ -69,14 +69,14 @@ main()
                 method to the Person class.  The function must take an object of the
                 class to work with that by convention we call <c>self</c>. The name of the function
                 doesn't need to have any underscores in it.</p>
-    <exercise label="class_person_init_ac1_fl">
+    <activity label="class_person_init_ac1_fl">
       <statement>
         <p>Change the following Person class to add an <c>initials</c> method that returns
                 a string with the first letter in the first name and the first letter in
                 the last name in lowercase.</p>
       </statement>
       <program xml:id="class_person_init_ac1_fl_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Person:
     """ Represents a person object """
 
@@ -93,17 +93,17 @@ def main():
     print(p1.initials())
 
 main()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="objects_feedback">
     <title>Feedback</title>
-    <exercise label="class-intro-sa-fl">
+    <activity label="class-intro-sa-fl">
       <statement>
-        <p>Q-4: Please provide feedback here. Please share any comments, problems, or suggestions.</p>
+        <p> Please provide feedback here. Please share any comments, problems, or suggestions.</p>
       </statement>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="objects_what-to-do-next">
     <title>What to do next</title>

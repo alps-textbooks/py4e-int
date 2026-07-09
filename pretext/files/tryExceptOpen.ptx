@@ -35,9 +35,9 @@ FileNotFoundError: [Errno 2] No such file or directory: 'na na boo boo'</pre>
             have delivered the program to the end users who may be purchasing the
             software or paying our salary to write the software. So the QA team is
             the programmer's best friend.</p>
-  <exercise label="file-try-mc-qa">
+  <activity label="file-try-mc-qa">
     <statement>
-      <p>Q-1: Which of the following is something that the Quality Assurance (QT) team does (pick all that apply)?</p>
+      <p> Which of the following is something that the Quality Assurance (QT) team does (pick all that apply)?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -65,13 +65,13 @@ FileNotFoundError: [Errno 2] No such file or directory: 'na na boo boo'</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>So now that we see the flaw in the program, we can elegantly fix it
             using the <c>try</c>/<c>except</c> structure. We need to
             assume that the <c>open</c> call might fail and add recovery code
             when the <c>open</c> fails as follows (creating a new file <em>search7.py</em>):</p>
   <program language="fileInputTry">
-    <input>
+    <code>
 fname = input('Enter the file name: ')
 try:
     fhand = open(fname)
@@ -84,7 +84,7 @@ for line in fhand:
         count = count + 1
 fhand.close()
 print('There were', count, 'subject lines in', fname)
-</input>
+</code>
   </program>
   <p>The <c>exit</c> function terminates the program. It is a function
             that we call that never returns. Now when our user (or QA team) types in
@@ -96,25 +96,22 @@ There were 1797 subject lines in mbox.txt
 python search7.py
 Enter the file name: na na boo boo
 File cannot be opened: na na boo boo</pre>
-  <exercise label="file-try-fitb-close">
+  <activity label="file-try-fitb-close">
     <statement>
-      <p>Q-2: The <BlankNode/> function terminates or ends the program. <var/>  </p>
+      <p> The <fillin width="20" mode="string" answer="exit"/> function terminates or ends the program.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="exit">
-          <feedback>
-            <p>The exit function does not return anything and closes the program.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again. Which function will close or end a program without returning anything?</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>The exit function does not return anything and closes the program.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again. Which function will close or end a program without returning anything?</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>Protecting the <c>open</c> call is a good example of the proper
             use of <c>try</c> and <c>except</c> in a Python program. We
             use the term <q>Pythonic</q> when we are doing something the <q>Python way</q>. We
@@ -125,23 +122,20 @@ File cannot be opened: na na boo boo</pre>
             the notion that programming is part engineering and part art. We are not
             always interested in just making something work, we also want our
             solution to be elegant and to be appreciated as elegant by our peers.</p>
-  <exercise label="file-try-fitb-python">
+  <activity label="file-try-fitb-python">
     <statement>
-      <p>Q-3: The term <BlankNode/> describes something done the <q>Python way</q>. <var/>  </p>
+      <p> The term <fillin width="20" mode="string" answer="[Pp]ythonic"/> describes something done the <q>Python way</q>.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]ythonic">
-          <feedback>
-            <p>A pythonic technique is a technique that works elegantly in Python.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>A pythonic technique is a technique that works elegantly in Python.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
 </section>

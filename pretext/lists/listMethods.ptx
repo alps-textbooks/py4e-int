@@ -10,15 +10,15 @@
   <p>Python provides methods that operate on lists. For example,
             <c>append</c> adds a new element to the end of a list:</p>
   <program xml:id="listAppend" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['a', 'b', 'c']
 t.append('d')
 print(t)
-        </input>
+        </code>
   </program>
-  <exercise label="listMethod_MC_append">
+  <activity label="listMethod_MC_append">
     <statement>
-      <p>Q-2: What is printed by the following statements?</p>
+      <p>What is printed by the following statements?</p>
       <pre>alist = [4, 2, 8, 6, 5]
 alist.append(True)
 alist.append(False)
@@ -50,29 +50,29 @@ print(alist)</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p><c>extend</c> takes a list as an argument and appends all of the
             elements:</p>
   <program xml:id="listExtend" interactive="activecode" language="python">
-    <input>
+    <code>
 t1 = ['a', 'b', 'c']
 t2 = ['d', 'e']
 t1.extend(t2)
 print(t1)
-        </input>
+        </code>
   </program>
   <p>This example leaves <c>t2</c> unmodified.</p>
   <p><c>sort</c> arranges the elements of the list from low to high:</p>
   <program xml:id="listSort" interactive="activecode" language="python">
-    <input>
+    <code>
 t = ['d', 'c', 'e', 'b', 'a']
 t.sort()
 print(t)
-        </input>
+        </code>
   </program>
-  <exercise label="listMethod_MC_sort">
+  <activity label="listMethod_MC_sort">
     <statement>
-      <p>Q-5: True or False? The sort method alphabetizes lists.</p>
+      <p>True or False? The sort method alphabetizes lists.</p>
     </statement>
     <choices>
       <choice>
@@ -92,27 +92,24 @@ print(t)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>Most list methods are void; they modify the list and return
             <c>None</c>. If you accidentally write <c>t = t.sort()</c>,
             you will be disappointed with the result.</p>
-  <exercise label="listMethod_fill1">
+  <activity label="listMethod_fill1">
     <statement>
-      <p>Q-6: Most list methods are _______. <var/>  </p>
+      <p>Most list methods are <fillin width="20" mode="string" answer="void"/>.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Vv]oid">
-          <feedback>
-            <p>Most list methods are void meaning they don't return anything.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again! (Remember that functions are either fruitful or void)</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Most list methods are <c>void</c> meaning they don't return anything.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again! (Remember that functions are either fruitful or void)</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
 </section>

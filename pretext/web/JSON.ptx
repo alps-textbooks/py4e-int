@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<exercises xml:id="web_javascript-object-notation-json">
+<worksheet xml:id="web_javascript-object-notation-json">
   <title>JavaScript Object Notation - JSON</title>
   <introduction>
 <idx>JSON</idx>
@@ -12,7 +12,7 @@
   <p>Here is a JSON encoding of some data. The outermost JSON structure is a dictionary
             and the value for two of the keys (phone and email) are dictionaries as well.</p>
   <program language="json">
-    <input>
+    <code>
 {
  "name" : "Chuck",
  "phone" : {
@@ -23,11 +23,11 @@
     "hide" : "yes"
   }
 }
-</input>
+</code>
   </program>
   <p>Here is the XML equivalent.</p>
   <program language="{.xml}">
-    <input>
+    <code>
 &lt;person&gt;
   &lt;name&gt;Chuck&lt;/name&gt;
   &lt;phone type="intl"&gt;
@@ -35,7 +35,7 @@
   &lt;/phone&gt;
   &lt;email hide="yes" /&gt;
 &lt;/person&gt;
-</input>
+</code>
   </program>
   <p>You will notice some differences. First, in XML, we can add attributes
             like <q>intl</q> to the <q>phone</q> tag. In JSON, we simply have key-value pairs in a dictionary.
@@ -47,9 +47,12 @@
             And since nearly all programming languages have something equivalent to
             Python's dictionaries and lists, JSON is a very natural format to have
             two cooperating programs exchange data.</p>
-  <exercise label="webJSON_MC_diffs_XML">
+ </introduction>
+  
+ 
+  <activity label="webJSON_MC_diffs_XML">
     <statement>
-      <p>csp-10-2-1: Which of the following are differences between JSON and XML?</p>
+      <p> Which of the following are differences between JSON and XML?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -85,10 +88,10 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="webJSON_MC_not_diffs">
+  </activity>
+  <activity label="webJSON_MC_not_diffs">
     <statement>
-      <p>csp-10-2-2: Which of the following is <term>not</term> a difference between JSON and XML?</p>
+      <p> Which of the following is <term>not</term> a difference between JSON and XML?</p>
     </statement>
     <choices>
       <choice>
@@ -124,13 +127,13 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>JSON is quickly becoming the format of choice for nearly all data
             exchange between applications because of its relative simplicity
             compared to XML.</p>
-  <exercise label="webJSON_MC_acro">
+  <activity label="webJSON_MC_acro">
     <statement>
-      <p>csp-10-2-3: JSON stands for what?</p>
+      <p> JSON stands for what?</p>
     </statement>
     <choices>
       <choice>
@@ -166,15 +169,15 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-</introduction>
+  </activity>
+
 
   <subexercises xml:id="web_list-of-dictionaries">
     <title>List of Dictionaries</title>
     <introduction><p>The outermost JSON structure can be a dictionary or a list.  Here is an example
         where the outermost JSON structure is a list.  In this case it is a list of dictionaries.</p>
     <program language="json">
-      <input>
+      <code>
 [{
   "id": 1,
   "first_name": "Jeanette",
@@ -188,11 +191,11 @@
   "email": "gfrediani1@senate.gov",
   "gender": "Non-binary",
 }]
-</input>
+</code>
     </program></introduction>
-    <exercise label="webJSON_equivalent_xml">
+    <activity label="webJSON_equivalent_xml">
       <statement>
-        <p>csp-10-2-4: Which of the following is the correct equivalent XML to the JSON above?</p>
+        <p> Which of the following is the correct equivalent XML to the JSON above?</p>
       </statement>
       <choices>
         <choice>
@@ -284,6 +287,6 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subexercises>
-</exercises>
+</worksheet>

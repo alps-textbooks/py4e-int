@@ -9,12 +9,12 @@
             the modulus operator is a percent sign ( <c>%</c> ). The syntax is the same as
             for other operators:</p>
   <program xml:id="var-ac-7-mod" interactive="activecode" language="python">
-    <input>
+    <code>
 quotient = 7 // 3
 print(quotient)
 remainder = 7 % 3
 print(remainder)
-        </input>
+        </code>
   </program>
   <p>So 7 divided by 3 is 2 with 1 left over.</p>
   <p>The modulus operator turns out to be surprisingly useful. For example,
@@ -23,9 +23,9 @@ print(remainder)
             example, <c>x&#160;%&#160;10</c> yields the right-most digit of
             <c>x</c> (in base 10). Similarly, <c>x&#160;%&#160;100</c> yields the
             last two digits.</p>
-  <exercise label="var-mod-mc-18-mod-5">
+  <activity label="var-mod-mc-18-mod-5">
     <statement>
-      <p>csp-10-2-2: What is the result of <c>18 % 5</c>?</p>
+      <p>What is the result of <c>18 % 5</c>?</p>
     </statement>
     <choices>
       <choice>
@@ -61,10 +61,10 @@ print(remainder)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="var-mod-mc-2-mod-3">
+  </activity>
+  <activity label="var-mod-mc-2-mod-3">
     <statement>
-      <p>csp-10-2-3: What is the result of <c>2 % 3</c>?</p>
+      <p>What is the result of <c>2 % 3</c>?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -100,56 +100,49 @@ print(remainder)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="var-mod-dnd-division">
+  </activity>
+  <activity label="var-mod-dnd-division">
     <statement>
       <p>Match each expression with the type of division the operator performs.</p>
     </statement>
     <feedback>
       <p>Try out these expressions in terminal or review the operators and operands section.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>7 / 2</premise>
         <response>division</response>
       </match>
-      <match order="2">
+      <match>
         <premise>90 // 4</premise>
         <response>floored division</response>
       </match>
-      <match order="3">
+      <match>
         <premise>45 % 6</premise>
         <response>remainder</response>
       </match>
-    </matches>
-  </exercise>
-  <exercise label="var-fitb-6-mod">
+    </cardsort>
+  </activity>
+  <activity label="var-fitb-6-mod">
     <statement>
-      <p>csp-10-2-5: What is the result of <c>25 % 4</c>? <var/>  </p>
+      <p>What is the result of <c>25 % 4</c>? <fillin width="20" mode="string" answer="1"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition number="1">
-          <feedback>
-            <p>25 % 4 has a remainder of 1.</p>
-          </feedback>
-        </condition>
-        <condition number="6">
-          <feedback>
-            <p>6 is the result of 25 // 4, try using modulus in terminal.</p>
-          </feedback>
-        </condition>
-        <condition number="6.25">
-          <feedback>
-            <p>6.25 is the result of 25 / 4, try using modulus in terminal.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Not quite, try using modulus in terminal.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>25 % 4 has a remainder of 1.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>6 is the result of 25 // 4, try using modulus in terminal.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>6.25 is the result of 25 / 4, try using modulus in terminal.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Not quite, try using modulus in terminal.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
 </section>

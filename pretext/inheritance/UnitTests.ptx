@@ -11,12 +11,12 @@
                 the output to be and compare that to what you actually get to see if your code is correct.</p>
     <p>In fact in test-driven development you should write test cases <term>before</term> you
                 start writing any code. That way you will know when your code works.</p>
-    <exercise label="ut_example_test_total_even">
+    <activity label="ut_example_test_total_even">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="ut_example_test_total_even_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # Return the total of the even numbers in a list of numbers called nums
 def total_even(nums):
     total = 0
@@ -37,9 +37,9 @@ def test():
 
 # function call
 test()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <p>This type of test is better than just printing out actual output because
                 then you have to think about what the correct value should be.  It lets you
                 quickly compare the expected value and the actual value.  However, you have
@@ -51,12 +51,12 @@ test()
     <p xml:id="inheritance_index-1">Another way to write the code above would be to use a <term>list comprehension</term>.  These are a quick way to return
                 a new list by applying some logic to each element of the list.</p>
     <pre>result_list = [returned_value for item in list logic]</pre>
-    <exercise label="ut_example_test_total_even_listc">
+    <activity label="ut_example_test_total_even_listc">
       <statement>
         <p>Run the code below to see what it prints.</p>
       </statement>
       <program xml:id="ut_example_test_total_even_listc_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 # Return the total of the even numbers in a list of numbers called nums
 def total_even(nums):
     evens = [num for num in nums if num % 2 == 0]
@@ -74,9 +74,9 @@ def test():
 
 # function call
 test()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="inheritance_creating-test-cases">
     <title>Creating Test Cases</title>
@@ -93,12 +93,12 @@ test()
                 highlighted in green. This gives you an even quicker visual indication that your code
                 is working than having to compare the expected output to the actual.</p>
     <p>Let's look at the unit tests that have usually been hidden.</p>
-    <exercise label="ut-ex-perimeterq-with-unit-test-vis">
+    <activity label="ut-ex-perimeterq-with-unit-test-vis">
       <statement>
         <p>Run the code below to see the unit tests again. See the unit tests after the code. The last unit test compares the result of <c>recPerimeter(3.0, 2)</c> to wrong value.  Fix the value so that all of the tests pass.</p>
       </statement>
       <program xml:id="ut-ex-perimeterq-with-unit-test-vis_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def recPerimeter(length, width):
     perimeter = 2 * (length + width)
     return perimeter
@@ -113,55 +113,49 @@ class myTests(TestCaseGui):
         self.assertEqual(recPerimeter(3.0, 2),12,"Tested recPerimeter on inputs 3.0 and 2")
 
 myTests().main()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <p>Look at the unit tests above and answer the questions below.</p>
-    <exercise label="ut_fitb_test_class">
+    <activity label="ut_fitb_test_class">
       <statement>
-        <p>Q-4: What is the class that is defined in the unit test code? <var/>  </p>
+        <p>What is the class that is defined in the unit test code? <fillin width="20" mode="string" answer="myTests"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="myTests">
-            <feedback>
-              <p>This defines the class myTests</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the name after the class keyword?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
-    <exercise label="ut_fitb_test_parent">
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>This defines the class myTests</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the name after the class keyword?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
+    </activity>
+    <activity label="ut_fitb_test_parent">
       <statement>
-        <p>Q-5: What class does the defined class inherit from? <var/>  </p>
+        <p>What class does the defined class inherit from? <fillin width="20" mode="string" answer="TestCaseGui"/>  </p>
       </statement>
-      <setup>
-        <var>
-          <condition string="TestCaseGui">
-            <feedback>
-              <p>The parent is TestCaseGui</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>What is the name in the () after the class name?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
-    <exercise label="ut-ex-compare-valuep-ac">
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The parent is <c>TestCaseGui</c></p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>What is the name in the () after the class name?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
+    </activity>
+    <activity label="ut-ex-compare-valuep-ac">
       <statement>
         <p>Run the code below to see what the unit tests do and then add another test to
                 test the result when x is higher than y.</p>
       </statement>
       <program xml:id="ut-ex-compare-valuep-ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def checkValue(x, y):
     if x &lt; y:
         return "lower"
@@ -178,10 +172,10 @@ class myTests(TestCaseGui):
         self.assertEqual(checkValue(5, 5), "equal", 'checkValue(5, 5)')
 
 myTests().main()
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="ut_get_middle_ac_add_test">
+    </activity>
+    <activity label="ut_get_middle_ac_add_test">
       <statement>
         <p>Fix the function below to return the middle characters from the passed string.
                 If the string has an odd length then return the middle character.  If the string has an even
@@ -190,7 +184,7 @@ myTests().main()
                 test the result when <c>str</c> has only one or two characters in it.</p>
       </statement>
       <program xml:id="ut_get_middle_ac_add_test_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def get_middle(str):
     len_s = len(str)
     mid = len_s // 2
@@ -210,9 +204,9 @@ class myTests(TestCaseGui):
         self.assertEqual(get_middle('123456'), '34', "get_middle('123456')")
 
 myTests().main()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <p>Add tests to check the result when <c>str</c> has one or two letters.</p>
     <note>
       <p>Unit tests in this ebook must include the line <c>from unittest.gui import TestCaseGui</c>
@@ -221,40 +215,40 @@ myTests().main()
     </note>
     <p>Unit tests inherit from a class that includes several methods. As you can see
                 from the code above one of the methods is <c>assertEqual</c> which returns the result of <c>a == b</c>.</p>
-    <exercise label="ut_method_def_dnd">
+    <activity label="ut_method_def_dnd">
       <statement>
         <p>Drag each method to what it returns.</p>
       </statement>
       <feedback>
         <p>Read this page and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>assertTrue(x)</premise>
           <response> x == True</response>
         </match>
-        <match order="2">
+        <match>
           <premise>assertIn(a, b)</premise>
           <response>a in b</response>
         </match>
-        <match order="3">
+        <match>
           <premise>assertIsInstance(a, b)</premise>
           <response>isinstance(a, b)</response>
         </match>
-        <match order="4">
+        <match>
           <premise>assertEqual(a, b)</premise>
           <response>a == b</response>
         </match>
-        <match order="5">
+        <match>
           <premise>assertNotEqual(a, b)</premise>
           <response>a != b</response>
         </match>
-        <match order="6">
+        <match>
           <premise>assertFalse(x)</premise>
           <response> x == False</response>
         </match>
-      </matches>
-    </exercise>
+      </cardsort>
+    </activity>
     <note>
       <p>All of the assert methods can take a third parameter which is a message (string) that explains what was tested.</p>
     </note>
@@ -294,12 +288,12 @@ myTests().main()
     <note>
       <p>The order that the tests run is not the order they are defined.</p>
     </note>
-    <exercise label="ut-ex-car-class-unit-tests">
+    <activity label="ut-ex-car-class-unit-tests">
       <statement>
         <p>Fix the code below to run and notice the test results.</p>
       </statement>
       <program xml:id="ut-ex-car-class-unit-tests_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Car:
 
     def __init__(self, make, model, color):
@@ -332,18 +326,18 @@ class myTests(TestCaseGui):
         self.assertEqual(self.c1.color, "white", "Test of set color")
 
 myTests().main()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <p>Modify the code above to add a method in the <c>Car</c> class to set (change) the model name and add a test method to test that the new method works.</p>
-    <exercise label="ut-pp-test-lower" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="ut-pp-test-lower" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the code in order to create tests for a Person class initials method that returns the first letter
                 from the first name followed by the first letter of the last name. The Person class initializer
                 takes the person's first name and last name.  First define a <c>setUp</c> method to
                 create two Person objects and then define the <c>test_initials</c> method.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="1">
           <cline>import unittest</cline>
         </block>
@@ -384,6 +378,6 @@ myTests().main()
           <cline>        self.assertEqual(p2i, "KW", "p2.initials()")</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
 </section>

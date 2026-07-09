@@ -56,9 +56,9 @@
       </li>
     </ul>
   </p>
-  <exercise label="intro-hardware-mc-storage">
+  <activity label="intro-hardware-mc-storage">
     <statement>
-      <p>Q-1: Which of the following will keep information stored without a power source?</p>
+      <p>Which of the following will keep information stored without a power source?</p>
     </statement>
     <choices>
       <choice>
@@ -94,7 +94,7 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>While most of the detail of how these components work is best left to
             computer builders, it helps to have some terminology so we can talk
             about these different parts as we write our programs.</p>
@@ -114,58 +114,53 @@
             instructions in advance. We call these stored instructions a
             <em>program</em> and the act of writing these instructions down
             and getting the instructions to be correct <em>programming</em>.</p>
-  <exercise label="intro-hardware-stored-instructions">
+  <activity label="intro-hardware-stored-instructions">
     <statement>
-      <p>Q-2: A set of stored instructions used to direct your computer's central processing unit is called a ________. <var/>  </p>
+      <p>A set of stored instructions used to direct your computer's central processing unit is called a <fillin width="20" mode="string" answer="program"/>.  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]rogram">
-          <feedback>
-            <p>A program holds the instructions that answer the CPU's <q>What next</q> question.</p>
-          </feedback>
-        </condition>
-        <condition string="[Pp]rogramming">
-          <feedback>
-            <p>Programming is the process of creating and editing these instructions.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
-  <exercise label="intro-hardware-dnd-memory">
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A program holds the instructions that answer the CPU's <q>What next</q> question.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Programming is the process of creating and editing these instructions.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
+  <activity label="intro-hardware-dnd-memory">
     <statement>
       <p>Match each term with its definition.</p>
     </statement>
     <feedback>
       <p>How is memory stored?</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>Main Memory</premise>
         <response>Stores information quickly for the CPU; needs power for storage.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>Secondary Memory</premise>
         <response>Stores information slowly; can save information without power.</response>
       </match>
-      <match order="3">
+      <match>
         <premise>Input/Output Devices</premise>
         <response>Physical aspects beyond the internal computer.</response>
       </match>
-      <match order="4">
+      <match>
         <premise>Network Connection</premise>
         <response>Allows information to be stored on a network; very slow.</response>
       </match>
-      <match order="5">
+      <match>
         <premise>Central Processing Unit</premise>
         <response>Does the actual computing and executing of programs in the computer.</response>
       </match>
-    </matches>
-  </exercise>
+    </cardsort>
+  </activity>
 </section>

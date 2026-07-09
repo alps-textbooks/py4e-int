@@ -16,10 +16,10 @@
   <p>The following is an example of a <c>SELECT</c> with a
             <c>JOIN</c> clause:</p>
   <program language="{.sql}">
-    <input>
+    <code>
 SELECT * FROM Follows JOIN People
     ON Follows.from_id = People.id WHERE People.id = 1
-</input>
+</code>
   </program>
   <p>The <c>JOIN</c> clause indicates that the fields we are selecting
             come from the <c>Follows</c> and <c>People</c> tables. The
@@ -27,44 +27,38 @@ SELECT * FROM Follows JOIN People
             Take the rows from <c>Follows</c> and append the row from
             <c>People</c> where the field <c>from_id</c> in <c>Follows</c> is
             the same the <c>id</c> value in the <c>People</c> table.</p>
-  <exercise label="dbJoin_fill1">
+  <activity label="dbJoin_fill1">
     <statement>
-      <p>Q-1: Which SQL clause can be used to return data from two tables? <var/>  </p>
+      <p>Which SQL clause can be used to return data from two tables? <fillin width="20" mode="string" answer="join"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="join">
-          <feedback>
-            <p>JOIN returns data from two tables based on rows selected to join them on.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
-  <exercise label="dbJoin_on_fill1">
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>JOIN returns data from two tables based on rows selected to join them on.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
+  <activity label="dbJoin_on_fill1">
     <statement>
-      <p>Q-2: Fill in the blank in the following: SELECT * FROM Follows JOIN People <BlankNode/> Follows.from_id = People.id LIMIT 5 <var/>  </p>
+      <p>Fill in the blank in the following: SELECT * FROM Follows JOIN People <fillin width="20" mode="string" answer="on"/> Follows.from_id = People.id LIMIT 5</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="on">
-          <feedback>
-            <p>Use ON to specify what column to join the data on.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Use ON to specify what column to join the data on.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>
     <term>Connecting Tables Using JOIN</term>
   </p>
@@ -74,9 +68,9 @@ SELECT * FROM Follows JOIN People
             <c>id</c> field from <c>People</c> and the <c>from_id</c> from
             <c>People</c>, then JOIN creates a metarow for <em>each</em> of the
             matching pairs of rows, duplicating data as needed.</p>
-  <exercise label="dbJoin_MC_metarow">
+  <activity label="dbJoin_MC_metarow">
     <statement>
-      <p>Q-3: True or False? A <q>metarow</q> only contains the first set of matching data.</p>
+      <p>True or False? A <q>metarow</q> only contains the first set of matching data.</p>
     </statement>
     <choices>
       <choice>
@@ -96,7 +90,7 @@ SELECT * FROM Follows JOIN People
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>The following code demonstrates the data that we will have in the
             database after the multi-table Twitter spider program (above) has been
             run several times.</p>
@@ -170,9 +164,9 @@ Connections for id=2:
             five from the <c>People</c> table. You can also see that the
             second column (<c>Follows.to_id</c>) matches the third column
             (<c>People.id</c>) in each of the joined-up <q>metarows</q>.</p>
-  <exercise label="dbJoin_MC_titles">
+  <activity label="dbJoin_MC_titles">
     <statement>
-      <p>Q-4: True or False? When using JOIN on two tables, you can join on columns that have different names.</p>
+      <p> True or False? When using JOIN on two tables, you can join on columns that have different names.</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -192,9 +186,9 @@ Connections for id=2:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>You can use <c>table_name.field_name</c> to specify the column that you want from each table.</p>
-  <exercise label="db_select_bike_join_ex1">
+  <activity label="db_select_bike_join_ex1">
     <statement>
       <p>The following code will select the <c>bike_number</c> from <c>trip_data</c>
             and <c>name</c> from <c>bikeshare_stations</c>
@@ -202,7 +196,7 @@ Connections for id=2:
             It will also limit the results to 5 rows.</p>
     </statement>
     <program xml:id="db_select_bike_join_ex1_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 SELECT trip_data.bike_number, bikeshare_stations.name
 FROM trip_data JOIN bikeshare_stations
 ON trip_data.start_station = bikeshare_stations.station_id
@@ -212,11 +206,11 @@ assert 0,0 == W00058
 assert 1,0 == W00775
 assert 4,0 == W00392
 assert 3,1 == 3rd &amp; H St NE
-        </input>
+        </code>
     </program>
-  </exercise>
+  </activity>
   <p>You can also add a <c>WHERE</c> clause.</p>
-  <exercise label="db_select_bike_join_with_where_ex1">
+  <activity label="db_select_bike_join_with_where_ex1">
     <statement>
       <p>The following code will select the <c>bike_number</c> and <c>duration</c> from <c>trip_data</c>
             and <c>name</c> from <c>bikeshare_stations</c>
@@ -224,7 +218,7 @@ assert 3,1 == 3rd &amp; H St NE
             and where the duration is greater than 85,000.</p>
     </statement>
     <program xml:id="db_select_bike_join_with_where_ex1_editor" interactive="activecode" language="sql">
-      <input>
+      <code>
 SELECT trip_data.bike_number, trip_data.duration, bikeshare_stations.name
 FROM trip_data JOIN bikeshare_stations
 ON trip_data.start_station = bikeshare_stations.station_id
@@ -236,7 +230,7 @@ assert 1,0 == W00930
 assert 3,0 == W00202
 assert 3,1 == 85102
 assert 3,2 == 14th &amp; G St NW
-        </input>
+        </code>
     </program>
-  </exercise>
+  </activity>
 </section>

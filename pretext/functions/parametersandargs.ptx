@@ -18,37 +18,34 @@
             <em>parameters</em>. Here is an example of a user-defined
             function that takes an argument:</p>
   <program language="python">
-    <input>
+    <code>
 def print_twice(bruce):
     print(bruce)
     print(bruce)
-</input>
+</code>
   </program>
   <p>This function assigns the argument to a parameter named
             <c>bruce</c>. When the function is called, it prints the value of
             the parameter (whatever it is) twice.</p>
-  <exercise label="functParam_fill1">
+  <activity label="functParam_fill1">
     <statement>
-      <p>Q-1: Inside the function, the arguments are assigned to variables called ___________. <var/>  </p>
+      <p>Inside the function, the arguments are assigned to variables called <fillin width="20" mode="string" answer="parameters*"/>. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Pp]arameters*">
-          <feedback>
-            <p>Inside the function, the arguments are assigned to variables called parameters.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Reread the beginning of this section and try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Inside the function, the arguments are assigned to variables called parameters.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Reread the beginning of this section and try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>This function works with any value that can be printed.</p>
   <program xml:id="functParam_codelens1" interactive="codelens" language="python">
-    <input>
+    <code>
 import math
 
 def print_twice(bruce):
@@ -58,13 +55,13 @@ def print_twice(bruce):
 print_twice('Spam')
 print_twice(17)
 print_twice(math.pi)
-    </input>
+    </code>
   </program>
   <p>The same rules of composition that apply to built-in functions also
             apply to user-defined functions, so we can use any kind of expression as
             an argument for <c>print_twice</c>:</p>
   <program xml:id="functParam_codelens2" interactive="codelens" language="python">
-    <input>
+    <code>
 import math
 
 def print_twice(bruce):
@@ -73,31 +70,31 @@ def print_twice(bruce):
 
 print_twice('Spam '*4)
 print_twice(math.cos(math.pi))
-    </input>
+    </code>
   </program>
   <p>The argument is evaluated before the function is called, so in the
             examples the expressions <c>'Spam '*4</c> and <c>math.cos(math.pi)</c>
             are only evaluated once.</p>
   <p>You can also use a variable as an argument:</p>
   <program xml:id="functParam_codelens3" interactive="codelens" language="python">
-    <input>
+    <code>
 def print_twice(bruce):
     print(bruce)
     print(bruce)
 
 michael = 'Python is cool.'
 print_twice(michael)
-    </input>
+    </code>
   </program>
   <p>The name of the variable we pass as an argument (<c>michael</c>)
             has nothing to do with the name of the parameter (<c>bruce</c>).
             It doesn't matter what the value was called back home (in the caller);
             here in <c>print_twice</c>, we call everybody <c>bruce</c>.</p>
-  <exercise label="functParam_MC_add">
+  <activity label="functParam_MC_add">
     <statement>
-      <p>Q-5: Consider the code block below. What prints?</p>
+      <p>Consider the code block below. What prints?</p>
       <program language="python">
-        <input>
+        <code>
 def add_two(num):
     num = num + 2
     print(num)
@@ -109,7 +106,7 @@ def add_three(nums):
 hi = 4
 add_two(hi)
 add_three(hi)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -146,14 +143,14 @@ add_three(hi)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functParam_PP_four" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="functParam_PP_four" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code with four functions, defined in this order: printName, printGPA,
             printAttendance, printStudentInfo. printStudentInfo should call the other three functions
             which will print all of the student's information. Be mindful of indentation!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="9">
         <cline>def printName(name):</cline>
       </block>
@@ -185,5 +182,5 @@ add_three(hi)
         <cline>printStudentInfo("Ben", 3.2, 4)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

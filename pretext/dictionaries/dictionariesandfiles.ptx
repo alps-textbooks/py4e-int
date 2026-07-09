@@ -17,7 +17,7 @@ Who is already sick and pale with grief</pre>
             break each line into a list of words, and then loop through each of the
             words in the line and count each word using a dictionary.</p>
   <program xml:id="dictionariesandfiles_example_1" interactive="activecode" language="python">
-    <input>
+    <code>
 fname = input('Enter the file name: ')
 try:
     fhand = open(fname)
@@ -35,7 +35,7 @@ for line in fhand:
             counts[word] += 1
 
 print(counts)
-        </input>
+        </code>
   </program>
   <p>You will see that we have two <c>for</c> loops. The outer loop is
             reading the lines of the file and the inner loop is iterating through
@@ -47,29 +47,26 @@ print(counts)
             iterating <q>more quickly</q> and the outer loop as iterating more slowly.</p>
   <p>The combination of the two nested loops ensures that we will count every
             word on every line of the input file.</p>
-  <exercise label="question9_3_1">
+  <activity label="question9_3_1">
     <statement>
-      <p>Q-2: A(n) _________ is a pattern consisting of two for loops, where one of the loops is the outer loop and the other is the inner loop. <var/>  </p>
+      <p>A(n) <fillin width="20" mode="string" answer="nested loop"/> is a pattern consisting of two for loops, where one of the loops is the outer loop and the other is the inner loop.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Nn]ested\s+[Ll]oop">
-          <feedback>
-            <p>Correct! A nested loop contains two for loops where the inner loop executes all its iterations every time the outer loop completes one loop.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! A nested loop contains two for loops where the inner loop executes all its iterations every time the outer loop completes one loop.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>In our <c>else</c> statement, we use the more compact alternative for incrementing a variable. <c>counts[word] += 1</c> is equivalent to <c>counts[word] = counts[word] + 1</c>. Either method can be used to change the value of a variable by any desired amount. Similar alternatives exist for <c>-=</c>, <c>*=</c>, and <c>/=</c>.</p>
-  <exercise label="question9_3_2">
+  <activity label="question9_3_2">
     <statement>
-      <p>Q-3: Which of these answers (if any) will increment a key's value in the dictionary counts by 1?</p>
+      <p>Which of these answers (if any) will increment a key's value in the dictionary counts by 1?</p>
     </statement>
     <choices>
       <choice>
@@ -105,7 +102,7 @@ print(counts)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>When we run the program, we see a raw dump of all of the counts in
             unsorted hash order. (the <em>romeo.txt</em> file is available at
             <url href="http://www.py4e.com/code3/romeo.txt" visual="http://www.py4e.com/code3/romeo.txt">www.py4e.com/code3/romeo.txt</url>)</p>
@@ -120,11 +117,11 @@ Enter the file name: romeo.txt
   <p>It is a bit inconvenient to look through the dictionary to find the most
             common words and their counts, so we need to add some more Python code
             to get us the output that will be more helpful.</p>
-  <exercise label="question9_3_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="question9_3_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code to read through the lines of a file, break each line into a list of words, and then loop through each of the words in the line and count each word using a dictionary.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="12">
         <cline>file_to_read = "textfile.txt"</cline>
       </block>
@@ -165,5 +162,5 @@ Enter the file name: romeo.txt
         <cline>print(word_count)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

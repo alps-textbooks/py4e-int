@@ -13,11 +13,11 @@
   <p>A segment of a string is called a <em>slice</em>. Selecting a
             slice is similar to selecting a character:</p>
   <program xml:id="str-slice" interactive="activecode" language="python">
-    <input>
+    <code>
 s = 'Monty Python'
 print(s[0:5])
 print(s[6:12])
-        </input>
+        </code>
   </program>
   <p>The operator returns the part of the string from the <q>n-th</q> character
             to the <q>m-th</q> character, including the first but excluding the last.</p>
@@ -25,50 +25,47 @@ print(s[6:12])
             beginning of the string. If you omit the second index, the slice goes to
             the end of the string:</p>
   <program xml:id="str-colonSlices" interactive="activecode" language="python">
-    <input>
+    <code>
 fruit = 'orange'
 print(fruit[:3])
 print(fruit[3:])
-        </input>
+        </code>
   </program>
   <p>If the first index is greater than or equal to the second the result is
             an <em>empty string</em>, represented by two quotation marks:</p>
   <program xml:id="str-emptyString" interactive="activecode" language="python">
-    <input>
+    <code>
 fruit = 'orange'
 print(fruit[3:3])
-        </input>
+        </code>
   </program>
   <p>An empty string contains no characters and has length 0, but other than
             that, it is the same as any other string.</p>
-  <exercise label="str-slice-fitb-fruit">
+  <activity label="str-slice-fitb-fruit">
     <statement>
-      <p>11-9-4: Given that <c>fruit</c> is a string, how many characters does <c>fruit[:]</c> select? <var/>  </p>
+      <p>Given that <c>fruit</c> is a string, how many characters does <c>fruit[:]</c> select? <fillin width="20" mode="string" answer="5"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="([Aa]ll)|5|([Ff]ive)">
-          <feedback>
-            <p>[:] Correct! It selects the entire string.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! It could be helpful to run this in an activecode block. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
-  <exercise label="str-slice-mc-hello">
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>([Aa]ll)|5|([Ff]ive)</strcmp>
+                    <feedback><p>[:] Correct! It selects the entire string.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! It could be helpful to run this in an activecode block. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
+  <activity label="str-slice-mc-hello">
     <statement>
-      <p>11-9-5: How many times is the word HELLO printed by the following statements?</p>
+      <p>How many times is the word HELLO printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "pomegranate"
 for ch in s[3:8]:
     print("HELLO")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -105,10 +102,10 @@ for ch in s[3:8]:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-slice-mc-end">
+  </activity>
+  <activity label="str-slice-mc-end">
     <statement>
-      <p>11-9-6: What will be printed when the following executes?</p>
+      <p>What will be printed when the following executes?</p>
       <pre>str = "Python is cool"
 str = str[1:4]
 print(str)</pre>
@@ -147,15 +144,15 @@ print(str)</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-slice-mc-38">
+  </activity>
+  <activity label="str-slice-mc-38">
     <statement>
-      <p>11-9-7: What is printed by the following statements?</p>
+      <p>What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(s[3:8])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -192,5 +189,5 @@ print(s[3:8])
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

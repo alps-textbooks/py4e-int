@@ -8,7 +8,7 @@
             accumulate the data in a string, trim off the headers, and then save the
             image data to a file as follows:</p>
   <program xml:id="urljpeg" interactive="activecode" language="python3">
-    <input>
+    <code>
 import socket
 import time
 
@@ -40,32 +40,29 @@ picture = picture[pos+4:]
 fhand = open("stuff.jpg", "wb")
 fhand.write(picture)
 fhand.close()
-        </input>
+        </code>
   </program>
   <p>You can see that for this url, the <c>Content-Type</c> header
             indicates that body of the document is an image
             (<c>image/jpeg</c>). Once the program completes, you can view the
             image data by opening the file <c>stuff.jpg</c> in an image
             viewer.</p>
-  <exercise label="image_header">
+  <activity label="image_header">
     <statement>
-      <p>Q-2: The ________ header indicates that the body of the document is a jpeg image. <var/>  </p>
+      <p>The <fillin width="20" mode="string" answer="Content-Type"/> header indicates that the body of the document is a jpeg image.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="Content-Type">
-          <feedback>
-            <p>Yes, the &#x2018;Content-Type' header has value <q>image/jpeg</q> to denote its a jpeg image.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again! This has to be an exact match.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Yes, the &#x2018;Content-Type' header has value <q>image/jpeg</q> to denote its a jpeg image.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again! This has to be an exact match.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>As the program runs, you can see that we don't get 5120 characters each
             time we call the <c>recv()</c> method. We get as many characters
             as have been transferred across the network to us by the web server at
@@ -90,9 +87,9 @@ fhand.close()
             the buffer in the socket and be forced to pause until our program starts
             to empty the buffer. The pausing of either the sending application or
             the receiving application is called <q>flow control.</q></p>
-  <exercise label="jpeg_slow">
+  <activity label="jpeg_slow">
     <statement>
-      <p>Q-3: Which of the following methods will slow down the requests made in the program above?</p>
+      <p>Which of the following methods will slow down the requests made in the program above?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -128,5 +125,5 @@ fhand.close()
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

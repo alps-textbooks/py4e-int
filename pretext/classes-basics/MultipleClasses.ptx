@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="classes-basics_group-work-with-multiple-classes">
+<worksheet label= "group-work-with-multiple-classes" xml:id="classes-basics_group-work-with-multiple-classes" groupwork="yes" groupsize="4">
   <title>Group Work with Multiple Classes</title>
   <introduction>
   <idx><h>class</h><h>multiple</h></idx>
@@ -57,12 +57,12 @@
                 and the other is the bottom right.  That means the width of a rectangle is the difference
                 between the x values and the height is the difference between the y values.
                 The area of a rectangle is the width times the height.</p>
-    <exercise label="mult_class_point_and_rectangle">
+    <activity label="mult_class_point_and_rectangle">
       <statement>
         <p>Run the code below to see what it prints.  You can also use the <q>Show in CodeLens</q> button to step through the code.</p>
       </statement>
       <program xml:id="mult_class_point_and_rectangle_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Point:
 
     def __init__(self, initX, initY):
@@ -102,12 +102,12 @@ print(r1.area())
 point3 = Point(-5,-10)
 r2 = Rectangle(point2, point3)
 print(r2.area())
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="mult_class_rectangle_object_methods">
+    </activity>
+    <activity label="mult_class_rectangle_object_methods">
       <statement>
-        <p>Q-2: Look at the code above.  What are the object methods in the <c>Rectangle</c> class?  Pick all that apply.</p>
+        <p> Look at the code above.  What are the object methods in the <c>Rectangle</c> class?  Pick all that apply.</p>
       </statement>
       <choices>
         <choice>
@@ -143,10 +143,10 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="mult_class_point_rect_mcq2">
+    </activity>
+    <activity label="mult_class_point_rect_mcq2">
       <statement>
-        <p>Q-3: Look at the code above.  What type of thing (class) is <c>p1</c> in the <c>__init__</c> method in the <c>Rectangle</c> class?</p>
+        <p> Look at the code above.  What type of thing (class) is <c>p1</c> in the <c>__init__</c> method in the <c>Rectangle</c> class?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -174,10 +174,10 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="mult_class_point_attributes">
+    </activity>
+    <activity label="mult_class_point_attributes">
       <statement>
-        <p>Q-4: Look at the code above.  What are the object attributes in the <c>Point</c> class?  Pick all that apply.</p>
+        <p> Look at the code above.  What are the object attributes in the <c>Point</c> class?  Pick all that apply.</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -213,7 +213,7 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="classes-basics_object-oriented-analysis-and-design">
     <title>Object-Oriented Analysis and Design</title>
@@ -224,9 +224,9 @@ print(r2.area())
     </note>
     <p>How would you create software for a simple card game?  Play the Aces and Twos card game at <url href="https://www.mathsisfun.com/games/card-match-game.html" visual="https://www.mathsisfun.com/games/card-match-game.html">https://www.mathsisfun.com/games/card-match-game.html</url></p>
     <p>When the game starts all of the cards are all face down in rows and columns.  You click on a card to select it and it turns over to show the suit and rank (value).  Then you click another card to select it and it also turns face up.  If the two cards match (have the same rank and value) then the cards stay facing up.  Otherwise they both turn down and you take another turn.  You win when you have found all of the matches.  The game keeps track of the total time it took you to find all of the matches.</p>
-    <exercise label="mult_class_card_game_classes">
+    <activity label="mult_class_card_game_classes">
       <statement>
-        <p>Q-5: Look at explanation of the game above.  Which of the following nouns could be classes?</p>
+        <p> Look at explanation of the game above.  Which of the following nouns could be classes?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -262,10 +262,10 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="mult_class_card_game_bevaiors">
+    </activity>
+    <activity label="mult_class_card_game_bevaiors">
       <statement>
-        <p>Q-6: Look at explanation of the game above.  Which of the following verbs could be methods (behaviors)?</p>
+        <p> Look at explanation of the game above.  Which of the following verbs could be methods (behaviors)?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -301,7 +301,7 @@ print(r2.area())
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="classes-basics_uml-diagrams">
     <title>UML Diagrams</title>
@@ -315,12 +315,12 @@ print(r2.area())
     <figure align="">
       <image source="images/cardAndDeck.png" width="50%" alt="Class diagram for Card and Deck"/>
     </figure>
-    <exercise label="mult_classes_card_and_deck">
+    <activity label="mult_classes_card_and_deck">
       <statement>
         <p>Run the code below to see what it prints.  You can also use the <q>Show in CodeLens</q> button to step through the code.</p>
       </statement>
       <program xml:id="mult_classes_card_and_deck_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Card:
 
     suit_names = ["Clubs", "Diamonds", "Hearts", "Spades"]
@@ -354,33 +354,30 @@ def main():
 
 if __name__ == "__main__":
     main()
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <p>Notice that we have defined a list of <c>suit_names</c> and <c>rank_names</c> in the <c>Card</c> class.  These will be created in the class <c>Card</c> and not in each object of the class <c>Card</c>.  They are called <c>class attributes</c>.
                 Each object of the <c>Card</c> class doesn't need to have its own copy of these lists.  That would be a waste of space. Instead they are created in the class and all objects of the class have access to it.</p>
-    <exercise label="mult_class_attribute_fitb">
+    <activity label="mult_class_attribute_fitb">
       <statement>
-        <p>Q-8: Use <BlankNode/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class. <var/>  </p>
+        <p> Use <fillin width="20" mode="string" answer="Card"/>.rank_names to access the class attribute <c>rank_names</c> in the <c>Card</c> class.</p>
       </statement>
-      <setup>
-        <var>
-          <condition string="Card">
-            <feedback>
-              <p>Use the name of the class to access a class attribute</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Look at the __init__ method in the Deck class</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
-    <exercise label="mult-classes-card-attributes-vs-class">
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>Use the name of the class to access a class attribute</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Look at the __init__ method in the Deck class</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
+    </activity>
+    <activity label="mult-classes-card-attributes-vs-class">
       <statement>
-        <p>Q-9: Look at class <c>Card</c> above.  Which of the following are object attributes?  Select all that apply.</p>
+        <p> Look at class <c>Card</c> above.  Which of the following are object attributes?  Select all that apply.</p>
       </statement>
       <choices>
         <choice>
@@ -416,50 +413,44 @@ if __name__ == "__main__":
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="mult_class_diff_class_and_object_attribute">
+    </activity>
+    <activity label="mult_class_diff_class_and_object_attribute">
       <statement>
-        <p>Q-10: How can you tell if an attribute is a class or object attribute?</p>
+        <p> How can you tell if an attribute is a class or object attribute?</p>
       </statement>
-    </exercise>
-    <exercise label="mult_class_deck_who_creates_cards_fitb">
+    </activity>
+    <activity label="mult_class_deck_who_creates_cards_fitb">
       <statement>
-        <p>Q-11: The <BlankNode/> function in class <BlankNode/> creates all of the card objects in the deck object. <var/>  <var/>  </p>
+        <p> The <fillin width="20" mode="string" answer="__init__"/> function in class <fillin width="20" mode="string" answer="Deck"/> creates all of the card objects in the deck object.</p>
       </statement>
-      <setup>
-        <var>
-          <condition string="__init__">
-            <feedback>
-              <p>The __init__ function creates all 52 cards</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>An object of a class is created with Class()</p>
-            </feedback>
-          </condition>
-        </var>
-        <var>
-          <condition string="Deck">
-            <feedback>
-              <p>The Deck class creates the 52 cards when you create a new deck</p>
-            </feedback>
-          </condition>
-          <condition string=".*">
-            <feedback>
-              <p>Which class creates multiple cards?</p>
-            </feedback>
-          </condition>
-        </var>
-      </setup>
-    </exercise>
+      <evaluation>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The __init__ function in the Deck class creates all 52 cards</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>An object of a class is created with Class()</p></feedback>
+                  </test>
+          </evaluate>
+          <evaluate>
+                  <test correct="yes">
+                      <strcmp use-answer="yes"/>
+                      <feedback><p>The Deck class creates the 52 cards when you create a new deck</p></feedback>
+                  </test>
+                  <test>
+                      <feedback><p>Which class creates multiple cards?</p></feedback>
+                  </test>
+          </evaluate>
+      </evaluation>
+    </activity>
     <p>Use the following UML class diagram to answer the next few questions.</p>
     <figure align="">
       <image source="images/flightAndAirport.png" width="50%" alt="class diagram of a Flight and Airport class"/>
     </figure>
-    <exercise label="mult-classes-flight-airport-mcq1">
+    <activity label="mult-classes-flight-airport-mcq1">
       <statement>
-        <p>Q-12: Look at class diagram for <c>Flight</c> and <c>Airport</c> above.  How many object attributes does a <c>Flight</c> object have?</p>
+        <p> Look at class diagram for <c>Flight</c> and <c>Airport</c> above.  How many object attributes does a <c>Flight</c> object have?</p>
       </statement>
       <choices>
         <choice>
@@ -487,13 +478,13 @@ if __name__ == "__main__":
           </feedback>
         </choice>
       </choices>
-    </exercise>
-    <exercise label="classes_flight_and_airport">
+    </activity>
+    <activity label="classes_flight_and_airport">
       <statement>
         <p>Given the <c>Airport</c> class shown below and the class diagram shown above, write the <c>Flight</c> class with an <c>__init__</c> method that takes the object attributes in order from top to bottom in the class diagram (number, departure_date, departure_time, departure_airport, and arrival_airport).</p>
       </statement>
       <program xml:id="classes_flight_and_airport_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Airport:
 
     def __init__(self, name, code):
@@ -518,15 +509,15 @@ class myTests(TestCaseGui):
         self.assertEqual(f1.arrival_airport, a2, "test of f1.arrival_airport")
 
 myTests().main()
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="classes_order_and_item">
+    </activity>
+    <activity label="classes_order_and_item">
       <statement>
         <p>Given the <c>Item</c>  and <c>Order</c> classes shown below, write the <c>get_total</c> method in the <c>Order</c> class that returns a total of all of the prices of the items in the order.</p>
       </statement>
       <program xml:id="classes_order_and_item_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 class Item:
 
     def __init__(self, name, price):
@@ -559,29 +550,15 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="mult_class_relationship_between_classes_sa">
+    </activity>
+    <activity label="mult_class_relationship_between_classes_sa">
       <statement>
-        <p>Q-15: What is the relationship between the example classes on this page, such as <c>Point</c> and <c>Rectangle</c> or <c>Item</c> and <c>Order</c>?  How do they relate to each other?</p>
+        <p> What is the relationship between the example classes on this page, such as <c>Point</c> and <c>Rectangle</c> or <c>Item</c> and <c>Order</c>?  How do they relate to each other?</p>
       </statement>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=mult_classes_groupsub data-size_limit=4&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+    
   </subsection>
-</section>
+</worksheet>

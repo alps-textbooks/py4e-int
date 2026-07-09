@@ -9,15 +9,18 @@
   <p>While the <em>file handle</em> object does not contain the actual data in the
             file, it is quite easy to construct a <c>for</c> loop to read
             through and count each of the lines in a file:</p>
-  <program xml:id="fileLines" interactive="activecode" language="python" datafile="files/mbox-short.txt">
-    <input>
+  <activity label="file-read-mbox-short">
+  <!-- codelens issue: open() not supported in python tutor -->
+  <program xml:id="fileLines" interactive="activecode" language="python" codelens="no" add-files="mbox-short-read-id">
+    <code>
 fhand = open('mbox-short.txt')
 count = 0
 for line in fhand:
     count = count + 1
 print('Line Count:', count)
-        </input>
+        </code>
   </program>
+  </activity>
   <p>We can use the file handle object in a <c>for</c> loop.
             Our <c>for</c> loop simply counts the number of lines in the file
             and prints them out. The rough translation of the <c>for</c> loop
@@ -38,37 +41,36 @@ print('Line Count:', count)
             running out of main memory to store the data. The above program can
             count the lines in any size file using very little memory since each
             line is read, counted, and then discarded.</p>
-  <exercise label="file-read-fitb-lines">
+  <activity label="file-read-fitb-lines">
     <statement>
-      <p>Q-2: When using a for loop to read lines, how many lines are read at a time? <var/>  </p>
+      <p>When using a for loop to read lines, how many lines are read at a time? <fillin width="20" mode="string" answer="1"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="([Oo]ne)|1">
-          <feedback>
-            <p>When using a for loop, the program reads each line individually.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes" case="insensitive">
+                    <strcmp>1|one</strcmp>
+                    <feedback><p>When using a for loop, the program reads each line individually.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>If you know the file is relatively small compared to the size of your
             main memory, you can read the whole file into one string using the
             <c>read</c> method on the file handle.</p>
-  <program xml:id="fileSlice" interactive="activecode" language="python">
-    <input>
+  <activity label="file-read-and-slice">
+  <program xml:id="fileSlice" interactive="activecode" language="python" codelens="no" add-files="mbox-short-read-id">
+    <code>
 fhand = open('mbox-short.txt')
 inp = fhand.read()
 print(len(inp))
 print(inp[:20])
-        </input>
+        </code>
   </program>
-  <p>In this example, the entire contents (all 94,626 characters) of the file
+  </activity>
+  <p>In this example, the entire contents (all 94,630 characters) of the file
             <em>mbox-short.txt</em> are read directly into the variable
             <c>inp</c>. We use string slicing to print out the first 20
             characters of the string data stored in <c>inp</c>.</p>
@@ -77,23 +79,23 @@ print(inp[:20])
             <c>inp</c>. It is a good idea to store the output of <c>read</c> as a variable
             because each call to <c>read</c> exhausts the resource:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; fhand = open('mbox-short.txt')
 &gt;&gt;&gt; print(len(fhand.read()))
 94626
 &gt;&gt;&gt; print(len(fhand.read()))
 0
-</input>
+</code>
   </program>
   <p>Remember that this form of the <c>open</c> function should only be used
             if the file data will fit comfortably in the main memory of your computer.
             If the file is too large to fit in main memory, you should write your
             program to read the file in chunks using a <c>for</c> or <c>while</c> loop.</p>
-  <exercise label="file-read-pp-code" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file-read-pp-code" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the following code in order so that it uses a for each loop to read the file and print out the total number of lines.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>count = 0</cline>
         <cline>file_handler = open('textFile.txt')</cline>
@@ -108,5 +110,9 @@ print(inp[:20])
         <cline>print('Line Count:', count)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
+  <!-- causes data to brief flash on the page -->
+  <datafile xml:id="mbox-short-read-id" label="mbox-short-read-id" filename="mbox-short.txt" hide="yes">
+      <pre source="files/mbox-short.txt"></pre>
+  </datafile>
 </section>

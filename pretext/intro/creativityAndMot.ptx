@@ -22,9 +22,9 @@
             you will be both the programmer and the end user of your programs. As
             you gain skill as a programmer and programming feels more creative to
             you, your thoughts may turn toward developing programs for others.</p>
-  <exercise label="intro-creativity-mc-intentions">
+  <activity label="intro-creativity-mc-intentions">
     <statement>
-      <p>Q-1: Which of the following is true about this book?</p>
+      <p> Which of the following is true about this book?</p>
     </statement>
     <choices>
       <choice>
@@ -68,10 +68,10 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="intro-creativity-mc-tf">
+  </activity>
+  <activity label="intro-creativity-mc-tf">
     <statement>
-      <p>Q-2: True or False? You will be both the programmer and the user in this book.</p>
+      <p> True or False? You will be both the programmer and the user in this book.</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -91,10 +91,10 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="intro-creativity-mc-tf2">
+  </activity>
+  <activity label="intro-creativity-mc-tf2">
     <statement>
-      <p>Q-3: True or False? The primary motivation of this book is to please end users and make money.</p>
+      <p> True or False? The primary motivation of this book is to please end users and make money.</p>
     </statement>
     <choices>
       <choice>
@@ -114,5 +114,5 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

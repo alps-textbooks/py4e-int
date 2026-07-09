@@ -18,13 +18,13 @@
   <p>If you put a space in a variable name, Python thinks it is two operands
             without an operator:</p>
   <program xml:id="var-ac-12-badname" interactive="activecode" language="python">
-    <input>
+    <code>
 bad name = 5
-        </input>
+        </code>
   </program>
-  <exercise label="var-debug-mc-name">
+  <activity label="var-debug-mc-name">
     <statement>
-      <p>csp-10-2-2: Which error will you get if you name a variable <q>bad name</q>?</p>
+      <p>Which error will you get if you name a variable <q>bad name</q>?</p>
     </statement>
     <choices>
       <choice>
@@ -60,7 +60,7 @@ bad name = 5
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>For syntax errors, the error messages don't help much. The most common
             messages are <c>SyntaxError: invalid syntax</c> and
             <c>SyntaxError: invalid token</c>, neither of which is very
@@ -69,46 +69,43 @@ bad name = 5
             that is, trying to use a variable before you have assigned a value. This
             can happen if you spell a variable name wrong:</p>
   <program xml:id="var-ac-13-definition" interactive="activecode" language="python">
-    <input>
+    <code>
 principal = 327.68
 interest = principle * rate
-        </input>
+        </code>
   </program>
   <p>Variables names are case sensitive, so <c>LaTeX</c> is not the
             same as <c>latex</c>.</p>
   <p>At this point, the most likely cause of a semantic error is the order of
     operations. For example, to evaluate <m>1 \over {2\pi }</m> (which is .159), you might be tempted to write</p>
   <program xml:id="var-ac-14-pi" interactive="activecode" language="python">
-    <input>
+    <code>
 print(1.0 / 2.0 * 3.14)
-        </input>
+        </code>
   </program>
   <p>But the division happens first, so you would get <m>\pi \over 2</m>, which is not
             the same thing! There is no way for Python to know what you meant to
             write, so in this case you don't get an error message; you just get the
             wrong answer. <em>Try adding parentheses to the code above to return the correct answer.</em></p>
-  <exercise label="var-fitb-error-fix">
+  <activity label="var-fitb-error-fix">
     <statement>
-      <p>csp-10-2-5: ________ is the process of fixing errors in your code. <var/>  </p>
+      <p><fillin width="20" mode="string" answer="debugging"/> is the process of fixing errors in your code.   </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Dd]ebugging">
-          <feedback>
-            <p>Debugging is the process of fixing errors in your code.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
-  <exercise label="var-debug-mc-equation">
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Debugging is the process of fixing errors in your code.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
+  <activity label="var-debug-mc-equation">
     <statement>
-      <p>csp-10-2-6: Which error will you get if you use the equation 1/2*3.14 instead of 1/(2*3.14)?</p>
+      <p>Which error will you get if you use the equation 1/2*3.14 instead of 1/(2*3.14)?</p>
     </statement>
     <choices>
       <choice>
@@ -144,5 +141,5 @@ print(1.0 / 2.0 * 3.14)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

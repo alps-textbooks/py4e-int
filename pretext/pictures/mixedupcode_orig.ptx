@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<section xml:id="pictures_mixed-up-code-exercises">
-  <title>Mixed-Up Code Exercises</title>
-  <exercise label="mixedupcode_pictures_pp1" numbered="yes" adaptive="yes" indentation="hide" language="python">
+<section xml:id="pictures_mixed-up-code-section-orig">
+  <title>Mixed-Up Code section</title>
+  <activity label="mixedupcode_pictures_pp1" xml:id="mixedupcode_pictures_pp1" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>removeGreen(img)</c> that sets the green in all pixels in image <c>img</c> to 0.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>from image import *</cline>
       </block>
@@ -36,13 +36,13 @@
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac1">
+  </activity>
+  <activity label="mixedupcode_pictures_ac1" xml:id="mixedupcode_pictures_ac1">
     <statement>
       <p>Write a function <c>removeGreen(img)</c> that sets the green in all pixels in image <c>img</c> to 0.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -56,14 +56,14 @@ class myTests(TestCaseGui):
                     for p in pixels:
                               self.assertEqual(p, 0, 'Checking that the green in each pixel was set to 0.')
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp2" xml:id="mixedupcode_pictures_pp2" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>changeColors(img)</c> that sets the red in all pixels equal to the blue value in the image <c>img</c>. Then, it sets the green and blue in all pixels to 255.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="9">
         <cline>from image import *</cline>
       </block>
@@ -104,13 +104,13 @@ myTests().main()
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac2">
+  </activity>
+  <activity label="mixedupcode_pictures_ac2" xml:id="mixedupcode_pictures_ac2">
     <statement>
       <p>Write a function <c>changeColors(img)</c> that sets the red in all pixels equal to the blue value in the image <c>img</c>. Then, it sets the green and blue in all pixels to 255.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -134,14 +134,14 @@ class myTests(TestCaseGui):
                 self.assertEqual(p.getBlue(), 255, "Checking that the last blue value was set to 255")
                 self.assertEqual(p.getGreen(), 255, "Checking that the last green value was set to 255")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp3" xml:id="mixedupcode_pictures_pp3" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>reduceGreen(img)</c> that reduces the green in all pixels by 75% in image <c>img</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="11">
         <cline>from image import *</cline>
       </block>
@@ -180,13 +180,13 @@ myTests().main()
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac3">
+  </activity>
+  <activity label="mixedupcode_pictures_ac3" xml:id="mixedupcode_pictures_ac3">
     <statement>
       <p>Write a function <c>reduceGreen(img)</c> that reduces the green in all pixels by 75% in image <c>img</c>.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac3_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -205,14 +205,14 @@ class myTests(TestCaseGui):
                 c1 = p.getGreen()
                 self.assertEqual(c1, x1, "Checking that the green value in the last pixel was reduced by 75%")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp4" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp4" xml:id="mixedupcode_pictures_pp4" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>changeRed(img)</c> that sets all red values equal to 1.5x the blue value in the image <c>img</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="10">
         <cline>from image import *</cline>
       </block>
@@ -251,13 +251,13 @@ myTests().main()
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac4">
+  </activity>
+  <activity label="mixedupcode_pictures_ac4" xml:id="mixedupcode_pictures_ac4">
     <statement>
       <p>Write a function <c>changeRed</c> that sets all red values equal to 1.5x the blue value in the image <c>img</c>.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac4_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -276,14 +276,14 @@ class myTests(TestCaseGui):
                 c1 = p.getRed()
                 self.assertEqual(c1, x1, "Checking that the red value was set to 1.5x the blue value")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp_5" xml:id="mixedupcode_pictures_pp_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>modifyColors(img)</c> that decreases the red to 60% of its original value, increases the blue by 60% of its original value, and sets the green to 0 in the image <c>img</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>from image import *</cline>
       </block>
@@ -327,13 +327,13 @@ myTests().main()
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac5">
+  </activity>
+  <activity label="mixedupcode_pictures_ac5" xml:id="mixedupcode_pictures_ac5">
     <statement>
       <p>Write a function <c>modifyColors(img)</c> that decreases the red to 60% of its original value, increases the blue by 60% of its original value, and sets the green to 0 in the image <c>img</c>.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac5_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -357,14 +357,14 @@ class myTests(TestCaseGui):
                 self.assertEqual(1.6, x2, "Checking that blue value increased by 60% of original value")
                 self.assertEqual(c3, 0, "Checking that green value was set to 0")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp6" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp6" xml:id="mixedupcode_pictures_pp6" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>imageToWhite(img)</c> that makes the image <c>img</c> completely white.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <choice correct="yes">
           <cline>from image import *</cline>
@@ -400,13 +400,13 @@ myTests().main()
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac6">
+  </activity>
+  <activity label="mixedupcode_pictures_ac6" xml:id="mixedupcode_pictures_ac6">
     <statement>
       <p>Write a function <c>imageToWhite(img)</c> that makes the image <c>img</c> completely white.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac6_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -426,14 +426,14 @@ class myTests(TestCaseGui):
                     self.assertEqual(b, 255, "Checking that the blue value was set to 255")
                     self.assertEqual(g, 255, "Checking that the green value was set to 255")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp_7" xml:id="mixedupcode_pictures_pp_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>alternatingRed(img)</c> that sets the red of every other pixel to 0 in the image <c>img</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>from image import *</cline>
       </block>
@@ -470,13 +470,13 @@ myTests().main()
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac7">
+  </activity>
+  <activity label="mixedupcode_pictures_ac7" xml:id="mixedupcode_pictures_ac7">
     <statement>
       <p>Write a function <c>alternatingRed(img)</c> that sets the red of every other pixel to 0 in the image <c>img</c>.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac7_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -498,15 +498,15 @@ class myTests(TestCaseGui):
                 self.assertEqual(r2, 40, "Checking that the values of the odd elements have stayed the same")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp8" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp8" xml:id="mixedupcode_pictures_pp8" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>changeQuadrantColors(img)</c> that only changes the color of the pixels in the bottom left quadrant of the image <c>img</c>.
             The code should set the red value to the original blue value, the green value to the original red value, and the blue value to the original green value.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>from image import *</cline>
       </block>
@@ -547,14 +547,14 @@ myTests().main()
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac8">
+  </activity>
+  <activity label="mixedupcode_pictures_ac8" xml:id="mixedupcode_pictures_ac8">
     <statement>
       <p>Write a function <c>changeQuadrantColors(img)</c> that only changes the color of the pixels in the bottom left quadrant of the image <c>img</c>.
             The code should set the red value to the original blue value, the green value to the original red value, and the blue value to the original green value.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac8_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -578,14 +578,14 @@ class myTests(TestCaseGui):
                 self.assertEqual(g_new, r_orig, "Checking that the green values are set to original red values")
                 self.assertEqual(b_new, g_orig, "Checking that the blue values are set to original green values")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp9" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp9" xml:id="mixedupcode_pictures_pp9" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>copyRightSide(img)</c> that copies the right side of the image onto the left side in the image <c>img</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>from image import *</cline>
       </block>
@@ -622,13 +622,13 @@ myTests().main()
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac9">
+  </activity>
+  <activity label="mixedupcode_pictures_ac9" xml:id="mixedupcode_pictures_ac9">
     <statement>
       <p>Write a function <c>copyRightSide(img)</c> that copies the right side of the image onto the left side in the image <c>img</c>.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac9_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -643,14 +643,14 @@ class myTests(TestCaseGui):
                 pixel_new = img.getPixel(97,50)
                 self.assertEqual(list(pixel_right), list(pixel_new), "Checking that the right side of the image is copied onto the left side")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_pictures_pp10" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_pictures_pp10" xml:id="mixedupcode_pictures_pp10" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>copyTopQuarter(img)</c> that copies the pixels from the top quarter of the y-axis to the bottom quarter of the y-axis in the image <c>img</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>from image import *</cline>
       </block>
@@ -677,13 +677,13 @@ myTests().main()
         <cline>        img.draw(win)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_pictures_ac10">
+  </activity>
+  <activity label="mixedupcode_pictures_ac10" xml:id="mixedupcode_pictures_ac10">
     <statement>
       <p>Write a function <c>copyTopQuarter(img)</c> that copies the pixels from the top quarter of the y-axis to the bottom quarter of the y-axis in the image <c>img</c>.</p>
     </statement>
     <program xml:id="mixedupcode_pictures_ac10_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 =====
 
@@ -703,7 +703,7 @@ class myTests(TestCaseGui):
                 self.assertEqual(list(pixels1), list(pixels_new1), "Check that the top quarter is copied to bottom quarter")
                 self.assertEqual(list(pixels2), list(pixels_new2), "Checking that the pixels not in the bottom quarter stayed the same")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
+  </activity>
 </section>

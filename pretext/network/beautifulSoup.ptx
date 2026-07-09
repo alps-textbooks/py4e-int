@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="network_group-work-on-beautifulsoup-with-requests">
+<worksheet xml:id="network_group-work-on-beautifulsoup-with-requests" groupwork="yes" groupsize="4" label="group-work_on-beautifulsoup-with-requests">
   <title>Group Work on BeautifulSoup with Requests</title>
   <introduction>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -63,13 +63,13 @@
                 create a <c>BeautifulSoup</c> object from the HTML content in the response,
                 use <c>find</c> to find the first paragraph tag, and then
                 print the first paragraph tag.</p>
-    <exercise label="bs_get_print_first_para">
+    <activity label="bs_get_print_first_para">
       <statement>
         <p>This will find and print the first paragraph tag from the Michigan Daily site.
                 It will interpret the tag as HTML and show just the text of the tag.</p>
       </statement>
       <program xml:id="bs_get_print_first_para_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -82,21 +82,21 @@ soup = BeautifulSoup(resp.content, 'html.parser')
 
 # Print the first paragraph tag in the soup
 print(soup.find('p'))
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <p>The <c>html.parser</c> is the HTML parser that is included in the standard Python 3 library.
                 It is used to parse the HTML into a tree of tags.
                 Information on other HTML parsers is available at:</p>
     <p>
       <url href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser" visual="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser">http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser</url>
     </p>
-    <exercise label="bs_print_first_paragraph_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_print_first_paragraph_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to print the second paragraph from the Michigan Daily website.  It uses the <c>find_all</c> method on
                 BeautifulSoup to get a list of all of the paragraphs.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="1">
           <choice correct="yes">
             <cline>import requests</cline>
@@ -139,18 +139,18 @@ print(soup.find('p'))
           </choice>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_getting-text-from-a-tag">
     <title>Getting text from a tag</title>
     <p>Some tags have text like a paragraph tag or a span tag.  You can use <c>tagName.text</c> to get the text.
                 You can also find a tag with a particular CSS class.</p>
-    <exercise label="bs_get_text_with_class">
+    <activity label="bs_get_text_with_class">
       <statement>
         <p>This will print the text for the site description paragraph.</p>
       </statement>
       <program xml:id="bs_get_text_with_class_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -162,19 +162,19 @@ soup = BeautifulSoup(resp.content, 'html.parser')
 # get the headline with the class and print its text
 tag = soup.find("p", class_="site-description")
 print(tag.text)
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>When you specify a CSS class you must use <c>class_</c> as the keyword.  This is becuase <c>class</c> is already
                     a keyword that is used to define a new class in Python.</p>
     </note>
-    <exercise label="bs_get_tag_text_with_class_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_get_tag_text_with_class_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to print the text for span tag which
                 is a child of a h3 tag with a class of css-1pjbq1w.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="9">
           <cline>import requests</cline>
           <cline>from bs4 import BeautifulSoup</cline>
@@ -213,19 +213,19 @@ print(tag.text)
           <cline>print(tag.text)</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_getting-data-from-tags-with-attributes">
     <title>Getting data from tags with attributes</title>
     <p>Some tags have attribute and value pairs like the link (anchor) tag.  You can
                 get the value for an attribute of the tag.  A link or anchor tag looks like
                 <c>&lt;a href="url"&gt;link text&lt;/a&gt;</c>. An example is <c>&lt;a href="https://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</c>.</p>
-    <exercise label="bs_get_all_a_tags_and_print_hrefs">
+    <activity label="bs_get_all_a_tags_and_print_hrefs">
       <statement>
         <p>This will find all of the link tags in the New York Times site and print the href for each of them.</p>
       </statement>
       <program xml:id="bs_get_all_a_tags_and_print_hrefs_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -238,14 +238,14 @@ soup = BeautifulSoup(resp.content, 'html.parser')
 tags = soup.find_all('a')
 for tag in tags:
     print(tag.get('href', None))
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="bs_print_get_all_href_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="bs_print_get_all_href_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to find all the link tags and print the href for each one for the Michgian Daily.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="9">
           <cline>import requests</cline>
           <cline>from bs4 import BeautifulSoup</cline>
@@ -289,7 +289,7 @@ for tag in tags:
           </choice>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_how-to-find-tags-inside-of-tags">
     <title>How to Find Tags Inside of Tags</title>
@@ -316,12 +316,12 @@ for tag in tags:
                 in the nagivation bar in the Michigan Daily webpage.
                 Use <em>find_all</em> to get all the <q>li</q> tags and then loop through those tags and use <em>find</em> to get the
                 first <q>a</q> tag in each <q>li</q> tag.</p>
-    <exercise label="bs_get_mini_nav_href">
+    <activity label="bs_get_mini_nav_href">
       <statement>
         <p>This will print the first <q>href</q> inside each list item (li) with a class of <q>menu-item-has-children</q>.</p>
       </statement>
       <program xml:id="bs_get_mini_nav_href_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -335,19 +335,19 @@ li_list = soup.find_all("li", class_="menu-item-has-children")
 for li in li_list:
     a_tag = li.find('a')
     print(a_tag.get("href",None))
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>You don't have to use all the classes that a tag has.  Try to find a class
                     that is specific to the tags you are looking for.</p>
     </note>
-    <exercise label="bs_find_all_and_find" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="bs_find_all_and_find" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the following blocks in order to print the href for the first &#x2018;a' tag
                 in each h2 tag with a class of <q>entry-title</q></p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="10">
           <cline>import requests</cline>
           <cline>from bs4 import BeautifulSoup</cline>
@@ -394,17 +394,17 @@ for li in li_list:
           <cline>    print(a_tag.get("href",None))</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
     <p>The Michigan Daily has a <q>Most Read</q> section. It is in a <q>div</q> tag with a
                 class of <q>jetpack_top_posts_widget</q>.  Inside that tag there are <q>li</q> (list item)
                 tags.  In each <q>li</q> tag is an <q>a</q> tag.</p>
-    <exercise label="bs_get_most_read_href">
+    <activity label="bs_get_most_read_href">
       <statement>
         <p>Complete the code below to print the
                 href values for the <q>a</q> tags in the <q>Most Read</q> section.</p>
       </statement>
       <program xml:id="bs_get_most_read_href_editor" interactive="activecode" language="python3">
-        <input>
+        <code>
 import requests
 from bs4 import BeautifulSoup
 
@@ -420,24 +420,10 @@ soup = BeautifulSoup(resp.content, 'html.parser')
 # loop through the li tags
 
     # get the 'a' tag and print the value of the "href" attribute
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=bs_group_work_intro data-size_limit=4&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+    
   </subsection>
-</section>
+</worksheet>

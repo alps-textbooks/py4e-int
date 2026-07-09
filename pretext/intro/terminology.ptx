@@ -45,8 +45,9 @@
             remembered and we can use that symbolic name to retrieve the value
             later. We use the term <em>variable</em> to refer to the labels
             we use to refer to this stored data.</p>
+  <p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; x = 6
 &gt;&gt;&gt; print(x)
 6
@@ -54,8 +55,9 @@
 &gt;&gt;&gt; print(y)
 42
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
+  </p>
   <p>In this example, we ask Python to remember the value six and use the
             label <em>x</em> so we can retrieve the value later. We verify
             that Python has actually remembered the value using
@@ -74,30 +76,26 @@
             process to translate the high-level source code into machine language
             and then the compiler puts the resulting machine language into a file
             for later execution.</p>
-  <exercise label="intro-terminology-fitb-translate">
+  <activity label="intro-terminology-fitb-translate">
     <statement>
-      <p>Q-1: A(n) ________ translates a program into machine language from a file and saves it for later execution. <var/>  </p>
+      <p>A(n) <fillin width="20" mode="string" answer="compiler"/> translates a program into machine language from a file and saves it for later execution.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Cc]ompiler">
-          <feedback>
-            <p>Correct! A compiler translates a program into machine language from a file.</p>
-          </feedback>
-        </condition>
-        <condition string="[Ii]nterpreter">
-          <feedback>
-            <p>An interpreter reads and processes code immediately.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again!</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>Correct! A compiler translates a program into machine language from a file.</p></feedback>
+                </test>
+                <test>
+                    <strcmp case="insensitive">interpreter</strcmp>
+                    <feedback><p>An interpreter reads and processes code immediately.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again!</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>If you have a Windows system, often these executable machine language
             programs have a suffix of <q>.exe</q> or <q>.dll</q> which stand for <q>executable</q>
             and <q>dynamic link library</q> respectively. In Linux and Macintosh, there
@@ -129,9 +127,9 @@
   <p>That is more than you really need to know to be a Python programmer, but
             sometimes it pays to answer those little nagging questions right at the
             beginning.</p>
-  <exercise label="intro-terminology-mc-language">
+  <activity label="intro-terminology-mc-language">
     <statement>
-      <p>Q-2: What language is the Python interpreter written in?</p>
+      <p>What language is the Python interpreter written in?</p>
     </statement>
     <choices>
       <choice correct="yes">
@@ -167,31 +165,31 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="intro-terminology-dnd-terms">
+  </activity>
+  <activity label="intro-terminology-dnd-terms">
     <statement>
       <p>Match each term to its definition.</p>
     </statement>
     <feedback>
       <p>What do these terms mean?</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>Machine Language</premise>
         <response>Programming language using binary or hexadecimal instructions that a computer can directly respond to.</response>
       </match>
-      <match order="2">
+      <match>
         <premise>Interpreter</premise>
         <response>Program that analyzes and executes each line of code.</response>
       </match>
-      <match order="3">
+      <match>
         <premise>Variable</premise>
         <response>Item that holds a value while a program is running.</response>
       </match>
-      <match order="4">
+      <match>
         <premise>Compiler</premise>
         <response>Program that converts instructions into a machine-code so that they can be read and executed by a computer.</response>
       </match>
-    </matches>
-  </exercise>
+    </cardsort>
+  </activity>
 </section>

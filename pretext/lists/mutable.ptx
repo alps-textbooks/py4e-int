@@ -24,21 +24,21 @@
             expression inside the brackets specifies the index. Remember that the
             indices start at 0:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print(cheeses[0])
 Cheddar
-</input>
+</code>
   </program>
   <p>Unlike strings, lists are mutable because you can change the order of
             items in a list or reassign an item in a list. When the bracket operator
             appears on the left side of an assignment, it identifies the element of
             the list that will be assigned.</p>
   <program xml:id="listReassign" interactive="codelens" language="python">
-    <input>
+    <code>
 numbers = [17, 123]
 numbers[1] = 5
 print(numbers)
-    </input>
+    </code>
   </program>
   <p>The one-th element of <c>numbers</c>, which used to be 123, is
             now 5.</p>
@@ -63,15 +63,15 @@ print(numbers)
   </p>
   <p>The <c>in</c> operator also works on lists.</p>
   <program xml:id="listIn" interactive="activecode" language="python">
-    <input>
+    <code>
 cheeses = ['Cheddar', 'Edam', 'Gouda']
 print('Edam' in cheeses)
 print('Brie' in cheeses)
-        </input>
+        </code>
   </program>
-  <exercise label="listMut_MC_alist">
+  <activity label="listMut_MC_alist">
     <statement>
-      <p>Q-3: What is printed by the following statements?</p>
+      <p> What is printed by the following statements?</p>
       <pre>alist = [4, 2, 8, 6, 5]
 alist[2] = True
 print(alist)</pre>
@@ -102,10 +102,10 @@ print(alist)</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="listMut_MC_index">
+  </activity>
+  <activity label="listMut_MC_index">
     <statement>
-      <p>Q-4: What would the following code print?</p>
+      <p> What would the following code print?</p>
       <pre>values = [3, 2, 1]
 values[0] = values[1]
 values[2] = values[2] + 1
@@ -145,10 +145,10 @@ print(values)</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="listMut_MC_in">
+  </activity>
+  <activity label="listMut_MC_in">
     <statement>
-      <p>Q-5: What is printed by the following statements?</p>
+      <p> What is printed by the following statements?</p>
       <pre>alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(57 in alist)</pre>
     </statement>
@@ -170,5 +170,5 @@ print(57 in alist)</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

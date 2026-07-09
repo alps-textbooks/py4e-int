@@ -10,7 +10,7 @@
   <p>This is quite simple to do by reading the file name from the user using
             <c>input</c> as follows:</p>
   <program language="fileInput">
-    <input>
+    <code>
 fname = input('Enter the file name: ')
 fhand = open(fname)
 count = 0
@@ -19,7 +19,7 @@ for line in fhand:
         count = count + 1
 fhand.close()
 print('There were', count, 'subject lines in', fname)
-</input>
+</code>
   </program>
   <p>We read the file name from the user and place it in a variable named
             <c>fname</c> and open that file. Now we can run the program
@@ -31,12 +31,12 @@ print('There were', count, 'subject lines in', fname)
  python search6.py
   Enter the file name: mbox-short.txt
 There were 27 subject lines in mbox-short.txt</pre>
-  <exercise label="file-user-pp-input-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file-user-pp-input-v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Put the following code in order to open and count the lines of a file from the user.
             Watch out for indentation and extra code blocks!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>count = 0</cline>
         <cline>fname = input('Enter the file name: ')</cline>
@@ -60,18 +60,42 @@ There were 27 subject lines in mbox-short.txt</pre>
         <cline>print('There were', count, 'lines in', fname)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
   <p>Before peeking at the next section, take a look at the above program and
             ask yourself, <q>What could go possibly wrong here?</q> or <q>What might our
             friendly user do that would cause our nice little program to
             ungracefully exit with a traceback, making us look not-so-cool in the
             eyes of our users?</q></p>
-  <exercise>
-    <statement/>
-    <program interactive="" language=""/>
+  <activity label="file-user-names-received">
+    <statement>
+      <p>There are five errors in the code below.
+      Fix the code to ask a user for a file, open "mbox-short.txt", 
+      and count the lines that start with <c>Received:</c>.</p>
+    </statement>
+    <program interactive="activecode" language="python" codelens="yes" add-files="mbox-short-usernames-id">
+      <code>
+        count = 1
+        fname = input('Enter the file name: '
+        fhand = open(file)
+        for line in fhand:
+            if line.endswith('Received:'):
+            count = count + 1
+        fhand.close()
+        print('There were', count, 'lines starting with "Received:" in the file', fname)
+
+        =====
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(count,243,"Remember to start counting from zero")
+
+        myTests().main()
+      </code>
+    </program>
     <solution>
       <program xml:id="fileOpenInputa" language="python">
-        <input>
+        <code>
 count = 0 # Start counting from zero
 fname = input('Enter the file name: ') # Close parentheses
 fhand = open(fname) # Open the correct file name
@@ -82,8 +106,13 @@ for line in fhand:
         count = count + 1 # Correct indentation.
 fhand.close()
 print('There were', count, 'lines starting with "Received:" in the file', fname)
-        </input>
+        </code>
       </program>
     </solution>
-  </exercise>
+  </activity>
+  <!-- causes data to brief flash on the page -->
+  <datafile xml:id="mbox-short-usernames-id" label="mbox-short-usernames-id" filename="mbox-short.txt" hide="yes">
+    <pre source="files/mbox-short.txt"></pre>
+  </datafile>
+
 </section>

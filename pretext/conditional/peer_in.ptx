@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <section xml:id="conditional_peer-instruction-conditionals-multiple-choice-questions">
   <title>Peer Instruction: Conditionals Multiple Choice Questions</title>
-  <exercise label="ctp-conditionals-06_Conditionals_04">
+  <activity label="ctp-conditionals-06_Conditionals_04">
     <statement>
-      <p>Q-1: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 x = 1
 if (x &lt; 3):
    print(x)
    x = x + 4
    print(x)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -56,18 +56,18 @@ if (x &lt; 3):
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="ctp-conditionals-06_Conditionals_06">
+  </activity>
+  <activity label="ctp-conditionals-06_Conditionals_06">
     <statement>
-      <p>Q-2: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 x = 1
 if (x &lt; 3):
    print(x)
 else:
    print(x+7)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -112,12 +112,12 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="ctp-conditionals-06_Conditionals_10">
+  </activity>
+  <activity label="ctp-conditionals-06_Conditionals_10">
     <statement>
-      <p>Q-3: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 grade = 98
 if (grade &gt;= 90):
    print(<q>You got an A!</q>)
@@ -125,7 +125,7 @@ if (grade &gt;= 80):
    print(<q>You got a B!</q>)
 else:
    print(<q>You got something else</q>)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -170,12 +170,12 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="ctp-conditionals-06_Conditionals_11">
+  </activity>
+  <activity label="ctp-conditionals-06_Conditionals_11">
     <statement>
-      <p>Q-4: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 grade = 98
 if (grade &gt;= 90):
    print(<q>You got an A!</q>)
@@ -183,7 +183,7 @@ if (grade &gt;= 80 and grade &lt; 90):
    print(<q>You got a B!</q>)
 else:
    print(<q>You got something else</q>)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -228,10 +228,10 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="ctp-conditionals-06_Conditionals_12">
+  </activity>
+  <activity label="ctp-conditionals-06_Conditionals_12">
     <statement>
-      <p>Q-5: Which code prints the correct value? If grade &gt;= 90 it should print <q>You got an A!</q>.
+      <p> Which code prints the correct value? If grade &gt;= 90 it should print <q>You got an A!</q>.
             If grade &lt; 90 and &gt;= 80 it should print <q>You got a B!</q>. If you got less than
             80 it should print <q>You got something else</q>.</p>
     </statement>
@@ -295,18 +295,18 @@ elif(grade &lt; 80):
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="ctp-conditionals-06_Conditionals_14">
+  </activity>
+  <activity label="ctp-conditionals-06_Conditionals_14">
     <statement>
-      <p>Q-6: How do we print row <c>r</c> of this pattern? Skip rows with 2 stars.</p>
+      <p> How do we print row <c>r</c> of this pattern? Skip rows with 2 stars.</p>
       <program language="python">
-        <input>
+        <code>
 *   *
 **  *
 * * *
 *  **
 *   *
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -351,12 +351,12 @@ elif(grade &lt; 80):
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="ctp-conditionals-06_Conditionals_16">
+  </activity>
+  <activity label="ctp-conditionals-06_Conditionals_16">
     <statement>
-      <p>Q-7: Will the codeblock print the following pattern?</p>
+      <p> Will the codeblock print the following pattern?</p>
       <program language="python">
-        <input>
+        <code>
 for row in range(n+2):
    for col in range(n+2):
       if (row == col or col == 0 or col == n+1):
@@ -374,7 +374,7 @@ Output-
 * * *
 *  **
 *   *
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -411,12 +411,12 @@ Output-
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture7_Conditionals_03">
+  </activity>
+  <activity label="dz-lecture7_Conditionals_03">
     <statement>
-      <p>Q-8: What is the value of <c>x</c> after this code runs?</p>
+      <p> What is the value of <c>x</c> after this code runs?</p>
       <program language="python">
-        <input>
+        <code>
 x = 5
 if x &gt; 2:
    x = -3
@@ -424,7 +424,7 @@ if x &gt; 2:
 else:
    x = 3
    x = 2
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -469,12 +469,12 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture7_Conditionals_04">
+  </activity>
+  <activity label="dz-lecture7_Conditionals_04">
     <statement>
-      <p>Q-9: What is the value of <c>x</c> after this code runs?</p>
+      <p> What is the value of <c>x</c> after this code runs?</p>
       <program language="python">
-        <input>
+        <code>
 x = 1
 if x &gt; 2:
    x = -3
@@ -482,7 +482,7 @@ if x &gt; 2:
 else:
    x = 3
    x = 2
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -527,12 +527,12 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture7_Conditionals_06">
+  </activity>
+  <activity label="dz-lecture7_Conditionals_06">
     <statement>
-      <p>Q-10: Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
+      <p> Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
       <program language="python">
-        <input>
+        <code>
 Code 1-
 
 if temperature &gt; 0:
@@ -552,7 +552,7 @@ elif temperature == 0:
    print("at freezing")
 elif temperature &lt; 0:
    print("below freezing")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -573,12 +573,12 @@ elif temperature &lt; 0:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture7_Conditionals_07">
+  </activity>
+  <activity label="dz-lecture7_Conditionals_07">
     <statement>
-      <p>Q-11: Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
+      <p> Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
       <program language="python">
-        <input>
+        <code>
 Code 1-
 
 if temperature &gt; 0:
@@ -597,7 +597,7 @@ if temperature &gt; 0:
 elif temperature == 0:
    print("at freezing")
 print("below freezing")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -618,12 +618,12 @@ print("below freezing")
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture7_Conditionals_08">
+  </activity>
+  <activity label="dz-lecture7_Conditionals_08">
     <statement>
-      <p>Q-12: Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
+      <p> Does Code 1 do exactly the same thing as Code 2? (Assume temperature already refers to some numeric value.)</p>
       <program language="python">
-        <input>
+        <code>
 Code 1-
 
 if temperature &gt; 0:
@@ -643,7 +643,7 @@ elif temperature &lt;= 0:
    print("below freezing")
 else:
    print("above freezing")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -664,12 +664,12 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture7_Conditionals_09">
+  </activity>
+  <activity label="dz-lecture7_Conditionals_09">
     <statement>
-      <p>Q-13: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 x = 5
 if x &lt; 15:
    if x &gt; 8:
@@ -678,7 +678,7 @@ if x &lt; 15:
       print('two')
 else:
    print('three')
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -723,18 +723,18 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture8_Conditionals_06">
+  </activity>
+  <activity label="dz-lecture8_Conditionals_06">
     <statement>
-      <p>Q-14: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 def is_odd(x):
    if x % 2 == 1:
       return True
    else:
       return False
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -771,12 +771,12 @@ def is_odd(x):
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture8_Conditionals_08">
+  </activity>
+  <activity label="dz-lecture8_Conditionals_08">
     <statement>
-      <p>Q-15: What parts of the code can be removed without changing what the code does? Assume that the user enters a non-negative integer.</p>
+      <p> What parts of the code can be removed without changing what the code does? Assume that the user enters a non-negative integer.</p>
       <program language="python">
-        <input>
+        <code>
 age = int(input("Enter your age: "))
 if age &lt; 18:
    print("minor")
@@ -786,7 +786,7 @@ elif age &gt;= 30:
    print("older than Dan")
 else:
    print("ageless")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -823,13 +823,13 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture9_Conditionals_02">
+  </activity>
+  <activity label="dz-lecture9_Conditionals_02">
     <statement>
-      <p>Q-16: What goes in the two numbered blanks?</p>
+      <p> What goes in the two numbered blanks?</p>
       <image source="images/dz-lecture9_Conditionals_02.png" width="50%"/>
       <program language="python">
-        <input>
+        <code>
 if experience == 0:
    wage = 6.5
 elif (1) :
@@ -839,7 +839,7 @@ elif (1) :
       wage = 11
 else:
    wage = 12
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -868,13 +868,13 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture9_Conditionals_03">
+  </activity>
+  <activity label="dz-lecture9_Conditionals_03">
     <statement>
-      <p>Q-17: What goes in the two numbered blanks?</p>
+      <p> What goes in the two numbered blanks?</p>
       <image source="images/dz-lecture9_Conditionals_03.png" width="50%"/>
       <program language="python">
-        <input>
+        <code>
 if months == 1:
    cost = 90
 elif (1) :
@@ -884,7 +884,7 @@ else:
       cost = 70
    else:
       cost = 35
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -913,5 +913,5 @@ else:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

@@ -12,25 +12,22 @@
             period.</p>
   <p>Sometimes once you get your API key, you simply include the key as part
             of POST data or perhaps as a parameter on the URL when calling the API.</p>
-  <exercise label="webSecurity_fill">
+  <activity label="webSecurity_fill">
     <statement>
-      <p>csp-10-2-1: An API ____ is typically needed to use and access an API with the vendor's services. <var/>  </p>
+      <p>An API <fillin width="20" mode="string" answer="key"/> is typically needed to use and access an API with the vendor's services. </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Kk]ey">
-          <feedback>
-            <p>An API key can be a parameter in the URL when calling the API or part of POST data.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again. What would you need if access to the API is considered to be <q>locked</q>?</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>An API key can be a parameter in the URL when calling the API or part of POST data.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again. What would you need if access to the API is considered to be <q>locked</q>?</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>Other times, the vendor wants increased assurance of the source of the
             requests and so they expect you to send cryptographically signed
             messages using shared keys and secrets. A very common technology that is
@@ -43,9 +40,9 @@
             libraries are of varying complexity and have varying degrees of
             richness. The OAuth web site has information about various OAuth
             libraries.</p>
-  <exercise label="webSecurity_MC_OAuth">
+  <activity label="webSecurity_MC_OAuth">
     <statement>
-      <p>csp-10-2-2: OAuth is a technology used to ________?</p>
+      <p>OAuth is a technology used to ________?</p>
     </statement>
     <choices>
       <choice>
@@ -81,5 +78,5 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

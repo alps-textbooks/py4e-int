@@ -4,38 +4,38 @@
   <warning>
     <p>Be careful not to create infinite loops, as they will cause the page to freeze.</p>
   </warning>
-  <exercise>
+  <activity>
     <statement>
       <p>Fix the 5 errors in the code below to return a countdown of the numbers from 10 to 0, including 0.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="itr-ex-countdownq_editor">
-      <input>
-def countdown():
-    counter = 10
-    answer = ""
-    while Counter &gt; 0:
-        answer = answer + str(counter) + " "
-        counter = counter + 1
-    Return answer
-countDown()
+      <code>
+        def countdown():
+            counter = 10
+            answer = ""
+            while Counter &gt; 0:
+                answer = answer + str(counter) + " "
+                counter = counter + 1
+            Return answer
+        countDown()
+      </code>
 
-====
-from unittest.gui import TestCaseGui
-class myTests(TestCaseGui):
-    def testOne(self):
-        output = countdown()
-        self.assertEqual(output,"10 9 8 7 6 5 4 3 2 1 0 ")
-myTests().main()
-        </input>
+      
+      <tests>
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+            
+            def testOne(self):
+                output = countdown()
+                self.assertEqual(output,"10 9 8 7 6 5 4 3 2 1 0 ")
+        myTests().main()
+      </tests>
     </program>
     <solution>
-
-
-    
-                Fix the 5 errors in the code below to return a countdown of the numbers from 10 to 0, including 0.
-
-    
-    <program xml:id="itr-ex-countdowna_editor" language="python"><input>
+      <p>Fix the 5 errors in the code below to return a countdown of the numbers from 10 to 0, including 0.</p>
+      <program xml:id="itr-ex-countdowna_editor" language="python">
+        <code>
 def countdown():
     counter = 10
     answer = ""
@@ -53,37 +53,33 @@ def countdown():
 
 # Call correct function name (countdown)
 countdown()
+        </code>
+      </program>
+    </solution>
+  </activity>
+  
 
-====
-from unittest.gui import TestCaseGui
-class myTests(TestCaseGui):
-    def testOne(self):
-        output = countdown()
-        self.assertEqual(output,"10 9 8 7 6 5 4 3 2 1 0 ")
-myTests().main()
-        </input></program>
-            </solution>
-  </exercise>
-  <exercise label="itr-ex-100Loopq">
+
+  <activity label="itr-ex-100Loopq">
     <statement>
       <p>The following code will loop way too many times. Change one line to
             make the loop only have five iterations.</p>
     </statement>
     <program xml:id="itr-ex-100Loopq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 x = 5
 while x &lt; 100:
     print(x)
     x = x + 1
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="itr-ex-countq_editor">
-      <input>
+      <code>
 output = ""
 x = -10
 while x &lt; 0
@@ -97,7 +93,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(output,"-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 ")
 myTests().main()
-        </input>
+        </code>
     </program>
     <solution>
 
@@ -106,7 +102,7 @@ myTests().main()
                 Make 5 changes to the code below to correctly print a count up from -10 to 0, including 0.
 
     
-    <program xml:id="itr-ex-counta_editor" language="python"><input>
+    <program xml:id="itr-ex-counta_editor" language="python"><code>
 output = ""
 # Start x at -11 so it stays under 0
 x = -11
@@ -129,15 +125,15 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(output,"-10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 ")
 myTests().main()
-        </input></program>
+        </code></program>
             </solution>
-  </exercise>
-  <exercise label="itr-ex-allValuesq">
+  </activity>
+  <activity label="itr-ex-allValuesq">
     <statement>
       <p>Finish lines 1 and 5 so that the following code correctly prints every integer from -5 to -1, including -1.</p>
     </statement>
     <program xml:id="itr-ex-allValuesq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 output =
 x = -5
 while x &lt; 0:
@@ -151,15 +147,15 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(output,"-5 -4 -3 -2 -1 ")
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>Complete the code on lines 4 and 6 so that it prints the number 6.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="itr-ex-sixq_editor">
-      <input>
+      <code>
 x = 3
 i = 0
 while i &lt; 3:
@@ -173,7 +169,7 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(x,6)
 myTests().main()
-        </input>
+        </code>
     </program>
     <solution>
 
@@ -182,7 +178,7 @@ myTests().main()
                 Complete the code on lines 4 and 6 so that it prints the number 6.
 
     
-    <program xml:id="itr-ex-sixa_editor" language="python"><input>
+    <program xml:id="itr-ex-sixa_editor" language="python"><code>
 x = 3
 i = 0
 while i &lt; 3:
@@ -198,24 +194,70 @@ class myTests(TestCaseGui):
     def testOne(self):
         self.assertEqual(x,6)
 myTests().main()
-        </input></program>
+        </code></program>
 
             </solution>
-  </exercise>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=iterations_writecode6 data-questionlist='itr-ex-root_ac, itr-ex-root_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: itr-ex-root_ac, itr-ex-root_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
-  <exercise>
+  </activity>
+
+  <activity label="itr-ex-root_ac" xml:id="itr-ex-root_ac">
+    <statement>
+      <p>The code below is supposed to print an estimate of the square root of a number (target). You are given an initial guess of 2.
+            However, the indention is wrong on 4 lines. Fix these errors to find the estimate.</p>
+    </statement>
+    <program xml:id="itr-ex-root_ac_editor" interactive="activecode" language="python">
+      <code>
+target = 6
+    guess = 2
+guessSquared = guess * guess
+while abs(target-guessSquared) &gt; 0.01:
+    closer = target / guess
+guess = (guess + closer) / 2.0
+        guessSquared = guess * guess
+    print("Square root of", target, "is", guess)
+        </code>
+    </program>
+  </activity>
+  <activity label="itr-ex-root_pp" xml:id="itr-ex-root_pp">
+    <statement>
+      <p>Create code to print an estimate of the square root of a number (target). You are given an initial guess of 2.</p>
+    </statement>
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+      <block order="6">
+        <cline>target = 6</cline>
+        <cline>guess = 2</cline>
+      </block>
+      <block order="2">
+        <cline>guessSquared = guess * guess</cline>
+      </block>
+      <block order="7">
+        <cline>while abs(target-guessSquared) &gt; 0.01:</cline>
+      </block>
+      <block order="3">
+        <cline>    closer = target / guess</cline>
+      </block>
+      <block order="4">
+        <cline>    guess = (guess + closer) / 2.0</cline>
+      </block>
+      <block order="1">
+        <cline>    guessSquared = guess * guess</cline>
+      </block>
+      <block order="5">
+        <cline>print("Square root of", target, "is", guess)</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="iterations_writecode6">
+      <select grade="first" questions="itr-ex-root_ac itr-ex-root_pp"/>
+  </activity>
+
+  <activity>
     <statement>
       <p>This function currently takes a start and stop argument and uses a for loop to find the sum of all the numbers between them (inclusive).
                     Change the for loop to a while loop while still using the same parameters.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="int-ex-inclusiveq_editor">
-      <input>
+      <code>
 def sumFunc(start, stop):
     sum = 0
     for num in range(start, stop + 1):
@@ -232,7 +274,7 @@ class myTests(TestCaseGui):
         self.assertEqual(sumFunc(-5, 0),-15,"Tested sumFunc on inputs 20 and 50")
         self.assertEqual(sumFunc(-3, 12),72,"Tested sumFunc on inputs -3 and 12")
 myTests().main()
-        </input>
+        </code>
     </program>
     <solution>
 
@@ -242,7 +284,7 @@ myTests().main()
                     Change the for loop to a while loop while still using the same parameters.
 
     
-    <program xml:id="int-ex-inclusivea_editor" language="python"><input>
+    <program xml:id="int-ex-inclusivea_editor" language="python"><code>
 def sumFunc(start, stop):
     sum = 0
     # Create an iteration variable, initialized to the start argument
@@ -268,38 +310,38 @@ class myTests(TestCaseGui):
         self.assertEqual(sumFunc(-5, 0),-15,"Tested sumFunc on inputs 20 and 50")
         self.assertEqual(sumFunc(-3, 12),72,"Tested sumFunc on inputs -3 and 12")
 myTests().main()
-        </input></program>
+        </code></program>
             </solution>
-  </exercise>
-  <exercise label="int-ex-timesq">
+  </activity>
+  <activity label="int-ex-timesq">
     <statement>
       <p>The program below is supposed to print the times tables from 1 to 3, but
             there are 6 errors.  Fix the errors.</p>
     </statement>
     <program xml:id="int-ex-timesq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 for x in range(1, 3):
     for y in range(1, 4)
         print(str(x) + " * " str(y) + " = " x * y)
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise>
+  </activity>
+  <activity>
     <statement>
       <p>The following code prints the times tables for 1 to 3 using two for loops.
                     Rewrite the program to use a while and a for loop instead.</p>
     </statement>
     <program interactive="activecode" language="python" xml:id="int-ex-timesWhileq_editor">
-      <input>
+      <code>
 
 for x in range(1, 4):
     for y in range(1, 11):
         print(str(x) + " * " + str(y) + " = " + str(x * y))
-        </input>
+        </code>
     </program>
     <solution>
       <program xml:id="int-ex-timesWhileA" language="python">
-        <input>
+        <code>
 # There are a few different ways this can be done
 # One is shown here
 
@@ -312,15 +354,66 @@ for x in range(1, 4):
         print(str(x) + " * " + str(y) + " = " + str(x * y))
         # Increment the iteration variable
         y = y + 1
-        </input>
+        </code>
       </program>
     </solution>
-  </exercise>
-  <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-&lt;div data-component="selectquestion" id=iterations_writecode10 data-questionlist='int-ex-while_ac, int-ex-while_pp'         data-toggleoptions="toggle, lock" data-togglelabels="togglelabels:" data-limit-basecourse=true&gt;
-    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: int-ex-while_ac, int-ex-while_pp&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</raw>
+  </activity>
+
+  <activity label="int-ex-while_ac" xml:id="int-ex-while_ac">
+    <statement>
+      <p>Rewrite the following code to use a while loop instead of a for loop to calculate the value of ten factorial.</p>
+    </statement>
+    <program xml:id="int-ex-while_ac_editor" interactive="activecode" language="python">
+      <code>
+product = 1  # Start out with nothing
+numbers = range(1,11)
+for number in numbers:
+    product = product * number
+print(product)
+
+====
+from unittest.gui import TestCaseGui
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertEqual(product, 3628800)
+
+myTests().main()
+        </code>
+    </program>
+  </activity>
+
+  <activity label="int-ex-while_pp" xml:id="int-ex-while_pp">
+    <statement>
+      <p>Using the blocks below, create code to calculate the value of ten factorial.</p>
+    </statement>
+    <blocks numbered="left" adaptive="yes" indentation="hide" language="python">
+      <block order="5">
+        <cline>product = 1</cline>
+        <cline>number = 1</cline>
+      </block>
+      <block order="4">
+        <cline>while number &lt; 11:</cline>
+      </block>
+      <block order="1">
+        <choice correct="yes">
+          <cline>    product = product * number</cline>
+        </choice>
+        <choice>
+          <cline>    product = number * number </cline>
+        </choice>
+      </block>
+      <block order="6">
+        <cline>    number = number + 1</cline>
+      </block>
+      <block order="2">
+        <cline>print(product)</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="iterations_writecode10">
+      <select grade="first" questions="int-ex-while_ac int-ex-while_pp"/>
+  </activity>
+
 </section>

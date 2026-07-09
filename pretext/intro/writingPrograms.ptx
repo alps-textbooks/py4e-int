@@ -2,47 +2,42 @@
 <section xml:id="intro_writing-a-program">
   <title>Writing a program</title>
 <idx>Script</idx>
+<introduction>
   <p>Typing commands into the Python interpreter is a great way to experiment
             with Python's features, but it is not recommended for solving more
             complex problems.</p>
   <p>When we want to write a program, we use a text editor to write the
             Python instructions into a file, which is called a
             <em>script</em>. By convention, Python scripts have names that
-            end with <c>.py</c>.</p>
-  <exercise label="intro-write-fitb-file">
+            end with <c>.py</c>.
+  </p>
+ </introduction>
+  <activity label="intro-write-fitb-file">
     <statement>
-      <p>Q-1: A(n) ______ is a file that holds Python instructions. <var/>  </p>
+      <p>A(n) <fillin width="20" mode="string" answer="script"/> is a file that holds Python instructions.</p>
     </statement>
-    <setup>
-      <var>
-        <condition string="[Ss]cript">
-          <feedback>
-            <p>A script is a file that holds Python instructions.</p>
-          </feedback>
-        </condition>
-        <condition string="[Ff]ile">
-          <feedback>
-            <p>What is this type of file called?</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes" case="insensitive"/>
+                    <feedback><p>A script is a file that holds Python instructions.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>What is this type of file called?</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>To execute the script, you have to tell the Python interpreter the name
             of the file. In a command window, you would type
             <c>python hello.py</c> as follows:</p>
   <program language="bash">
-    <input>
+    <code>
 $ cat hello.py
 print('Hello world!')
 $ python hello.py
 Hello world!
-</input>
+</code>
   </program>
   <p>The <q>$</q> is the operating system prompt, and the <q>cat hello.py</q> is
             showing us that the file <q>hello.py</q> has a one-line Python program to
@@ -54,28 +49,25 @@ Hello world!
             at the end of the Python program in the file. When Python is reading
             your source code from a file, it knows to stop when it reaches the end
             of the file.</p>
-  <exercise label="intro-write-fitb-end">
+  <activity label="intro-write-fitb-end">
     <statement>
-      <p>Q-2: Files containing Python instructions end with what two letters? <var/>  </p>
+      <p>Files containing Python instructions end with what two letters? <fillin width="20" mode="string" answer="py"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="\.?[Pp][Yy]">
-          <feedback>
-            <p>.py at the end of a file implies that it is a script containing Python instructions.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
-  <exercise label="intro-write-mc-end">
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>.py at the end of a file implies that it is a script containing Python instructions.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
+  <activity label="intro-write-mc-end">
     <statement>
-      <p>Q-3: How does a Python program stop when reading from a file?</p>
+      <p>How does a Python program stop when reading from a file?</p>
     </statement>
     <choices>
       <choice>
@@ -111,5 +103,5 @@ Hello world!
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

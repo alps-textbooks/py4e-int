@@ -14,50 +14,47 @@
             Python interpreter will start executing in interactive mode and appear
             somewhat as follows:</p>
   <program language="python">
-    <input>
+    <code>
 Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25)
 [MSC v.1900 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more
 information.
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
   <p>The <c>&gt;&gt;&gt;</c> prompt is the Python interpreter's way of asking
             you, <q>What do you want me to do next?</q> Python is ready to have a
             conversation with you. All you have to know is how to speak the Python
             language.</p>
-  <exercise label="intro-convo-fitb-prompt">
+  <activity label="intro-convo-fitb-prompt">
     <statement>
-      <p>Q-1: What symbol is the Python interpreter's prompt for <q>What do you want me to do next?</q> <var/>  </p>
+      <p>What symbol is the Python interpreter's prompt for <q>What do you want me to do next?</q> <fillin width="20" mode="string" answer=">>>"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="&gt;&gt;&gt;">
-          <feedback>
-            <p>Correct! &gt;&gt;&gt; is the prompt from the Python interpreter.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again. Open your Python interpreter using the command <q>python</q> and see what you are prompted with.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>Correct! &gt;&gt;&gt; is the prompt from the Python interpreter.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again. Open your Python interpreter using the command <q>python</q> and see what you are prompted with.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>Let's say for example that you did not know even the simplest Python
             language words or sentences. You might want to use the standard line
             that astronauts use when they land on a faraway planet and try to speak
             with the inhabitants of the planet:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; I come in peace, please take me to your leader
 File "&lt;stdin&gt;", line 1
   I come in peace, please take me to your leader
        ^
 SyntaxError: invalid syntax
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
   <p>This is not going so well. Unless you think of something quickly, the
             inhabitants of the planet are likely to stab you with their spears, put
@@ -65,14 +62,14 @@ SyntaxError: invalid syntax
   <p>Luckily you brought a copy of this book on your travels, and you thumb
             to this very page and try again:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print('Hello world!')
 Hello world!
-</input>
+</code>
   </program>
   <p>This is looking much better, so you try to communicate some more:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; print('You must be the legendary god that comes from the sky')
 You must be the legendary god that comes from the sky
 &gt;&gt;&gt; print('We have been waiting for you for a long time')
@@ -85,14 +82,14 @@ File "&lt;stdin&gt;", line 1
                                                    ^
 SyntaxError: Missing parentheses in call to 'print'
 &gt;&gt;&gt;
-</input>
+</code>
   </program>
   <p>The conversation was going so well for a while and then you made the
             tiniest mistake using the Python language and Python brought the spears
             back out.</p>
-  <exercise label="intro-convo-mc-print">
+  <activity label="intro-convo-mc-print">
     <statement>
-      <p>Q-2: What is missing from this print statement?</p>
+      <p>What is missing from this print statement?</p>
       <pre>print 'We will have a feast tonight unless you say'</pre>
     </statement>
     <choices>
@@ -129,7 +126,7 @@ SyntaxError: Missing parentheses in call to 'print'
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>At this point, you should also realize that while Python is amazingly
             complex and powerful and very picky about the syntax you use to
             communicate with it, Python is <em>not</em> intelligent. You are
@@ -145,7 +142,7 @@ SyntaxError: Missing parentheses in call to 'print'
             should probably know the proper way to say <q>good-bye</q> when interacting
             with the inhabitants of Planet Python:</p>
   <program language="python">
-    <input>
+    <code>
 &gt;&gt;&gt; good-bye
 Traceback (most recent call last):
 File "&lt;stdin&gt;", line 1, in &lt;module&gt;
@@ -156,7 +153,7 @@ File "&lt;stdin&gt;", line 1
            ^
 SyntaxError: invalid syntax
 &gt;&gt;&gt; quit()
-</input>
+</code>
   </program>
   <p>You will notice that the error is different for the first two incorrect
             attempts. The second error is different because <em>if</em> is a
@@ -166,23 +163,20 @@ SyntaxError: invalid syntax
             <em>quit()</em> at the interactive chevron <c>&gt;&gt;&gt;</c>
             prompt. It would have probably taken you quite a while to guess that
             one, so having a book handy probably will turn out to be helpful.</p>
-  <exercise label="intro-convo-fitb-leave-Python">
+  <activity label="intro-convo-fitb-leave-Python">
     <statement>
-      <p>Q-3: What do you type to leave the Python interpreter? <var/>  </p>
+      <p>What do you type to leave the Python interpreter? <fillin width="20" mode="string" answer="quit"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="quit(\(\))*">
-          <feedback>
-            <p>Correct!</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp>quit\(?\)?</strcmp>
+                    <feedback><p>Correct!</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
 </section>

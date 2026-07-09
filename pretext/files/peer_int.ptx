@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <section xml:id="files_peer-instruction-files-multiple-choice-questions">
   <title>Peer Instruction: Files Multiple Choice Questions</title>
-  <exercise label="dz-lecture_29_2">
+  <activity label="dz-lecture_29_2">
     <statement>
-      <p>Q-1:</p>
+      <p></p>
       <program language="python">
-        <input>
+        <code>
 def build_grocery_list(f):
   line = f.readline()
   big = []
@@ -29,7 +29,7 @@ e
 f
 
 What does the function return for the sample file?
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -66,12 +66,12 @@ What does the function return for the sample file?
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture_29_3">
+  </activity>
+  <activity label="dz-lecture_29_3">
     <statement>
-      <p>Q-2:</p>
+      <p></p>
       <program language="python">
-        <input>
+        <code>
 def build_grocery_list(f):
   line = f.readline()
   big = []
@@ -96,7 +96,7 @@ e
 f
 
 What does the function return for the sample file?
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -133,12 +133,12 @@ What does the function return for the sample file?
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture_29_4">
+  </activity>
+  <activity label="dz-lecture_29_4">
     <statement>
-      <p>Q-3:</p>
+      <p></p>
       <program language="python">
-        <input>
+        <code>
 def build_grocery_list(f):
   line = f.readline()
   big = []
@@ -164,7 +164,7 @@ e
 f
 
 What does the function return for the sample file?
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -201,12 +201,12 @@ What does the function return for the sample file?
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="dz-lecture_29_5">
+  </activity>
+  <activity label="dz-lecture_29_5">
     <statement>
-      <p>Q-4:</p>
+      <p></p>
       <program language="python">
-        <input>
+        <code>
 def build_grocery_list(f):
   big = []
   line = f.readline()
@@ -230,7 +230,7 @@ e
 f
 
 What does the function return for the sample file?
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -267,5 +267,5 @@ What does the function return for the sample file?
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

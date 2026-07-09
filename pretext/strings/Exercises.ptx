@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<exercises xml:id="strings_multiple-choice-questions">
+<section xml:id="strings_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
-  <exercise label="str-ex-mc-index">
+  <activity label="str-ex-mc-index">
     <statement>
       <p>11-9-1: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(s[1] * s.index("n"))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -45,8 +45,8 @@ print(s[1] * s.index("n"))
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-red">
+  </activity>
+  <activity label="str-ex-mc-red">
     <statement>
       <p>11-9-2: What will be printed when the following executes?</p>
       <pre>str = "His shirt is red"
@@ -87,8 +87,8 @@ print(pos)</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-end">
+  </activity>
+  <activity label="str-ex-mc-end">
     <statement>
       <p>11-9-3: What will be printed when the following executes?</p>
       <pre>str = "This is fun"
@@ -129,8 +129,8 @@ print(str)</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-hey">
+  </activity>
+  <activity label="str-ex-mc-hey">
     <statement>
       <p>11-9-4: What is the value of s1 after the following code executes?</p>
       <pre>s1 = "heY"
@@ -171,8 +171,8 @@ s1.lower()</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-name">
+  </activity>
+  <activity label="str-ex-mc-name">
     <statement>
       <p>11-9-5: What would the following code print?</p>
       <pre>Mali = 5
@@ -212,15 +212,15 @@ print("Mali" + " is " + str(Mali))</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-print">
+  </activity>
+  <activity label="str-ex-mc-print">
     <statement>
       <p>11-9-6: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(s[3])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -257,15 +257,15 @@ print(s[3])
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-add">
+  </activity>
+  <activity label="str-ex-mc-add">
     <statement>
       <p>11-9-7: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python is awesome"
 print(s[2] + s[-5])
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -302,15 +302,15 @@ print(s[2] + s[-5])
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-len">
+  </activity>
+  <activity label="str-ex-mc-len">
     <statement>
       <p>11-9-8: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(len(s))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -347,16 +347,16 @@ print(len(s))
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-rose">
+  </activity>
+  <activity label="str-ex-mc-rose">
     <statement>
       <p>11-9-9: What is printed by the following statements:</p>
       <program language="python">
-        <input>
+        <code>
 s = "Rose"
 s[1] = "i"
 print(s)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -393,18 +393,18 @@ print(s)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-ball">
+  </activity>
+  <activity label="str-ex-mc-ball">
     <statement>
       <p>11-9-10: What is printed by the following statements:</p>
       <program language="python">
-        <input>
+        <code>
 s = "ball"
 r = ""
 for item in s:
     r = item.upper() + r
 print(r)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -441,15 +441,15 @@ print(r)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-rock">
+  </activity>
+  <activity label="str-ex-mc-rock">
     <statement>
       <p>11-9-11: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 print(s[7:11] * 3)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -486,15 +486,15 @@ print(s[7:11] * 3)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-animal-no-space">
+  </activity>
+  <activity label="str-ex-mc-animal-no-space">
     <statement>
       <p>11-9-12: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 animal = "dog"
 print("animal" + animal)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -531,15 +531,15 @@ print("animal" + animal)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="str-ex-mc-animal-with-space-but-in-quotes">
+  </activity>
+  <activity label="str-ex-mc-animal-with-space-but-in-quotes">
     <statement>
       <p>11-9-13: What is printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 animal = "dog"
 print("animal " + "animal")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -576,5 +576,5 @@ print("animal " + "animal")
         </feedback>
       </choice>
     </choices>
-  </exercise>
-</exercises>
+  </activity>
+</section>

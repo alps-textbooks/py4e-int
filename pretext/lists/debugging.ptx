@@ -17,15 +17,15 @@
                                 return a new string and leave the original alone.</p>
             <p>If you are used to writing string code like this:</p>
             <program language="python">
-              <input>
+              <code>
 word = word.strip()
-</input>
+</code>
             </program>
             <p>It is tempting to write list code like this:</p>
             <program language="python">
-              <input>
+              <code>
 t = t.sort()           # WRONG!
-</input>
+</code>
             </program>
             <p>Because <c>sort</c> returns <c>None</c>, the next
                                 operation you perform with <c>t</c> is likely to fail.</p>
@@ -41,25 +41,22 @@ t = t.sort()           # WRONG!
             <p>
               <url href="https://docs.python.org/library/stdtypes.html#mutable-sequence-types" visual="https://docs.python.org/library/stdtypes.html#mutable-sequence-types">docs.python.org/library/stdtypes.html#mutable-sequence-types</url>
             </p>
-            <exercise label="listDebug_fillMethods">
+            <activity label="listDebug_fillMethods">
               <statement>
-                <p>Q-1: Most list methods return ______, where string methods generally return a new string. <var/>  </p>
+                <p>Most list methods return <fillin width="20" mode="string" answer="None"/>, where string methods generally return a new string.  </p>
               </statement>
-              <setup>
-                <var>
-                  <condition string="[Nn]one">
-                    <feedback>
-                      <p>Most list methods modify the argument and return <q>None</q>.</p>
-                    </feedback>
-                  </condition>
-                  <condition string=".*">
-                    <feedback>
-                      <p>Try again.</p>
-                    </feedback>
-                  </condition>
-                </var>
-              </setup>
-            </exercise>
+              <evaluation>
+                  <evaluate>
+                          <test correct="yes">
+                              <strcmp use-answer="yes"/>
+                              <feedback><p>Most list methods modify the argument and return <q>None</q>.</p></feedback>
+                          </test>
+                          <test>
+                              <feedback><p>Try again.</p></feedback>
+                          </test>
+                  </evaluate>
+              </evaluation>
+            </activity>
           </paragraphs>
           
           <paragraphs>
@@ -71,31 +68,31 @@ t = t.sort()           # WRONG!
             <p>To add an element, you can use the <c>append</c> method or the
                                 <c>+</c> operator. But don't forget that these are right:</p>
             <program language="python">
-              <input>
+              <code>
 t.append(x)
 t = t + [x]
-</input>
+</code>
             </program>
             <p>And these are wrong:</p>
             <program language="python">
-              <input>
+              <code>
 t.append([x])          # WRONG!
 t = t.append(x)        # WRONG!
 t + [x]                # WRONG!
 t = t + x              # WRONG!
-</input>
+</code>
             </program>
             <p>Try out each of these examples in interactive mode to make sure you
                                 understand what they do. Notice that only the last one causes a
                                 runtime error; the other three are legal, but they do the wrong
                                 thing.</p>
  
-  <exercise label="listDebug_ac_fix">
+  <activity label="listDebug_ac_fix">
     <statement>
       <p>Fix the following code to correctly add x, y, and z to the end of lst in that order.</p>
     </statement>
     <program xml:id="listDebug_ac_fix_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 lst = [1, 1, 2, 3, 5, 8, 13]
 x = 21
 y = 34
@@ -113,9 +110,9 @@ class myTests(TestCaseGui):
         self.assertEqual(lst,[1,1,2,3,5,8,13,21,34,55],"Testing that x, y, and z, have been added to the end of lst")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
+  </activity>
 </paragraphs>
 <paragraphs>
             <title>Make copies to avoid aliasing</title>
@@ -123,19 +120,19 @@ myTests().main()
                                 argument, but you need to keep the original list as well, you can
                                 make a copy.</p>
             <program language="python">
-              <input>
+              <code>
 orig = t[:]
 t.sort()
-</input>
+</code>
             </program>
             <p>In this example you could also use the built-in function
                                 <c>sorted</c>, which returns a new, sorted list and leaves the
                                 original alone. But in that case you should avoid using
                                 <c>sorted</c> as a variable name!</p>
 
-  <exercise label="listDebug_MC_tf">
+  <activity label="listDebug_MC_tf">
     <statement>
-      <p>Q-3: True or False? The built-in function sorted affects the original list.</p>
+      <p>True or False? The built-in function sorted affects the original list.</p>
     </statement>
     <choices>
       <choice>
@@ -155,7 +152,7 @@ t.sort()
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </paragraphs>
 
 <paragraphs>
@@ -174,20 +171,20 @@ t.sort()
                                 can use <c>continue</c> to skip lines that don't have <q>From</q>
                                 as the first word as follows:</p>
             <program xml:id="listDebug_ac_print" interactive="activecode" language="python">
-              <input>
+              <code>
 fhand = open('mboxShort.txt')
 for line in fhand:
     words = line.split()
     if words[0] != 'From' : continue
     print(words[2])
-        </input>
+        </code>
             </program>
             <p>This looks much simpler and we don't even need to do the
                                 <c>rstrip</c> to remove the newline at the end of the file.
                                 But is it better?</p>
-            <exercise label="listDebug_MC_error">
+            <activity label="listDebug_MC_error">
               <statement>
-                <p>Q-5: What kind of error will caused by the code above?</p>
+                <p>What kind of error will caused by the code above?</p>
               </statement>
               <choices>
                 <choice>
@@ -223,7 +220,7 @@ for line in fhand:
                   </feedback>
                 </choice>
               </choices>
-            </exercise>
+            </activity>
             <p>It kind of works and we see the day from the first line (Sat), but
                                 then the program fails with a traceback error. What went wrong? What
                                 messed-up data caused our elegant, clever, and very Pythonic program
@@ -239,13 +236,13 @@ for line in fhand:
                                 line five. We even add a prefix <q>Debug:</q> to the line so we can keep
                                 our regular output separate from our debug output.</p>
             <program language="python">
-              <input>
+              <code>
 for line in fhand:
     words = line.split()
     print('Debug:', words)
     if words[0] != 'From' : continue
     print(words[2])
-</input>
+</code>
             </program>
             <p>When we run the program, a lot of output scrolls off the screen but
                                 at the end, we see our debug output and the traceback so we know
@@ -278,7 +275,7 @@ Details: http://source.sakaiproject.org/viewsvn/?view=rev&amp;rev=39772</pre>
                                 code; we will choose to check the number of words we have before we
                                 look at the first word:</p>
             <program xml:id="listDebug_file" interactive="activecode" language="python">
-              <input>
+              <code>
 fhand = open('mboxShort1.txt')
 count = 0
 for line in fhand:
@@ -287,7 +284,7 @@ for line in fhand:
     if len(words) == 0 : continue
     if words[0] != 'From' : continue
     print(words[2])
-        </input>
+        </code>
             </program>
             <p>First we commented out the debug print statement instead of removing
                                 it, in case our modification fails and we need to debug again. Then

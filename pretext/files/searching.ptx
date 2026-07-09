@@ -15,15 +15,17 @@
             started with the prefix <q>From:</q>, we could use the string method
             <em>startswith</em> to select only those lines with the desired
             prefix:</p>
-  <program xml:id="fileFrom" interactive="activecode" language="python">
-    <input>
+  <activity label="search-file-from">
+  <program xml:id="fileFrom" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
+    <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
     if line.startswith('From:'):
         print(line)
 fhand.close()
-        </input>
+        </code>
   </program>
+  </activity>
   <p>The output looks great since the only lines we are seeing are those
             which start with <q>From:</q>, but why are we seeing the extra blank lines?
             This is due to that invisible <em>newline</em> character. Each
@@ -34,19 +36,21 @@ fhand.close()
   <p>We could use line slicing to print all but the last character, but a
             simpler approach is to use the <em>rstrip</em> method which
             strips whitespace from the right side of a string as follows:</p>
-  <program xml:id="filerstrip" interactive="activecode" language="python">
-    <input>
+  <activity label="file-rstrip">
+  <program xml:id="filerstrip" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
+    <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
     line = line.rstrip()
     if line.startswith('From:'):
         print(line)
 fhand.close()
-        </input>
+        </code>
   </program>
-  <exercise label="file-search-mc-rstrip">
+  </activity>
+  <activity label="file-search-mc-rstrip">
     <statement>
-      <p>Q-3: True or False? The <c>rstrip</c> method removes all whitespace from a string.</p>
+      <p> True or False? The <c>rstrip</c> method removes all whitespace from a string.</p>
     </statement>
     <choices>
       <choice>
@@ -66,7 +70,7 @@ fhand.close()
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>As your file processing programs get more complicated, you may want to
             structure your search loops using <c>continue</c>. The basic idea
             of the search loop is that you are looking for <q>interesting</q> lines and
@@ -74,8 +78,9 @@ fhand.close()
             interesting line, we do something with that line.</p>
   <p>We can structure the loop to follow the pattern of skipping
             uninteresting lines as follows:</p>
-  <program xml:id="fileInteresting" interactive="activecode" language="python">
-    <input>
+  <activity label="file-starts-with-from">
+  <program xml:id="fileInteresting" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
+    <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
     line = line.rstrip()
@@ -85,8 +90,9 @@ for line in fhand:
         # Process our 'interesting' line
     print(line)
 fhand.close()
-        </input>
+        </code>
   </program>
+  </activity>
   <p>The output of the program is the same. In English, the uninteresting
             lines are those which do not start with <q>From:</q>, which we skip using
             <c>continue</c>. For the <q>interesting</q> lines (i.e., those that
@@ -98,8 +104,9 @@ fhand.close()
             the string was not found, we can write the following loop to show lines
             which contain the string <q>@uct.ac.za</q> (i.e., they come from the
             University of Cape Town in South Africa):</p>
+  <activity label="file-find">
   <program xml:id="fileFind" interactive="activecode" language="python">
-    <input>
+    <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
     line = line.rstrip()
@@ -107,11 +114,12 @@ for line in fhand:
         continue
     print(line)
 fhand.close()
-        </input>
+        </code>
   </program>
-  <exercise label="file-search-mc-find">
+  </activity>
+  <activity label="file-search-mc-find">
     <statement>
-      <p>Q-6: When using the string method <c>find</c>, what does a return of <c>-1</c> mean?</p>
+      <p> When using the string method <c>find</c>, what does a return of <c>-1</c> mean?</p>
     </statement>
     <choices>
       <choice>
@@ -147,5 +155,9 @@ fhand.close()
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
+  <!-- causes data to brief flash on the page -->
+  <datafile xml:id="mbox-short-search-id" label="mbox-short-search-id" filename="mbox-short.txt" hide="yes">
+    <pre source="files/mbox-short.txt"></pre>
+  </datafile>
 </section>

@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<section xml:id="network_mixed-up-code-questions-original">
+<section xml:id="network_mixed-up-code-questions-original-orig">
   <title>Mixed-Up Code Questions Original</title>
-  <exercise label="mixedupcode_network_1" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="mixedupcode_network_1" xml:id="mixedupcode_network_1" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>decode</c> that takes in a parameter <c>link</c> and returns a string that contains
             the contents of the <c>link</c> using urllib. Between each word, there should be a space. Also, a space at the end is okay.
             For example, <c>decode('http://data.pr4e.org/romeo.txt')</c> should return <c>'But soft what light through yonder window breaks It is the east and Juliet is the sun Arise fair sun and kill the envious moon Who is already sick and pale with grief '</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>import urllib.request</cline>
       </block>
@@ -40,15 +40,15 @@
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_1_ac">
+  </activity>
+  <activity label="mixedupcode_network_1_ac" xml:id="mixedupcode_network_1_ac">
     <statement>
       <p>Write a function called <c>decode</c> that takes in a parameter <c>link</c> and returns a string that contains
             the contents of the <c>link</c> using urllib. Between each word, there should be a space. Also, a space at the end is okay.
             For example, <c>decode('http://data.pr4e.org/romeo.txt')</c> should return <c>'But soft what light through yonder window breaks It is the east and Juliet is the sun Arise fair sun and kill the envious moon Who is already sick and pale with grief '</c>.</p>
     </statement>
     <program xml:id="mixedupcode_network_1_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -59,16 +59,16 @@ class myTests(TestCaseGui):
         self.assertEqual(decode('http://data.pr4e.org/romeo.txt'),'But soft what light through yonder window breaks It is the east and Juliet is the sun Arise fair sun and kill the envious moon Who is already sick and pale with grief ', "decode('http://data.pr4e.org/romeo.txt')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_2" xml:id="mixedupcode_network_2" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>write_txt</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib,
             and writes the contents of the <c>link</c> to a file called <c>'clown.txt'</c>. For example, <c>write_txt('http://data.pr4e.org/clown.txt')</c> should create
             a file called <c>'clown.txt'</c> that has the string <c>'the clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car'</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>import urllib.request</cline>
         <cline>import os</cline>
@@ -94,15 +94,15 @@ myTests().main()
         <cline>    fhand.close()</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_2_ac">
+  </activity>
+  <activity label="mixedupcode_network_2_ac" xml:id="mixedupcode_network_2_ac">
     <statement>
       <p>Write a function called <c>write_txt</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib,
             and writes the contents of the <c>link</c> to a file called <c>'clown.txt'</c>. For example, <c>write_txt('http://data.pr4e.org/clown.txt')</c> should create
             a file called <c>'clown.txt'</c> that has the string <c>'the clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car'</c>.</p>
     </statement>
     <program xml:id="mixedupcode_network_2_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -115,16 +115,16 @@ class myTests(TestCaseGui):
         fhand.close()
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_3" xml:id="mixedupcode_network_3" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>count_words</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib, and
             returns a dictionary with words as keys and the number of times they appear in the <c>link</c> as values. For example, <c>count_words('http://data.pr4e.org/romeo.txt')</c>
             should return <c>{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 'grief': 1}</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import urllib.request</cline>
       </block>
@@ -166,15 +166,15 @@ myTests().main()
         <cline>    return counts</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_3_ac">
+  </activity>
+  <activity label="mixedupcode_network_3_ac" xml:id="mixedupcode_network_3_ac">
     <statement>
       <p>Write a function called <c>count_words</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib, and
             returns a dictionary with words as keys and the number of times they appear in the <c>link</c> as values. For example, <c>count_words('http://data.pr4e.org/romeo.txt')</c>
             should return <c>{'But': 1, 'soft': 1, 'what': 1, 'light': 1, 'through': 1, 'yonder': 1, 'window': 1, 'breaks': 1, 'It': 1, 'is': 3, 'the': 3, 'east': 1, 'and': 3, 'Juliet': 1, 'sun': 2, 'Arise': 1, 'fair': 1, 'kill': 1, 'envious': 1, 'moon': 1, 'Who': 1, 'already': 1, 'sick': 1, 'pale': 1, 'with': 1, 'grief': 1}</c>.</p>
     </statement>
     <program xml:id="mixedupcode_network_3_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -185,16 +185,16 @@ class myTests(TestCaseGui):
         self.assertEqual(count_words('http://data.pr4e.org/clown.txt'),{'the': 7, 'clown': 2, 'ran': 2, 'after': 1, 'car': 3, 'and': 3, 'into': 1, 'tent': 2, 'fell': 1, 'down': 1, 'on': 1},"count_words('http://data.pr4e.org/clown.txt')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_4" xml:id="mixedupcode_network_4" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>write_jpg</c> that takes in a parameter <c>img_link</c>, retrieves a file from the <c>img_link</c> using urllib,
             and writes the contents of the <c>img_link</c> to a file called <c>'cover.jpg'</c>. For example, <c>write_jpg('http://data.pr4e.org/cover3.jpg')</c> should create
             a file called <c>'cover.jpg'</c> that has an image of the cover for <c>"PYTHON FOR EVERYBODY"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="8">
         <cline>import urllib.request</cline>
         <cline>import os</cline>
@@ -223,26 +223,26 @@ myTests().main()
         <cline>    fhand.close()</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_4_ac">
+  </activity>
+  <activity label="mixedupcode_network_4_ac" xml:id="mixedupcode_network_4_ac">
     <statement>
       <p>Write a function called <c>write_jpg</c> that takes in a parameter <c>img_link</c>, retrieves a file from the <c>img_link</c> using urllib,
             and writes the contents of the <c>img_link</c> to a file called <c>'cover.jpg'</c>. For example, <c>write_jpg('http://data.pr4e.org/cover3.jpg')</c> should create
             a file called <c>'cover.jpg'</c> that has an image of the cover for <c>"PYTHON FOR EVERYBODY"</c>.</p>
     </statement>
     <program xml:id="mixedupcode_network_4_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_5" xml:id="mixedupcode_network_5" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>num_chars</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib, and
             returns the number of characters in <c>link</c> in the format <c>"(num) characters"</c>. For example, <c>num_chars('http://data.pr4e.org/romeo-full.txt')</c>
             should return <c>"8864 characters"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>import urllib.request</cline>
       </block>
@@ -272,15 +272,15 @@ myTests().main()
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_5_ac">
+  </activity>
+  <activity label="mixedupcode_network_5_ac" xml:id="mixedupcode_network_5_ac">
     <statement>
       <p>Write a function called <c>num_chars</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using urllib, and
             returns the number of characters in <c>link</c> in the format <c>"(num) characters"</c>. For example, <c>num_chars('http://data.pr4e.org/romeo-full.txt')</c>
             should return <c>"8864 characters"</c>.</p>
     </statement>
     <program xml:id="mixedupcode_network_5_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -291,16 +291,16 @@ class myTests(TestCaseGui):
         self.assertEqual(num_chars('http://data.pr4e.org/clown.txt'),"106 characters","num_chars('http://data.pr4e.org/clown.txt')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_6" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_6" xml:id="mixedupcode_network_6" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>contents</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using sockets, and returns as a string
             the contents of the <c>link</c> (specifically 10000 characters). For example, <c>contents('http://data.pr4e.org/clown.txt')</c> should return
             <c>"HTTP/1.1 200 OK\nDate: Thu, 12 Aug 2021 01:24:15 GMT\nServer: Apache/2.4.18 (Ubuntu)\nLast-Modified: Sat, 13 May 2017 11:22:22 GMT\nETag: '6a-54f6609240717'\nAccept-Ranges: bytes\nContent-Length: 106\nCache-Control: max-age=0, no-cache, no-store, must-revalidate\nPragma: no-cache\nExpires: Wed, 11 Jan 1984 05:00:00 GMT\nConnection: close\nContent-Type: text/plain\n\nthe clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car\n"</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import socket</cline>
       </block>
@@ -347,15 +347,15 @@ myTests().main()
         <cline>    mysock.close()</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_6_ac">
+  </activity>
+  <activity label="mixedupcode_network_6_ac" xml:id="mixedupcode_network_6_ac">
     <statement>
       <p>Write a function called <c>contents</c> that takes in a parameter <c>link</c>, retrieves a file from the <c>link</c> using sockets, and returns as a string
             the contents of the <c>link</c> (specifically 10000 characters). For example, <c>contents('http://data.pr4e.org/clown.txt')</c> should return
             <c>"HTTP/1.1 200 OK\nDate: Thu, 12 Aug 2021 01:24:15 GMT\nServer: Apache/2.4.18 (Ubuntu)\nLast-Modified: Sat, 13 May 2017 11:22:22 GMT\nETag: '6a-54f6609240717'\nAccept-Ranges: bytes\nContent-Length: 106\nCache-Control: max-age=0, no-cache, no-store, must-revalidate\nPragma: no-cache\nExpires: Wed, 11 Jan 1984 05:00:00 GMT\nConnection: close\nContent-Type: text/plain\n\nthe clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car\n"</c>.</p>
     </statement>
     <program xml:id="mixedupcode_network_6_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -366,16 +366,16 @@ class myTests(TestCaseGui):
         self.assertEqual(contents('http://data.pr4e.org/clown.txt'),"HTTP/1.1 200 OK\nDate: Thu, 12 Aug 2021 01:24:15 GMT\nServer: Apache/2.4.18 (Ubuntu)\nLast-Modified: Sat, 13 May 2017 11:22:22 GMT\nETag: '6a-54f6609240717'\nAccept-Ranges: bytes\nContent-Length: 106\nCache-Control: max-age=0, no-cache, no-store, must-revalidate\nPragma: no-cache\nExpires: Wed, 11 Jan 1984 05:00:00 GMT\nConnection: close\nContent-Type: text/plain\n\nthe clown ran after the car and the car ran into the tent and the tent fell down on the clown and the car\n","contents('http://data.pr4e.org/clown.txt')")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_7" xml:id="mixedupcode_network_7" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>reg_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
             attributes that start with &#x2018;http' using regular expressions. Since websites are frequently updated,
             the returned number may change as links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import urllib.request</cline>
         <cline>import re</cline>
@@ -403,15 +403,15 @@ myTests().main()
         <cline>    return len(links)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_7_ac">
+  </activity>
+  <activity label="mixedupcode_network_7_ac" xml:id="mixedupcode_network_7_ac">
     <statement>
       <p>Write a function called <c>reg_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
             attributes that start with &#x2018;http' using regular expressions. Since websites are frequently updated,
             the returned number may change as links get added and deleted.</p>
     </statement>
     <program xml:id="mixedupcode_network_7_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -426,16 +426,16 @@ class myTests(TestCaseGui):
             self.assertEqual(reg_num_links(link),length,"reg_num_links(link)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_8" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_8" xml:id="mixedupcode_network_8" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>bsoup_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
             attributes that start with &#x2018;http' using BeautifulSoup. Since websites are frequently updated,
             the returned number may change as links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -486,15 +486,15 @@ myTests().main()
         <cline>    return len(list1)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_8_ac">
+  </activity>
+  <activity label="mixedupcode_network_8_ac" xml:id="mixedupcode_network_8_ac">
     <statement>
       <p>Write a function called <c>bsoup_num_links</c> that takes in a parameter <c>url</c> and returns the number of &#x2018;href'
             attributes that start with &#x2018;http' using BeautifulSoup. Since websites are frequently updated,
             the returned number may change as links get added and deleted.</p>
     </statement>
     <program xml:id="mixedupcode_network_8_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -514,15 +514,15 @@ class myTests(TestCaseGui):
             self.assertEqual(bsoup_num_links(link),length,"bsoup_num_links(link)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_9" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_9" xml:id="mixedupcode_network_9" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list that contains all image links
             using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -562,14 +562,14 @@ myTests().main()
         <cline>    return list1</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_9_ac">
+  </activity>
+  <activity label="mixedupcode_network_9_ac" xml:id="mixedupcode_network_9_ac">
     <statement>
       <p>Write a function called <c>img_links</c> that takes in a parameter <c>url</c> and returns a list that contains all image links
             using BeautifulSoup. Since websites are frequently updated, the returned list of image links may change as image links get added and deleted.</p>
     </statement>
     <program xml:id="mixedupcode_network_9_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -587,17 +587,17 @@ class myTests(TestCaseGui):
             self.assertEqual(img_links(link),list1,"img_links(link)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="mixedupcode_network_10" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="mixedupcode_network_10" xml:id="mixedupcode_network_10" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function called <c>span_attrs</c> that takes in a parameter <c>url</c> and returns a list of dictionaries using BeautifulSoup.
             Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
             and the values of the dictionary are the values of the attributes. Since websites are frequently updated,
             the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="4">
         <cline>import requests</cline>
         <cline>from bs4 import BeautifulSoup</cline>
@@ -653,8 +653,8 @@ myTests().main()
         <cline>    return list1</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="mixedupcode_network_10_ac">
+  </activity>
+  <activity label="mixedupcode_network_10_ac" xml:id="mixedupcode_network_10_ac">
     <statement>
       <p>Write a function called <c>span_attrs</c> that takes in a parameter <c>url</c> and returns a list of dictionaries using BeautifulSoup.
             Each dictionary is equivalent to each span tag. The keys of the dictionary are the attributes of the span tag,
@@ -662,7 +662,7 @@ myTests().main()
             the returned list of dictionaries may change as span tags, attributes, and values get added, deleted, or modified.</p>
     </statement>
     <program xml:id="mixedupcode_network_10_ac_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -680,7 +680,7 @@ class myTests(TestCaseGui):
             self.assertEqual(span_attrs(link),list1,"span_attrs(link)")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
+  </activity>
 </section>

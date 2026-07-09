@@ -8,7 +8,7 @@
   <p>There are a number of built-in functions that can be used on lists that
             allow you to quickly look through a list without writing your own loops:</p>
   <program xml:id="listBuiltIn" interactive="activecode" language="python">
-    <input>
+    <code>
 nums = [3, 41, 12, 9, 74, 15]
 print(len(nums))
 
@@ -19,14 +19,14 @@ print(min(nums))
 print(sum(nums))
 
 print(sum(nums)/len(nums))
-        </input>
+        </code>
   </program>
   <p>The <c>sum()</c> function only works when the list elements are
             numbers. The other functions (<c>max()</c>, <c>len()</c>,
             etc.) work with lists of strings and other types that can be comparable.</p>
-  <exercise label="listFunct_MC_sum">
+  <activity label="listFunct_MC_sum">
     <statement>
-      <p>Q-2: True or False? The max, sum, and len functions can work on any list.</p>
+      <p> True or False? The max, sum, and len functions can work on any list.</p>
     </statement>
     <choices>
       <choice>
@@ -46,12 +46,12 @@ print(sum(nums)/len(nums))
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>We could rewrite an earlier program that computed the average of a list
             of numbers entered by the user using a list.</p>
   <p>First, the program to compute an average without a list:</p>
   <program xml:id="averageNoList" interactive="activecode" language="python">
-    <input>
+    <code>
 total = 0
 count = 0
 while (True):
@@ -63,7 +63,7 @@ while (True):
 
 average = total / count
 print('Average:', average)
-        </input>
+        </code>
   </program>
   <p>In this program, we have <c>count</c> and <c>total</c>
             variables to keep the number and running total of the user's numbers as
@@ -71,7 +71,7 @@ print('Average:', average)
   <p>We could simply remember each number as the user entered it and use
             built-in functions to compute the sum and count at the end.</p>
   <program xml:id="averageList" interactive="activecode" language="python">
-    <input>
+    <code>
 numlist = list()
 while (True):
     inp = input('Enter a number: ')
@@ -81,15 +81,15 @@ while (True):
 
 average = sum(numlist) / len(numlist)
 print('Average:', average)
-        </input>
+        </code>
   </program>
   <p>We make an empty list before the loop starts, and then each time we have
             a number, we append it to the list. At the end of the program, we simply
             compute the sum of the numbers in the list and divide it by the count of
             the numbers in the list to come up with the average.</p>
-  <exercise label="listFunct_MC_avg">
+  <activity label="listFunct_MC_avg">
     <statement>
-      <p>Q-5: Which of the following built-in functions can be used on lists to compute the average of the list?
+      <p> Which of the following built-in functions can be used on lists to compute the average of the list?
             Select all that apply.</p>
     </statement>
     <choices>
@@ -134,10 +134,10 @@ print('Average:', average)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="listFunct_MC_len">
+  </activity>
+  <activity label="listFunct_MC_len">
     <statement>
-      <p>Q-6: What is printed by the following statements?</p>
+      <p> What is printed by the following statements?</p>
       <pre>alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(len(alist))</pre>
     </statement>
@@ -175,5 +175,5 @@ print(len(alist))</pre>
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

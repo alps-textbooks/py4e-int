@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<section xml:id="network_group-work-more-html">
+<worksheet label="group-work-more-html" xml:id="network_group-work-more-html" groupwork="yes" groupsize="4">
+
   <title>Group Work: More HTML</title>
   <introduction>
   <p>It is best to use a POGIL approach with the following. In POGIL students work
@@ -53,12 +54,12 @@
   <subsection xml:id="network_table-tags">
     <title>Table Tags</title>
     <p>HTML pages can include tables.  Use the <c>&lt;table&gt;</c> tag.</p>
-    <exercise label="html_table_ex">
+    <activity label="html_table_ex">
       <statement>
         <p>Click on the <q>Render</q> button to see the resulting web page.</p>
       </statement>
-      <program xml:id="html_table_ex_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_table_ex_editor" interactive="activecode" language="html" label="html_table_ex_editor">
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -85,40 +86,40 @@
         &lt;/table&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="html_table_tag_def_dnd">
+    </activity>
+    <activity label="html_table_tag_def_dnd">
       <statement>
         <p>Match each tag to its definition.</p>
       </statement>
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>table</premise>
           <response>Used to create a table.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>th</premise>
           <response>Used to specify a header (optional first row).</response>
         </match>
-        <match order="3">
+        <match>
           <premise>tr</premise>
           <response>Used to create a row in a table.</response>
         </match>
-        <match order="4">
+        <match>
           <premise>td</premise>
           <response>Used to identify data in a table.</response>
         </match>
-      </matches>
-    </exercise>
-    <exercise label="html_body_table_unemployment_order" numbered="yes" adaptive="yes" indentation="hide" language="python">
+      </cardsort>
+    </activity>
+    <activity label="html_body_table_unemployment_order" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define just the body of simple HTML page with a table. The table has a header row and one row of data. Indent the blocks to show the structure.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="7">
           <cline>&lt;body&gt;</cline>
         </block>
@@ -154,12 +155,12 @@
           <cline>&lt;/body&gt;</cline>
         </block>
       </blocks>
-    </exercise>
-    <exercise label="html_body_table_order_two_data" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    </activity>
+    <activity label="html_body_table_order_two_data" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Put the blocks into order to define just the body of simple HTML page with a table. The table has two rows of data.  The first row is data about the United Kingdom and the second is data about India. Indent the blocks to show the structure.</p>
       </statement>
-      <blocks>
+      <blocks numbered="left">
         <block order="6">
           <cline>&lt;body&gt;</cline>
         </block>
@@ -195,27 +196,27 @@
           <cline>&lt;/body&gt;</cline>
         </block>
       </blocks>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_link-tag">
     <title>Link Tag</title>
     <p>Web pages can include hyperlinks to other web pages.  They do this by including
                 an anchor <c>a</c> tag which is also known as a <term>link</term> tag as shown below.</p>
     <program language="html">
-      <input>
+      <code>
 &lt;a href="https://www.w3schools.com/"&gt;Visit W3Schools.com!&lt;/a&gt;
-</input>
+</code>
     </program>
     <p>The start tag <c>&lt;a&gt;</c> contains an <term>attribute</term> <c>href</c> and <term>value</term> <c>"https://www.w3schools.com/"</c>.
                 The text of the tag is <c>Visit W3Schools.com!</c> which is the actual text of the link when it is displayed.
                 If you click on the link you will be taken to the <c>href</c> value: <c>https://www.w3schools.com/</c>.
                 The <c>&lt;a&gt;</c> tag has a closing <c>&lt;/a&gt;</c> tag.</p>
-    <exercise label="html_link_ac">
+    <activity label="html_link_ac" xml:id="html_link_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_link_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_link_ac_editor" interactive="activecode" language="html">
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -227,20 +228,20 @@
         &lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_image-tag">
     <title>Image Tag</title>
     <p>Web pages can include images using the &lt;img&gt; tag. The image tag has an attribute <c>src</c> that specifies the URL for the image
                 and can have an <c>alt</c> attribute to specify alternative text that describes the image.</p>
-    <exercise label="html_image_ac">
+    <activity label="html_image_ac" xml:id="html_image_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_image_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_image_ac_editor" interactive="activecode" language="html">
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -251,45 +252,45 @@
         &lt;img src="https://i.ibb.co/WfcrzVn/beach.jpg" alt="A picture of a beach"&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <note>
       <p>An image tag, <c>&lt;img&gt;</c>, does not have an end tag.  All of the information is in the start tag.</p>
     </note>
-    <exercise label="html_other_tags_def_dnd">
+    <activity label="html_other_tags_def_dnd">
       <statement>
         <p>Match each tag to its definition.</p>
       </statement>
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>img</premise>
           <response>Tag to include an image.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>div</premise>
           <response>Tag to define a division (section).</response>
         </match>
-        <match order="3">
+        <match>
           <premise>a</premise>
           <response>Tag to define a hyperlink (link)</response>
         </match>
-      </matches>
-    </exercise>
-    <exercise label="html-anchor-vs-img">
+      </cardsort>
+    </activity>
+    <activity label="html-anchor-vs-img">
       <statement>
-        <p>Q-8: List the differences between the <c>img</c> tag and the <c>a</c> tag?</p>
+        <p> List the differences between the <c>img</c> tag and the <c>a</c> tag?</p>
       </statement>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_attributes">
     <title>Attributes</title>
     <p>All HTML tags can have attributes.  Attributes provide additional information about the tag such as the alternative text to use for an image as shown above by the <c>alt</c> attribute of the <c>img</c> tag.
                 Attributes are specified by name and value pairs.  The value should be in quotes.</p>
-    <exercise label="html_a_tag_attribute_names">
+    <activity label="html_a_tag_attribute_names">
       <statement>
         <p>Click on all of the attribute names in the example HTML below.</p>
       </statement>
@@ -311,8 +312,8 @@
         <cline>    <area correct="no">&lt;/body&gt;</area></cline>
         <cline><area correct="no">&lt;/html&gt;</area></cline>
       </areas>
-    </exercise>
-    <exercise label="html_a_tag_attribute_values">
+    </activity>
+    <activity label="html_a_tag_attribute_values">
       <statement>
         <p>Click on all of the attribute values in the example HTML below.</p>
       </statement>
@@ -334,18 +335,18 @@
         <cline>    <area correct="no">&lt;/body&gt;</area></cline>
         <cline><area correct="no">&lt;/html&gt;</area></cline>
       </areas>
-    </exercise>
+    </activity>
   </subsection>
   <subsection xml:id="network_div-and-span-tags">
     <title>Div and Span tags</title>
     <p>The <c>div</c> tag is used to contain other HTML tags (elements).  It is often used to divide the HTML page into sections. The <c>span</c> tag is used for inline grouping or styling.
                 You can use Cascading Style Sheets (CSS) to change the look of each HTML tag (element).  You can add the CSS directly in the <c>head</c> section using the <c>style</c> tag, but the recommended approach is to use external CSS.</p>
-    <exercise label="html_div_with_css_ac">
+    <activity label="html_div_with_css_ac" xml:id="html_div_with_css_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_div_with_css_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_div_with_css_ac_editor" interactive="activecode" language="html">
+        <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -370,41 +371,41 @@
         &lt;/div&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
-    </exercise>
-    <exercise label="html_span_div_css">
+    </activity>
+    <activity label="html_span_div_css">
       <statement>
         <p>Match each term to its definition.</p>
       </statement>
       <feedback>
         <p>Read the information above and try again.</p>
       </feedback>
-      <matches>
-        <match order="1">
+      <cardsort>
+        <match>
           <premise>span</premise>
           <response>Tag to define an inline style or order.</response>
         </match>
-        <match order="2">
+        <match>
           <premise>div</premise>
           <response>Tag to define a block or section in an HTML page.</response>
         </match>
-        <match order="3">
+        <match>
           <premise>CSS</premise>
           <response>Is used to define styles to change how HTML elements are displayed.</response>
         </match>
-      </matches>
-    </exercise>
+      </cardsort>
+    </activity>
   </subsection>
   <subsection xml:id="network_using-css-classes">
     <title>Using CSS Classes</title>
     <p>You can define one or more classes in CSS and then use them to change the display of the HTML elements.</p>
-    <exercise label="html_div_with_css_classes_ac">
+    <activity label="html_div_with_css_classes_ac" xml:id="html_div_with_css_classes_ac_ex">
       <statement>
         <p>Render the HTML below.</p>
       </statement>
-      <program xml:id="html_div_with_css_classes_ac_editor" interactive="activecode" language="htmlmixed">
-        <input>
+      <program xml:id="html_div_with_css_classes_ac_editor" interactive="activecode" language="html">
+        <code>
 &lt;html&gt;
     &lt;head&gt;
         &lt;style&gt;
@@ -426,13 +427,13 @@
 
   &lt;/body&gt;
 &lt;/html&gt;
-        </input>
+        </code>
       </program>
-    </exercise>
+    </activity>
     <p>Change the class <c>warning</c> to use an orange color instead and render the HTML again.</p>
-    <exercise label="html_true_items">
+    <activity label="html_true_items">
       <statement>
-        <p>Q-14: Which of the follow are true?</p>
+        <p> Which of the follow are true?</p>
       </statement>
       <choices>
         <choice correct="yes">
@@ -468,22 +469,8 @@
           </feedback>
         </choice>
       </choices>
-    </exercise>
+    </activity>
     <p>If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.</p>
-    <raw format="html" xml:space="preserve">
-&lt;div class="runestone sqcontainer %(optclass)s"&gt;
-    &lt;div data-component="groupsub" id=html_more_groupsub data-size_limit=3&gt;
-        &lt;div class="col-sm-6"&gt;
-            &lt;select id="assignment_group" multiple class="assignment_partner_select" style="width: 100%"&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div id="groupsub_button" class="col-sm-6"&gt;
-        &lt;/div&gt;
-        &lt;p&gt;The Submit Group button will submit the answer for each each question
-        on this page for each member of your group. It also logs you as the official
-        group submitter.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</raw>
+    
   </subsection>
-</section>
+</worksheet>

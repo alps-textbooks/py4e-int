@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <section xml:id="functions_functions-with-loops-multiple-choice-questions">
   <title>Functions with Loops Multiple Choice Questions</title>
-  <exercise label="functions_with_loops_mc1">
+  <activity label="functions_with_loops_mc1">
     <statement>
-      <p>Q-1: Given the code below, what would the function print?</p>
+      <p> Given the code below, what would the function print?</p>
       <program language="python">
-        <input>
+        <code>
 def countodd(lst):
    num_of_odd = 0
       for item in lst:
@@ -15,7 +15,7 @@ def countodd(lst):
    return num_of_odd
 
 print(countodd([1,2,3,4,5]))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -60,12 +60,12 @@ print(countodd([1,2,3,4,5]))
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc2">
+  </activity>
+  <activity label="functions_with_loops_mc2">
     <statement>
-      <p>Q-2: After how many iterations will this code execute the <c>break</c>?</p>
+      <p> After how many iterations will this code execute the <c>break</c>?</p>
       <program language="python">
-        <input>
+        <code>
 def divide_by_two_until_one(num):
    count = 0
    while (True):
@@ -76,7 +76,7 @@ def divide_by_two_until_one(num):
    return count
 
 print(divide_by_two_until_one(50))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -121,18 +121,18 @@ print(divide_by_two_until_one(50))
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc3">
+  </activity>
+  <activity label="functions_with_loops_mc3">
     <statement>
-      <p>Q-3: Which of the following values for <c>x</c>, <c>y</c>, and <c>z</c> would result in the function returning <q>True</q>?</p>
+      <p> Which of the following values for <c>x</c>, <c>y</c>, and <c>z</c> would result in the function returning <q>True</q>?</p>
       <program language="python">
-        <input>
+        <code>
 def addition(x,y,z):
    if (x + y) == z:
       return "True"
    else:
       return "False"
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -177,15 +177,15 @@ def addition(x,y,z):
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc4">
+  </activity>
+  <activity label="functions_with_loops_mc4">
     <statement>
-      <p>Q-4: How many times would <c>"Hello world!"</c> print?</p>
+      <p> How many times would <c>"Hello world!"</c> print?</p>
       <program language="python">
-        <input>
+        <code>
 for i in range(4):
    print("Hello world!")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -222,19 +222,19 @@ for i in range(4):
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc5">
+  </activity>
+  <activity label="functions_with_loops_mc5">
     <statement>
-      <p>Q-5: How many times does the following code print and in what pattern?</p>
+      <p> How many times does the following code print and in what pattern?</p>
       <program language="python">
-        <input>
+        <code>
 lst1 = [1, 3, 5, 7]
 lst2 = [2, 4, 6, 8, 10]
 
 for x in lst1:
    for y in lst2:
       print(x * y)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -271,18 +271,18 @@ for x in lst1:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc6">
+  </activity>
+  <activity label="functions_with_loops_mc6">
     <statement>
-      <p>Q-6: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 out = ""
 for i in range(2):
     for j in range(2):
         out += "i: " + str(i) + " j:" + str(j) + ", "
 print(out)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -319,12 +319,12 @@ print(out)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc7">
+  </activity>
+  <activity label="functions_with_loops_mc7">
     <statement>
-      <p>Q-7: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 l1 = [1, 2]
 l2 = [3, 4]
 out = []
@@ -332,7 +332,7 @@ for val1 in l1:
     for val2 in l2:
         out.append(val1 + val2)
 print(out)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -369,12 +369,12 @@ print(out)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc8">
+  </activity>
+  <activity label="functions_with_loops_mc8">
     <statement>
-      <p>Q-8: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 l1 = [1, 2, 3]
 l2 = [4, 5]
 out = []
@@ -382,7 +382,7 @@ for val1 in l1:
     for val2 in l2:
         out.append(val1 + val2)
 print(out)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -419,12 +419,12 @@ print(out)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc9">
+  </activity>
+  <activity label="functions_with_loops_mc9">
     <statement>
-      <p>Q-9: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 l1 = [1, 2, 3]
 l2 = [4, 5]
 out = []
@@ -432,7 +432,7 @@ for val1 in l2:
     for val2 in l1:
         out.append(val1 + val2)
 print(out)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -469,12 +469,12 @@ print(out)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="functions_with_loops_mc10">
+  </activity>
+  <activity label="functions_with_loops_mc10">
     <statement>
-      <p>Q-10: What does the following code print?</p>
+      <p> What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 l1 = ['1', '2', '3']
 l2 = ['4', '5']
 out = []
@@ -482,7 +482,7 @@ for val1 in l1:
     for val2 in l2:
         out.append(val1 + val2)
 print(out)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -519,5 +519,5 @@ print(out)
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

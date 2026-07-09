@@ -15,30 +15,30 @@
             to achieve information hiding, but we do not cover them in this book.
             <term>Inheritance</term> and <term>polymorphism</term> are mechanisms that help to enable
             code reuse and contract-based programming, and are the subject of this chapter.</p>
-  <exercise label="pillars_of_oop_dnd">
+  <activity label="pillars_of_oop_dnd">
     <statement>
       <p>Drag each item to its location in a class diagram</p>
     </statement>
     <feedback>
       <p>Read the chapter on functions and try again.</p>
     </feedback>
-    <matches>
-      <match order="1">
+    <cardsort>
+      <match>
         <premise>encapsulation</premise>
         <response> Packaging data and methods together</response>
       </match>
-      <match order="2">
+      <match>
         <premise>information hiding</premise>
         <response> protecting state (data) in objects</response>
       </match>
-      <match order="3">
+      <match>
         <premise>inheritance</premise>
         <response> allows code reuse</response>
       </match>
-      <match order="4">
+      <match>
         <premise>polymorphism</premise>
         <response> contract-based programming</response>
       </match>
-    </matches>
-  </exercise>
+    </cardsort>
+  </activity>
 </section>

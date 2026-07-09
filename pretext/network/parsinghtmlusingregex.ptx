@@ -5,14 +5,14 @@
             search for and extract substrings that match a particular pattern.</p>
   <p>Here is a simple web page:</p>
   <program language="{.html}">
-    <input>
+    <code>
 &lt;h1&gt;The First Page&lt;/h1&gt;
 &lt;p&gt;
 If you like, you can switch to the
 &lt;a href="http://www.dr-chuck.com/page2.htm"&gt;
 Second Page&lt;/a&gt;.
 &lt;/p&gt;
-</input>
+</code>
   </program>
   <p>We can construct a well-formed regular expression to match and extract
             the link values from the above text as follows:</p>
@@ -26,9 +26,9 @@ Second Page&lt;/a&gt;.
             <q>greedy</q> fashion. A non-greedy match tries to find the
             <em>smallest</em> possible matching string and a greedy match
             tries to find the <em>largest</em> possible matching string.</p>
-  <exercise label="network_regex_tf">
+  <activity label="network_regex_tf">
     <statement>
-      <p>Q-1: True or False? In regex, <c>?</c> is a greedy character, meaning it will select as many characters as it can.</p>
+      <p> True or False? In regex, <c>?</c> is a greedy character, meaning it will select as many characters as it can.</p>
     </statement>
     <choices>
       <choice>
@@ -48,12 +48,12 @@ Second Page&lt;/a&gt;.
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
   <p>We add parentheses to our regular expression to indicate which part of
             our matched string we would like to extract, and produce the following
             program:</p>
   <program xml:id="urlregex" interactive="activecode" language="python3">
-    <input>
+    <code>
 # Search for link values within URL input
 import urllib.request, urllib.parse, urllib.error
 import re
@@ -69,7 +69,7 @@ html = urllib.request.urlopen(url, context=ctx).read()
 links = re.findall(b'href="(http[s]?://.*?)"', html)
 for link in links:
     print(link.decode())
-        </input>
+        </code>
   </program>
   <p>The <c>ssl</c> library allows this program to access web sites that strictly
             enforce HTTPS. The <c>read</c> method returns HTML source code as a bytes object
@@ -81,9 +81,9 @@ for link in links:
             there, a solution only using regular expressions might either miss some
             valid links or end up with bad data.</p>
   <p>This can be solved by using a robust HTML parsing library.</p>
-  <exercise label="network_regex_tf2">
+  <activity label="network_regex_tf2">
     <statement>
-      <p>Q-3: True or False? Using regex with HTML will always select the necessary HTML pages.</p>
+      <p> True or False? Using regex with HTML will always select the necessary HTML pages.</p>
     </statement>
     <choices>
       <choice>
@@ -103,5 +103,5 @@ for link in links:
         </feedback>
       </choice>
     </choices>
-  </exercise>
+  </activity>
 </section>

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <section xml:id="functions_functions-and-loops-write-code-questions">
   <title>Functions and Loops Write Code Questions</title>
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>list_starts_with_a</c> that takes in <c>lst</c> as a parameter and returns a
                             new list with the words from <c>lst</c> that start with <q>a</q>. For example, <c>list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"])</c>
                             would return <c>["alphabet", "apple", "amazing"]</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_loops_writecode1q_editor">
-            <input>
+            <code>
 def list_starts_with_a(lst):
     # write code here
 
@@ -25,7 +25,7 @@ class myTests(TestCaseGui):
         self.assertEqual(list_starts_with_a([]),[],"list_starts_with_a([])")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -36,7 +36,7 @@ myTests().main()
                             would return ["alphabet", "apple", "amazing"].
 
     
-    <program xml:id="funct_loops_writecode1a_editor" language="python"><input>
+    <program xml:id="funct_loops_writecode1a_editor" language="python"><code>
 def list_starts_with_a(lst):
     list_a = []
     for word in lst:
@@ -45,18 +45,18 @@ def list_starts_with_a(lst):
     return list_a
 
 print(list_starts_with_a(["alphabet", "apple", "banana", "coding", "amazing"]))
-        </input></program>
+        </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
         
-        <exercise label="funct_loops_writecode2q">
+        <activity label="funct_loops_writecode2q">
           <statement>
             <p>Write a function called <c>sentence_without_vowels</c> that takes in <c>string</c> as a parameter and returns a new
                     string that consists of only characters that are not vowels. For example, <c>sentence_without_vowels('apple')</c> would return <c>"ppl"</c>.</p>
           </statement>
           <program xml:id="funct_loops_writecode2q_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 def sentence_without_vowels(string):
     # write code here
 
@@ -72,11 +72,11 @@ class myTests(TestCaseGui):
         self.assertEqual(sentence_without_vowels(' ')," ","sentence_without_vowels(' ')")
 
 myTests().main()
-        </input>
+        </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>draw_square</c> that takes in <c>num</c> as a parameter and returns a
                             string that consists of a square made of <q>*</q> with the dimensions <c>num</c> times <c>num</c>. Note:
@@ -84,7 +84,7 @@ myTests().main()
                             <c>"****\n****\n****\n****"</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_loops_writecode3q_editor">
-            <input>
+            <code>
 def draw_square(num):
     # write code here
 
@@ -98,7 +98,7 @@ class myTests(TestCaseGui):
         self.assertEqual(draw_square(1),"*","draw_square(1)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -110,7 +110,7 @@ myTests().main()
                             "****\n****\n****\n****".
 
     
-    <program xml:id="funct_loops_writecode3a_editor" language="python"><input>
+    <program xml:id="funct_loops_writecode3a_editor" language="python"><code>
 def draw_square(num):
     string1 = ""
     for i in range(num):
@@ -121,18 +121,18 @@ def draw_square(num):
     return string1
 
 print(draw_square(4))
-        </input></program>
+        </code></program>
                     </solution>
-        </exercise>
+        </activity>
 
-        <exercise label="funct_loops_writecode4q">
+        <activity label="funct_loops_writecode4q">
           <statement>
             <p>Write a function called <c>check_prime_num</c> that takes in <c>num</c> as a parameter and returns <c>True</c> if <c>num</c> is a prime number
                     and <c>False</c> otherwise. For the purposes of this question, there is no need to test for values of <c>num</c> that are less than two.
                     For example, <c>check_prime_num(5)</c> should return <c>True</c>.</p>
           </statement>
           <program xml:id="funct_loops_writecode4q_editor" interactive="activecode" language="python">
-            <input>
+            <code>
 def check_prime_num(num):
     # write code here
 
@@ -149,17 +149,17 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
+        </code>
           </program>
-        </exercise>
+        </activity>
 
-        <exercise>
+        <activity>
           <statement>
             <p>Write a function called <c>factorial</c> that takes in <c>num</c> as a parameter and returns the factorial value.
                             Ignore checking numbers that are less than 1. For example, <c>factorial(5)</c> would return <c>120</c>.</p>
           </statement>
           <program interactive="activecode" language="python" xml:id="funct_loops_writecode5q_editor">
-            <input>
+            <code>
 def factorial(num):
     # write code here
 
@@ -175,7 +175,7 @@ class myTests(TestCaseGui):
         self.assertEqual(factorial(12), 479001600, "factorial(12)")
 
 myTests().main()
-        </input>
+        </code>
           </program>
           <solution>
 
@@ -185,14 +185,14 @@ myTests().main()
                             Ignore checking numbers that are less than 1. For example, factorial(5) would return 120.
 
     
-    <program xml:id="funct_loops_writecode5a_editor" language="python"><input>
+    <program xml:id="funct_loops_writecode5a_editor" language="python"><code>
 def factorial(num):
     total = num
     while num &gt; 1:
         num -= 1
         total *= num
     return total
-        </input></program>
+        </code></program>
                     </solution>
-        </exercise>
+        </activity>
 </section>

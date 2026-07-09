@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<exercises xml:id="pictures_multiple-choice-questions">
+<section xml:id="pictures_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
-  <exercise label="pictures-mc-q1">
+  <activity label="pictures-mc-q1">
     <statement>
-      <p>Q-1: What are the three colors parts that make up each pixel?</p>
+      <p> What are the three colors parts that make up each pixel?</p>
     </statement>
     <choices>
       <choice>
@@ -39,12 +39,12 @@
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-mc-q2_v2">
+  </activity>
+  <activity label="pictures-mc-q2_v2">
     <statement>
-      <p>Q-2: What does the following code block do?</p>
+      <p> What does the following code block do?</p>
       <program language="python">
-        <input>
+        <code>
 from image import *
 img = Image('beach.jpg')
 pixels = img.getPixels()
@@ -52,7 +52,7 @@ for p in pixels:
     r = p.getRed()
     p.setGreen(r)
     img.updatePixel(p)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -89,10 +89,10 @@ for p in pixels:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-mc-q3-v2">
+  </activity>
+  <activity label="pictures-mc-q3-v2">
     <statement>
-      <p>Q-3: Every pixel has a color with a red value, a green value and a blue value. What is the range (minimum value and maximum value)?</p>
+      <p> Every pixel has a color with a red value, a green value and a blue value. What is the range (minimum value and maximum value)?</p>
     </statement>
     <choices>
       <choice>
@@ -128,10 +128,10 @@ for p in pixels:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-mc-q4-v2">
+  </activity>
+  <activity label="pictures-mc-q4-v2">
     <statement>
-      <p>Q-4: If a pixel has red=0, green=255, and blue=0, what color will it be?</p>
+      <p> If a pixel has red=0, green=255, and blue=0, what color will it be?</p>
     </statement>
     <choices>
       <choice>
@@ -175,12 +175,12 @@ for p in pixels:
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-mc-q5-v2">
+  </activity>
+  <activity label="pictures-mc-q5-v2">
     <statement>
-      <p>Q-5: Which code block should you insert in the for loop below to correctly increase the blue by 180%?</p>
+      <p> Which code block should you insert in the for loop below to correctly increase the blue by 180%?</p>
       <program language="python">
-        <input>
+        <code>
 from image import *
 
 img = Image("motorcycle.jpg")
@@ -191,38 +191,38 @@ for p in pixels:
     img.updatePixel(p)
 win = ImageWin(img.getWidth(), img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 I.
 
 r = p.getRed()
 p.setRed(r * 180)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 II.
 
 b = p.getBlue()
 p.setBlue(b * 1.8)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 III.
 
 b = p.getBlue()
 p.setBlue(b * 180)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 IV.
 
 p.setBlue(b * 1.8)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -259,10 +259,10 @@ p.setBlue(b * 1.8)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-mc-reduce-25-percent-q6-v2">
+  </activity>
+  <activity label="pictures-mc-reduce-25-percent-q6-v2">
     <statement>
-      <p>Q-6: Which of the following would reduce the green value by 25%?</p>
+      <p> Which of the following would reduce the green value by 25%?</p>
     </statement>
     <choices>
       <choice>
@@ -298,12 +298,12 @@ p.setBlue(b * 1.8)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-mc-q7">
+  </activity>
+  <activity label="pictures-mc-q7">
     <statement>
-      <p>Q-7: Which code block would allow you to copy the bottom half of the image onto the top half?</p>
+      <p> Which code block would allow you to copy the bottom half of the image onto the top half?</p>
       <program language="python">
-        <input>
+        <code>
 I.
 
 from image import *
@@ -321,10 +321,10 @@ for x in range(img.getWidth()):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 II.
 
 from image import *
@@ -342,10 +342,10 @@ for x in range(halfway):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 III.
 
 from image import *
@@ -364,10 +364,10 @@ for x in range(halfway_x):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 IV.
 
 from image import *
@@ -385,7 +385,7 @@ for x in range(img.getWidth()):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -422,10 +422,10 @@ img.draw(win)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-make-white-q8">
+  </activity>
+  <activity label="pictures-make-white-q8">
     <statement>
-      <p>Q-8: Which of the following combinations of red (r), green (g), and blue (b) values makes white?</p>
+      <p> Which of the following combinations of red (r), green (g), and blue (b) values makes white?</p>
     </statement>
     <choices>
       <choice>
@@ -461,12 +461,12 @@ img.draw(win)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-mc-q9">
+  </activity>
+  <activity label="pictures-mc-q9">
     <statement>
-      <p>Q-9: What happens when we run the following code?</p>
+      <p> What happens when we run the following code?</p>
       <program language="python">
-        <input>
+        <code>
 from image import *
 img = Image("vangogh.jpg")
 
@@ -479,7 +479,7 @@ for x in range(img.getWidth()):
 
 win = ImageWin(img.getWidth(),img.getHeight())
 img.draw(win)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -516,10 +516,10 @@ img.draw(win)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="pictures-mc-q10-v2">
+  </activity>
+  <activity label="pictures-mc-q10-v2">
     <statement>
-      <p>Q-10:     What line of code sets the red, green and blue values simultaneously?</p>
+      <p>     What line of code sets the red, green and blue values simultaneously?</p>
     </statement>
     <choices>
       <choice>
@@ -555,5 +555,5 @@ img.draw(win)
         </feedback>
       </choice>
     </choices>
-  </exercise>
-</exercises>
+  </activity>
+</section>

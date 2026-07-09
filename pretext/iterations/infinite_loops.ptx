@@ -22,13 +22,13 @@
             logical expression on the <c>while</c> statement is simply the
             logical constant <c>True</c>:</p>
   <program xml:id="codelens531" interactive="codelens" language="python">
-    <input>
+    <code>
 n = 10
 while True:
     print(n, end=' ')
     n = n - 1
 print('Done!')
-    </input>
+    </code>
   </program>
   <p>As you can see above, the Code Lens gives you a warning because it runs for over 1000 steps.
             If you make the mistake of running this code, you will learn quickly how to
@@ -44,41 +44,37 @@ print('Done!')
   <p>For example, suppose you want to take input from the user until they
             type <c>done</c>. You could write:</p>
   <program language="05section3">
-    <input>
+    <code>
 while True:
     line = input('Word: ')
     if line == 'done':
         break
     print(line)
 print ('Done!')
-</input>
+</code>
   </program>
   <p>The loop condition is <c>True</c>, which is always true, so the
             loop runs repeatedly until it hits the break statement.</p>
-  <exercise label="itInfinite_fill1">
+  <activity label="itInfinite_fill1">
     <statement>
-      <p>Q-2: At what word will the while loop pictured above terminate? <var/>  </p>
+      <p>At what word will the while loop pictured above terminate? <fillin width="20" mode="string" answer="done"/>  </p>
     </statement>
-    <setup>
-      <var>
-        <condition string="done">
-          <feedback>
-            <p>The while loop will end when the user types <q>done</q></p>
-          </feedback>
-        </condition>
-        <condition string="Done">
-          <feedback>
-            <p>Incorrect! The conditions of the while loop are case specific. Try again.</p>
-          </feedback>
-        </condition>
-        <condition string=".*">
-          <feedback>
-            <p>Incorrect! Look closely at the code above. Try again.</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
-  </exercise>
+    <evaluation>
+        <evaluate>
+                <test correct="yes">
+                    <strcmp use-answer="yes"/>
+                    <feedback><p>The while loop will end when the user types <q>done</q></p></feedback>
+                </test>
+                <test>
+                    <strcmp>Done</strcmp>
+                    <feedback><p>Incorrect! The conditions of the while loop are case specific. Try again.</p></feedback>
+                </test>
+                <test>
+                    <feedback><p>Incorrect! Look closely at the code above. Try again.</p></feedback>
+                </test>
+        </evaluate>
+    </evaluation>
+  </activity>
   <p>Each time through, it prompts the user with <c>Word:</c>. If the
             user types <c>done</c>, the <c>break</c> statement exits the
             loop. Otherwise, the program echoes whatever the user types and goes back
@@ -93,11 +89,11 @@ Done!</pre>
             check the condition anywhere in the loop (not just at the top) and you
             can express the stop condition affirmatively (<q>stop when this happens</q>)
             rather than negatively (<q>keep going until that happens.</q>).</p>
-  <exercise label="itInfinite_MC_forever">
+  <activity label="itInfinite_MC_forever">
     <statement>
-      <p>Q-3: How many lines are in the body of the while loop in shown above?</p>
+      <p>How many lines are in the body of the while loop in shown above?</p>
       <program language="python">
-        <input>
+        <code>
 while 1==1:
     print ("Looping")
     print ("Forever")
@@ -110,7 +106,7 @@ Looping
 Forever
 Looping
 Forever
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -139,14 +135,14 @@ Forever
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="itInfinite_PP_1to5" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="itInfinite_PP_1to5" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that prints the numbers 1 through 5. Make sure you
             use correct indentation! Also, there will be three code blocks that aren't used
             in the final solution.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>n = 0</cline>
       </block>
@@ -169,5 +165,5 @@ Forever
         <cline>    n = n + 1</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

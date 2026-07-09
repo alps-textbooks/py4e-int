@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <section xml:id="strings_write-code-questions">
   <title>Write Code Questions</title>
-  <exercise label="str-ex-hiacq">
+  <activity label="str-ex-hiacq">
     <statement>
       <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
     </statement>
     <program xml:id="str-ex-hiacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 s1 = "hi"
 s1.capitalize()
 print(s1)
@@ -19,14 +19,14 @@ class myTests(TestCaseGui):
         self.assertEqual(s1,"Hi")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-hiansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-hiansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Fix line 2 so that it prints <q>Hi</q> instead of <q>hi</q>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>s1 = "hi"</cline>
       </block>
@@ -42,13 +42,13 @@ myTests().main()
         <cline>print(s1)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-meowacq">
+  </activity>
+  <activity label="str-ex-meowacq">
     <statement>
       <p>Fix the code so that only <q>meow</q> is printed.</p>
     </statement>
     <program xml:id="str-ex-meowacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 sentence = "The cat goes meow."
 s2 = [16:13]sentence
 print(s2)
@@ -61,14 +61,14 @@ class myTests(TestCaseGui):
             self.assertEqual(s2,"meow")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-meowansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-meowansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Fix the code so that only <q>meow</q> is printed.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>sentence = "The cat goes meow."</cline>
       </block>
@@ -82,14 +82,14 @@ myTests().main()
         <cline>print(s2)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-eggsacq">
+  </activity>
+  <activity label="str-ex-eggsacq">
     <statement>
       <p>Write code to evaluate the length of the string <q>I like green eggs</q>
             and print it. Save the string as s1. It should print <q>The length is 17</q>.</p>
     </statement>
     <program xml:id="str-ex-eggsacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -99,15 +99,15 @@ class myTests(TestCaseGui):
         self.assertEqual(s1,"The length is 17")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-eggsansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-eggsansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Write code to evaluate the length of the string <q>I like green eggs</q>
             and print it. It should print <q>The length is 17</q>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <cline>sentence = 'I like green eggs'</cline>
       </block>
@@ -120,8 +120,8 @@ myTests().main()
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-countacq">
+  </activity>
+  <activity label="str-ex-countacq">
     <statement>
       <p>Create a function named <c>count</c> that accepts a string and a letter
             as arguments, then returns the count of that letter in the string.
@@ -129,7 +129,7 @@ myTests().main()
             return <c>3</c>. <em>Hint: use the</em> <c>count</c> <em>method.</em></p>
     </statement>
     <program xml:id="str-ex-countacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 ====
 from unittest.gui import TestCaseGui
@@ -142,17 +142,17 @@ class myTests(TestCaseGui):
         self.assertEqual(count('racecar','r'),2,"Tested 'r' in 'racecar'")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-countansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-countansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function named <c>count</c> that accepts a string and a letter
             as arguments, then returns the count of that letter in the string.
             For example, if the function call was <c>count("banana", "a")</c> it would
             return <c>3</c>. <em>Hint: use the</em> <c>count</c> <em>method.</em></p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="2">
         <choice correct="yes">
           <cline>def count(str, letter):</cline>
@@ -170,15 +170,15 @@ myTests().main()
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-floatacq">
+  </activity>
+  <activity label="str-ex-floatacq">
     <statement>
       <p>Take the following Python code that stores this string: <c>string = "X-DSPAM-Confidence: 0.8475"</c>.
             Use <c>find</c> and string slicing to extract the portion of the string after the colon character
             and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
     </statement>
     <program xml:id="str-ex-floatacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 string = "X-DSPAM-Confidence: 0.8475"
 
 
@@ -190,16 +190,16 @@ class myTests(TestCaseGui):
         self.assertEqual(num,0.8475)
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-floatansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-floatansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Take the following Python code that stores this string: <c>string = "X-DSPAM-Confidence: 0.8475"</c>.
             Use <c>find</c> and string slicing to extract the portion of the string after the colon character
             and then use the <c>float</c> function to convert the extracted string into a floating point number called <c>num</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>string = "X-DSPAM-Confidence: 0.8475"</cline>
       </block>
@@ -223,8 +223,8 @@ myTests().main()
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-ducksacq">
+  </activity>
+  <activity label="str-ex-ducksacq">
     <statement>
       <p>In Robert McCloskey's book <em>Make Way for Ducklings</em>, the names of the ducklings are
             Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.
@@ -233,16 +233,16 @@ myTests().main()
             Can you fix it?</p>
     </statement>
     <program xml:id="str-ex-ducksacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 prefixes = "JKLMNOPQ"
 suffix = "ack"
 
 for letter in prefixes:
     print(letter + suffix)
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-ducksansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-ducksansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>In Robert McCloskey's book <em>Make Way for Ducklings</em>, the names of the ducklings are
             Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack.
@@ -250,7 +250,7 @@ for letter in prefixes:
             Of course, that's not quite right because Ouack and Quack are misspelled.
             Can you fix it?</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="5">
         <cline>prefixes = "JKLMNOPQ"</cline>
         <cline>suffix = "ack"</cline>
@@ -273,13 +273,13 @@ for letter in prefixes:
         <cline>        print(letter + suffix)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-digitsacq">
+  </activity>
+  <activity label="str-ex-digitsacq">
     <statement>
       <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
     </statement>
     <program xml:id="str-ex-digitsacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 def numDigits(n):
     # your code here
 
@@ -294,14 +294,14 @@ class myTests(TestCaseGui):
         self.assertEqual(numDigits(55),2,"Tested numDigits on input of 55")
         self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
         self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-digitsansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-digitsansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Write a function <c>numDigits</c> that will return the number of digits in an integer <c>n</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <choice correct="yes">
           <cline>def numDigits(n):</cline>
@@ -322,8 +322,8 @@ class myTests(TestCaseGui):
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-nameacq">
+  </activity>
+  <activity label="str-ex-nameacq">
     <statement>
       <p>Write code to print out the statement <q>Hi my name is Bob and I am 2</q> using only string methods
             or string slicing. You must get every part of the new string from the given strings, not by using
@@ -331,7 +331,7 @@ class myTests(TestCaseGui):
             Name the final string <c>statement</c>.</p>
     </statement>
     <program xml:id="str-ex-nameacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 s1 = "hi"
 s2 = "My name is Bob, and he and I love to eat ham."
 
@@ -343,17 +343,17 @@ class myTests(TestCaseGui):
         self.assertEqual(statement,"Hi my name is Bob and I am 2")
 
 myTests().main()
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-nameansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-nameansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Write code to print out the statement <q>Hi my name is Bob and I am 2</q> using only string methods
             or string slicing. You must get every part of the new string from the given strings, not by using
             string literals.
             Name the final string <c>statement</c>.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="1">
         <cline>s1 = "hi"</cline>
         <cline>s2 = "My name is Bob, and he and I love to eat ham."</cline>
@@ -370,24 +370,24 @@ myTests().main()
         <cline>print(statement)</cline>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-nameInputacq">
+  </activity>
+  <activity label="str-ex-nameInputacq">
     <statement>
       <p>Write a program that asks a user for their name and from the input
             prints the first letter of their name in lowercase.</p>
     </statement>
     <program xml:id="str-ex-nameInputacq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-nameInputansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-nameInputansw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Write a program that asks a user for their name and from the input
             prints the first letter of their name in lowercase.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="7">
         <cline>prompt = "What is your name?"</cline>
       </block>
@@ -414,24 +414,24 @@ myTests().main()
         </choice>
       </block>
     </blocks>
-  </exercise>
-  <exercise label="str-ex-loweracq">
+  </activity>
+  <activity label="str-ex-loweracq">
     <statement>
       <p>Write a program that asks for user input and prints their
             input in all lowercase, as well as the length of their string.</p>
     </statement>
     <program xml:id="str-ex-loweracq_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
-        </input>
+        </code>
     </program>
-  </exercise>
-  <exercise label="str-ex-loweransw" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="str-ex-loweransw" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Write a program that asks for user input and prints their
             input in all lowercase, as well as the length of their string.</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="3">
         <cline>user_input = input("Enter a string: ")</cline>
       </block>
@@ -444,5 +444,5 @@ myTests().main()
         </choice>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>

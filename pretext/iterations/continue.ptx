@@ -14,7 +14,7 @@
   <p>Here is a sample run of this new program with <c>continue</c>
             added:</p>
   <program xml:id="itr-section4_1" interactive="activecode" language="python">
-    <input>
+    <code>
 while True:
     line = input('&gt; ')
     if line[0] == '#' :
@@ -24,11 +24,11 @@ while True:
     else:
         print(line)
 print ('Done!')
-        </input>
+        </code>
   </program>
   <p>Try the code block above using the input below as well as your own input.</p>
   <program language="python">
-    <input>
+    <code>
 &gt; hello there
 hello there
 &gt; # don't print this
@@ -36,17 +36,17 @@ hello there
 print this!
 &gt; done
 Done!
-</input>
+</code>
   </program>
   <p>All the lines are printed except the one that starts with the hash sign
             because when the <c>continue</c> is executed, it ends the current
             iteration and jumps back to the <c>while</c> statement to start
             the next iteration, thus skipping the <c>print</c> statement.</p>
-  <exercise label="itContinue_MC_line_v2">
+  <activity label="itContinue_MC_line_v2">
     <statement>
-      <p>Q-2: What prints if the user's input is &#x2018;done'?</p>
+      <p> What prints if the user's input is &#x2018;done'?</p>
       <program language="python">
-        <input>
+        <code>
 while True:
     line = input('&gt; ')
     if line[0] == '#' :
@@ -56,7 +56,7 @@ while True:
     else:
         print(line)
 print ('Done!')
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -93,14 +93,14 @@ print ('Done!')
         </feedback>
       </choice>
     </choices>
-  </exercise>
-  <exercise label="itContinue_PP_not8_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  </activity>
+  <activity label="itContinue_PP_not8_v2" numbered="yes" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that prints the numbers 1 through 10, but skips the number 8.
             The loop will start by incrementing n, before doing anything else. Look out for the
             three extra code pieces and watch your indentation!</p>
     </statement>
-    <blocks>
+    <blocks numbered="left">
       <block order="6">
         <cline>n = 0</cline>
       </block>
@@ -130,5 +130,5 @@ print ('Done!')
         <cline>    print(n)</cline>
       </block>
     </blocks>
-  </exercise>
+  </activity>
 </section>
