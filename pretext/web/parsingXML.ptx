@@ -11,12 +11,20 @@
 </introduction>
         <activity label="xml_parse_last_printed_when_no_attr">
             <statement>
-    <p> What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p>
-    </statement><setup><var><condition string="['&quot;]?Attr">
-    <feedback><p>['"]?yes['"]?: It prints <q>Attr: </q> plus the value of the hide attribute in the email tag.</p></feedback></condition>
-    <condition string="['&quot;]?yes['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition>
-    <condition string=".*"><feedback><p>What is the value of the hide attribute?</p></feedback></condition></var>
-    </setup></activity>        
+    <p> What is the last thing (last line of text) that will be printed when the code below runs? <fillin width="10" mode="string" answer="Attr: yes"/>  </p>
+    </statement>
+    <evaluation>
+    <evaluate>
+    <test correct="yes">
+    <strcmp>Attr: yes</strcmp>
+    <feedback><p>It prints Attr: and the value of the hide attribute in the email tag.</p></feedback>
+    </test>
+    <test>
+    <feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback>
+    </test>
+    </evaluate>
+    </evaluation>
+    </activity>        
     
     <p>Here is a simple application that parses some XML and extracts some data
             elements from the XML:</p>
@@ -24,9 +32,8 @@
 <activity label="xml_parse_person_ac1">
     <statement>
         <p>Run this to see what it prints.</p>
-
     </statement>
-    <program xml:id="xml_parse_person_ac1_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_person_ac1_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -68,13 +75,29 @@ print('Attr:', tree.find('email').get('hide'))
             </introduction>
         <activity label="xml_parse_last_printed">
             <statement>
-    <p> What is the last thing (last line of text) that will be printed when the code below runs? <var/>  </p></statement><setup><var><condition string="['&quot;]?Attr"><feedback><p>None[""]?: The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback></condition><condition string="['&quot;]?None['&quot;]?"><feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback></condition><condition string=".*"><feedback><p>What is the default value when there is no attribute with that name?</p></feedback></condition></var></setup></activity>
+    <p> What is the last thing (last line of text) that will be printed when the code below runs?</p>
+        <p><fillin width="10" mode="string" answer="None"/></p>
+        </statement>
+        <evaluation>
+        <evaluate>
+        <test correct="yes">
+        <strcmp>['&quot;]?None['&quot;]?</strcmp>
+        <feedback><p>The default is to print None if there is no attribute with that name when you use <c>.get('name')</c>.</p></feedback>
+        </test>
+        <test>
+        <feedback><p>Something will be printed before the value. Look at the print statement again.</p></feedback>
+        </test>
+        </evaluate>
+        </evaluation>
+        </activity>
+
+
 <activity label="xml_parse_person_wihtout_attr_ac1">
     <statement>
             <p>Run this to see what it prints.</p>
 
     </statement>
-    <program xml:id="xml_parse_person_wihtout_attr_ac1_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_person_wihtout_attr_ac1_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -109,7 +132,7 @@ print('Attr:', tree.find('email').get('hide'))
             <p>Run the code to see what this prints.</p>
 
     </statement>
-    <program xml:id="xml_parse_book_data_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_book_data_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -152,7 +175,7 @@ print('Lang:',book.find('title').get('lang'))
             <p>The following XML has errors.  Try to run the code first to see what happens and then fix the XML so that the code runs correctly.</p>
 
     </statement>
-    <program xml:id="xml_parse_fix_book_data_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_fix_book_data_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -181,7 +204,7 @@ print('Lang:',book.find('title').get('lang'))
             <p>The following XML has errors.  Try to run the code first to see what happens and then fix the XML so that the code runs correctly.</p>
 
     </statement>
-    <program xml:id="xml_parse_fix_note_data_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_fix_note_data_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -222,7 +245,7 @@ print('time region:',note.find('time').get('region'))
             <p>Write code to print the book title, category, author, and year.</p>
 
     </statement>
-    <program xml:id="xml_parse_write_code_book_data_ac_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_write_code_book_data_ac_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 
@@ -244,7 +267,7 @@ data = '''
             <p>Write code to print the note's to, from, body, and time (with region).</p>
 
     </statement>
-    <program xml:id="xml_parse_write_code_note_data_ac_editor" interactive="activecode" language="python3">
+    <program label="xml_parse_write_code_note_data_ac_editor" interactive="activecode" language="python3">
         <code>
 import xml.etree.ElementTree as ET
 

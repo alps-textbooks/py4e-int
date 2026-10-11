@@ -29,7 +29,7 @@ def print_twice(bruce):
             the parameter (whatever it is) twice.</p>
   <activity label="functParam_fill1">
     <statement>
-      <p>Inside the function, the arguments are assigned to variables called <fillin width="20" mode="string" answer="parameters*"/>. </p>
+      <p>Inside the function, the arguments are assigned to variables called <fillin width="20" mode="string" answer="parameters"/>. </p>
     </statement>
     <evaluation>
         <evaluate>
@@ -44,7 +44,7 @@ def print_twice(bruce):
     </evaluation>
   </activity>
   <p>This function works with any value that can be printed.</p>
-  <program xml:id="functParam_codelens1" interactive="codelens" language="python">
+  <program label="functParam_codelens1" interactive="codelens" language="python">
     <code>
 import math
 
@@ -60,7 +60,7 @@ print_twice(math.pi)
   <p>The same rules of composition that apply to built-in functions also
             apply to user-defined functions, so we can use any kind of expression as
             an argument for <c>print_twice</c>:</p>
-  <program xml:id="functParam_codelens2" interactive="codelens" language="python">
+  <program label="functParam_codelens2" interactive="codelens" language="python">
     <code>
 import math
 
@@ -76,7 +76,7 @@ print_twice(math.cos(math.pi))
             examples the expressions <c>'Spam '*4</c> and <c>math.cos(math.pi)</c>
             are only evaluated once.</p>
   <p>You can also use a variable as an argument:</p>
-  <program xml:id="functParam_codelens3" interactive="codelens" language="python">
+  <program label="functParam_codelens3" interactive="codelens" language="python">
     <code>
 def print_twice(bruce):
     print(bruce)
@@ -144,7 +144,7 @@ add_three(hi)
       </choice>
     </choices>
   </activity>
-  <activity label="functParam_PP_four" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="functParam_PP_four" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code with four functions, defined in this order: printName, printGPA,
             printAttendance, printStudentInfo. printStudentInfo should call the other three functions

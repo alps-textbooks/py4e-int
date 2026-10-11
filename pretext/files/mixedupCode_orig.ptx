@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="files_mixed-up-code-questions-orig">
+<section xml:id="files_mixed-up-code-questions-orig" component="source-for-select-questions">
   <title>Mixed-up Code Questions</title>
   <activity label="file_write_line_pp" xml:id="file_write_line_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
@@ -184,7 +184,7 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="file_count_lines_starting_with_pp" xml:id="file_count_lines_starting_with_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_count_lines_starting_with_pp" xml:id="file_count_lines_starting_with_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>count_starting_with(file, str)</c> that returns the number of lines in the passed <c>file</c> that start with the characters in <c>str</c>.  Be sure to close the file.</p>
     </statement>
@@ -248,7 +248,7 @@ myTests().main()
         </code>
     </program>
   </activity>
-  <activity label="file_write_squares_pp" xml:id="file_write_squares_pp" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="file_write_squares_pp" xml:id="file_write_squares_pp" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Create a function <c>write_squares(file)</c> which writes the squares of 1 (inclusive) to 10 (inclusive) with each one on a single line to <c>file</c>.</p>
     </statement>

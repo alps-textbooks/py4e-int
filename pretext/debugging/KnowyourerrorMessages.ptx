@@ -25,7 +25,7 @@
       right!</p>
     <p>Let's try the program again, but this time in an activecode:</p>
     <activity label="db_ex3_5">
-      <program xml:id="db_ex3_5" interactive="activecode" language="python">
+      <program label="db_ex3_5-editor" interactive="activecode" language="python">
         <code>
           current_time_str = input("What is the current time (in hours 0-23)?")
           wait_time_str = input("How many hours do you want to wait")
@@ -185,11 +185,11 @@
       trying to include everything that follows as a parameter to some function.</p>
     <p>Here are a couple examples that produce a ParseError in the example program we have been
       using. See if you can figure out what caused them.</p>
-    <activity label="db_ex3_6">
+    <activity label="db_ex3_6-editor">
       <statement>
         <p>Find and fix the error in the following code.</p>
       </statement>
-      <program interactive="activecode" language="python" xml:id="parse_err_example1">
+      <program interactive="activecode" language="python" label="parse_err_example1">
         <code>current_time_str = input("What is the current time (in hours 0-23)?")
           wait_time_str = input("How many hours do you want to wait"
 
@@ -233,11 +233,11 @@
       remaining lines in the program. Now the error message changes to <c>TokenError: EOF in
       multi-line statement</c> This is a very technical way of saying that Python got to the end of
       file (EOF) while it was still looking for something. In this case a right parenthesis.</p>
-    <activity label="db_ex3_7">
+    <activity label="db_ex3_7-editor">
       <statement>
         <p>Find and fix the error in the following code.</p>
       </statement>
-      <program interactive="activecode" language="python" xml:id="parse_err_example2">
+      <program interactive="activecode" language="python" label="parse_err_example2">
         <code>current_time_str = input("What is the "current time" (in hours 0-23)?")
           wait_time_str = input("How many hours do you want to wait")
 
@@ -301,8 +301,8 @@
       is an accurate indication of the line.</p>
     <p>Here's an example of a type error created by a Polish learner. See if you can find and fix
       the error.</p>
-    <activity label="db_ex3_8">
-      <program xml:id="db_ex3_8" interactive="activecode" language="python">
+    <activity label="db_ex3_8-editor">
+      <program label="db_ex3_8" interactive="activecode" language="python">
         <code>
           a = input('wpisz godzine')
           x = input('wpisz liczbe godzin')
@@ -375,8 +375,8 @@
       of a variable or even a function you want to call. You have seen one example of a NameError at
       the beginning of this section. Here is another one. See if you can get this program to run
       successfully:</p>
-    <activity label="db_ex3_9">
-      <program xml:id="db_ex3_9" interactive="activecode" language="python">
+    <activity label="db_ex3_9-editor">
+      <program label="db_ex3_9" interactive="activecode" language="python">
         <code>
           str_time = input("What time is it now?")
           str_wait_time = input("What is the number of nours to wait?")
@@ -421,7 +421,7 @@
     </p>
     <p>Here is another one for you to try:</p>
     <activity label="db_ex3_10">
-      <program xml:id="db_ex3_10" interactive="activecode" language="python">
+      <program label="db_ex3_10-editor" interactive="activecode" language="python">
         <code>
           n = input("What time is it now (in hours)?")
           n = imt(n)
@@ -441,7 +441,7 @@
     </activity>
     <p>And one last bit of code to fix.</p>
     <activity label="db_ex3_11">
-      <program xml:id="db_ex3_11" interactive="activecode" language="python">
+      <program label="db_ex3_11-editor" interactive="activecode" language="python">
         <code>
           present_time = input("Enter the present timein hours:")
           set_alarm = input("Set the hours for alarm:")
@@ -497,7 +497,7 @@
       certain limitations on the values, and the value passed is not compatible. We can illustrate
       that with this particular program in two different ways.</p>
     <activity label="db_ex3_12">
-      <program xml:id="db_ex3_12" interactive="activecode" language="python">
+      <program label="db_ex3_12-editor" interactive="activecode" language="python">
         <code>
           current_time_str = input("What is the current time (in hours 0-23)?")
           current_time_int = int(current_time_str)

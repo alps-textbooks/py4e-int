@@ -54,7 +54,7 @@
     <statement>
       <p>Edit the code below to answer the following questions.</p>
     </statement>
-    <program xml:id="list_methods_digit_editor" interactive="activecode" language="python">
+    <program label="list_methods_digit_editor" interactive="activecode" language="python">
       <code>
 digits = [1, 2, 0, 5, 4, 3, 6, 9, 8, 7]
 media = ["facebook", "twitter", "instagram", "snapchat"]
@@ -134,7 +134,7 @@ print(len(digits))
         </evaluate>
     </evaluation>
   </activity>
-  <activity label="par_ex_group1" indentation="hide" language="python">
+  <activity label="par_ex_group1" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a function that replaces a value in a list with a new specified value and returns the list with the new value.</p>
     </statement>
@@ -151,7 +151,7 @@ print(len(digits))
     <statement>
       <p>Run this code to see what it prints. Feel free to edit!</p>
     </statement>
-    <program xml:id="listRepeat1_editor" interactive="activecode" language="python">
+    <program label="listRepeat1_editor" interactive="activecode" language="python">
       <code>
 areaCode = [3, 1, 2]
 print(areaCode * 3)
@@ -260,7 +260,7 @@ print(areaCode * 3)
       </choice>
     </choices>
   </activity>
-  <activity label="par_ex_group2" indentation="hide" language="python">
+  <activity label="par_ex_group2" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a function that returns the max value from a list. If there are no items in <c>alist``return ``None</c>.</p>
     </statement>
@@ -291,7 +291,7 @@ print(areaCode * 3)
     <statement>
       <p>Run this code to see what it prints. Feel free to edit!</p>
     </statement>
-    <program xml:id="list_methods_lucky_ac_editor" interactive="activecode" language="python">
+    <program label="list_methods_lucky_ac_editor" interactive="activecode" language="python">
       <code>
 bigCities = ["Chicago", "Detroit", "Houston", "New York"]
 print(bigCities)
@@ -356,7 +356,7 @@ print()
       </choice>
     </choices>
   </activity>
-  <activity label="par_ex_group5" indentation="hide" language="python">
+  <activity label="par_ex_group5" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a function that returns the average of the values entered into the list.</p>
     </statement>

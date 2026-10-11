@@ -35,7 +35,7 @@
             time which letters appear in the string and we only have to make room
             for the letters that do appear.</p>
   <p>Here is what the code might look like:</p>
-  <program xml:id="brontosaurausexample" interactive="activecode" language="python">
+  <program label="brontosaurausexample" interactive="activecode" language="python">
     <code>
 word = 'brontosaurus'
 d = dict()
@@ -62,7 +62,7 @@ print(d)
   </program>
   <p>The histogram indicates that the letters <q>a</q> and <q>b</q>
             appear once; <q>o</q> appears twice, and so on.</p>
-  <activity label="question9_2_1" numbered="yes" adaptive="yes" indentation="hide" language="python">
+  <activity label="question9_2_1" adaptive="yes" indentation="hide" language="python">
     <statement>
       <p>Construct a block of code that prints a dictionary containing the amount of times a letter appears in the string &#x2018;word'.</p>
     </statement>

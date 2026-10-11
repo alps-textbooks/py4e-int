@@ -1,66 +1,76 @@
 <?xml version="1.0"?>
+
 <section xml:id="variables_write-code-questions">
   <title>Write Code Questions</title>
-        <activity exercise-interactive="coding">
-          <statement>
-            <p>There are 3 syntax errors in the following code. Fix it to print correctly
-                            without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p>
-          </statement>
-          <program interactive="activecode" language="python" xml:id="var-wc-syntax_editor">
-            <code>
+
+  <activity xml:id="var-wc-syntax" label="var-wc-syntax">
+    <statement>
+      <p>
+        There are 3 syntax errors in the following code.
+        Fix it to print correctly without errors.
+        It will print, <q>Her name is Molly and her favorite food is tuna.</q>
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="python">
+      <code>
 food = "tuna'
 name = 'Molly'
 print("Her name is " + name +  and her favorite food is "  food + ".")
+      </code>
+      <tests>
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOutput(self):
+        expected = "Her name is Molly and her favorite food is tuna."
+        actual = self.getOutput().strip()
+        self.assertEqual(actual, expected,
+                         "Checking that the program prints the correct sentence")
+
+myTests().main()
+      </tests>
+    </program>
+
+    <solution>
+      <p>
+        There are 3 syntax errors in the following code.
+        Fix it to print correctly without errors.
+        It will print, <q>Her name is Molly and her favorite food is tuna.</q>
+      </p>
+
+      <program interactive="activecode" language="python" label="var-wc-syntax-sol">
+        <code>
+# Each set of quotes needs to be matching
+food = 'tuna'
+name = 'Molly'
+
+# Place full sets of quotes around strings to be printed
+# Include spaces before and after where variables are printed
+# Add + between strings
+print("Her name is " + name + " and her favorite food is " + food + ".")
         </code>
-          </program>
-          <solution>
+      </program>
+    </solution>
+  </activity>
 
+  <activity label="var-wc-fruitq" xml:id="var-wc-fruitq">
+    <statement>
+      <p>
+        Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
+        Modify the program below to calculate the total cost of 4 apples and 3
+        pears.
+      </p>
+    </statement>
 
-    
-                        There are 3 syntax errors in the following code. Fix it to print correctly
-                            without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.
-
-    
-    <program xml:id="var-wc-syntaxA_editor"  interactive="activecode" language="python"><code>
-# Each set of quotes needs to be matching
-food = 'tuna'
-name = 'Molly'
-
-# Place full sets of quotes around strings to be printed
-# Include spaces before and after where variables are printed
-# Add + between strings
-print("Her name is " + name + " and her favorite food is " + food + ".")
-        </code></program>
-
-                    
-<!--
-<activity label="var-wc-syntaxA"><statement><p>There are 3 syntax errors in the following code. Fix it to print correctly
-                            without errors. It will print, <q>Her name is Molly and her favorite food is tuna</q>.</p></statement><program xml:id="var-wc-syntaxA_editor" interactive="activecode" language="python"><code>
-# Each set of quotes needs to be matching
-food = 'tuna'
-name = 'Molly'
-
-# Place full sets of quotes around strings to be printed
-# Include spaces before and after where variables are printed
-# Add + between strings
-print("Her name is " + name + " and her favorite food is " + food + ".")
-    </code></program></activity>-->
-                    </solution>
-        </activity>
-
-        <activity label="var-wc-fruitq" exercise-interactive="coding">
-          <statement>
-            <p>Let's say that apples are $0.40 apiece, and pears are $0.65 apiece.
-                    Modify the program below to calculate the total cost of 4 apples and 3 pears</p>
-          </statement>
-          <program xml:id="var-wc-fruitq_editor" interactive="activecode" language="python">
-            <code>
+    <program interactive="activecode" language="python">
+      <code>
 apples = 4
 pears = 3
 totalCost =
 print(totalCost)
-
-====
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
@@ -68,31 +78,44 @@ class myTests(TestCaseGui):
         self.assertAlmostEqual(totalCost,3.55, 2, "totalCost should equal 3.55", 0.2)
 
 myTests().main()
-        </code>
-          </program>
-        </activity>
+      </tests>
+    </program>
+  </activity>
 
-        <activity>
-          <statement>
-            <p>Take the phrase: <term>twinkle twinkle little star</term>.
-                            Store each word in a separate variable, then print out the sentence on
-                            one line using <c>print</c>.</p>
-          </statement>
-          <program interactive="activecode" language="python" xml:id="var-wc-rhymeq_editor">
-            <code>
+  <activity xml:id="var-wc-rhymeq" label="var-wc-rhymeq">
+    <statement>
+      <p>
+        Take the phrase: <term>twinkle twinkle little star</term>.
+        Store each word in a separate variable, then print out the sentence on
+        one line using <c>print</c>.
+      </p>
+    </statement>
 
-        </code>
-          </program>
-          <solution>
+    <program interactive="activecode" language="python">
+      <code/>
+      <tests>
+from unittest.gui import TestCaseGui
 
+class myTests(TestCaseGui):
+    def testOutput(self):
+        expected = "twinkle twinkle little star"
+        actual = self.getOutput().strip()
+        self.assertEqual(actual, expected,
+                         "Checking that the program prints the correct sentence")
 
-    
-                        Take the phrase: twinkle twinkle little star.
-                            Store each word in a separate variable, then print out the sentence on
-                            one line using print.
+myTests().main()
+      </tests>
+    </program>
 
-    
-    <program xml:id="var-wc-rhymeA_editor" language="python"><code>
+    <solution>
+      <p>
+        Take the phrase: twinkle twinkle little star.
+        Store each word in a separate variable, then print out the sentence on
+        one line using print.
+      </p>
+
+      <program interactive="activecode" language="python" label="var-wc-rhymeq-sol">
+        <code>
 # Set each word to its own variable
 word1 = "twinkle"
 word2 = "little"
@@ -104,38 +127,25 @@ print(word1, word1, word2, word3)
 
 #another option is
 #print(word1 + " " + word1 + " " + word2 + " " + word3)
-        </code></program>
+        </code>
+      </program>
+    </solution>
+  </activity>
 
-                    
+  <activity label="var-wc-order" xml:id="var-wc-order">
+    <statement>
+      <p>
+        Add parentheses to the following code so that the total equals 40.
+      </p>
+    </statement>
 
-<!--<activity label="var-wc-rhymeA"><statement><p>Take the phrase: <term>twinkle twinkle little star</term>.
-                            Store each word in a separate variable, then print out the sentence on
-                            one line using <c>print</c>.</p></statement><program xml:id="var-wc-rhymeA_editor" interactive="activecode" language="python"><code>
-# Set each word to its own variable
-word1 = "twinkle"
-word2 = "little"
-word3 = "star"
-
-# Print each word in succession
-# Using commas automaticallly inserts spaces
-print(word1, word1, word2, word3)
-
-#another option is
-#print(word1 + " " + word1 + " " + word2 + " " + word3)
-    </code></program></activity>-->
-                    </solution>
-        </activity>
-
-        <activity label="var-wc-order">
-          <statement>
-            <p>Add parentheses to the following code so that the total equals 40.</p>
-          </statement>
-          <program xml:id="var-wc-order_editor" interactive="activecode" language="python">
-            <code>
+    <program interactive="activecode" language="python">
+      <code>
 total = 7 + 3 * 6 - 2
 print(total)
 
-====
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
@@ -143,108 +153,152 @@ class myTests(TestCaseGui):
         self.assertEqual(total,40)
 
 myTests().main()
-        </code>
-          </program>
-        </activity>
+      </tests>
+    </program>
+  </activity>
 
-        <activity>
-          <statement>
-            <p>Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
-                            If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
-                            Write a Python program to solve the general version of the above problem. Ask the user
-                            for the time now (in hours), and then ask for the number of hours to wait for the alarm.
-                            Your program should output what the time will be on the clock when the alarm goes off.
-                            <em>Using the <c>int()</c> function and modulus operator <c>%</c> could come in handy!</em></p>
-          </statement>
-          <program interactive="activecode" language="python" xml:id="var-wc-timeq_editor">
-            <code>
+  <activity label="var-wc-timeq" xml:id="var-wc-timeq">
+    <statement>
+      <p>
+        Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm,
+        0 is midnight).
+        If it is currently 13 and you set your alarm to go off in 50 hours, it
+        will be 15 (3pm).
+        Write a Python program to solve the general version of the above
+        problem.
+        Ask the user for the time now (in hours), and then ask for the number of
+        hours to wait for the alarm.
+        Your program should output what the time will be on the clock when the
+        alarm goes off.
+        <em>Using the <c>int()</c> function and modulus operator <c>%</c> could come in handy!</em>
+      </p>
+
+      <p>
+        Store the current time in a variable called <c>current_time</c>, the
+        number of hours to wait in a variable called <c>waiting_time</c>, the
+        sum of the current time and waiting time in a variable called <c>hours</c>,
+        and the resulting alarm time in a variable called <c>time_of_day</c>, as shown in
+        the starter code.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="python">
+      <code>
 
 current_time =
 waiting_time =
 
 
 hours =
+time_of_day =
 
 print()
+      </code>
+      <tests>
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testVariablesExist(self):
+        try:
+            current_time
+        except NameError:
+            self.fail("Checking that a variable named 'current_time' was created")
+        try:
+            waiting_time
+        except NameError:
+            self.fail("Checking that a variable named 'waiting_time' was created")
+        try:
+            hours
+        except NameError:
+            self.fail("Checking that a variable named 'hours' was created")
+        try:
+            time_of_day
+        except NameError:
+            self.fail("Checking that a variable named 'time_of_day' was created")
+
+    def testHoursCalculation(self):
+      expected = int(current_time) + int(waiting_time)
+      self.assertEqual(int(hours), expected,
+        "Checking that hours equals current_time + waiting_time")
+    
+    def testCalculation(self):
+        expected = (int(current_time) + int(waiting_time)) % 24
+        self.assertEqual(int(time_of_day), expected,
+            "Checking that time_of_day equals (current_time + waiting_time) % 24")
+
+    def testOutput(self):
+        expected = (int(current_time) + int(waiting_time)) % 24
+        self.assertIn(str(expected), self.getOutput(),
+            "Checking that the correct alarm time appears in the printed output")
+
+myTests().main()
+      </tests>
+    </program>
+
+    <solution>
+      <p>
+        Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm,
+        0 is midnight).
+        If it is currently 13 and you set your alarm to go off in 50 hours, it
+        will be 15 (3pm).
+        Write a Python program to solve the general version of the above
+        problem.
+        Ask the user for the time now (in hours), and then ask for the number of
+        hours to wait for the alarm.
+        Your program should output what the time will be on the clock when the
+        alarm goes off.
+        <em>Using the <c>int()</c> function and modulus operator <c>%</c> could come in handy!</em>
+      </p>
+
+      <program interactive="activecode" language="python" label="var-wc-timeq-sol">
+        <code>
+
+#prompt the user for the current time
+current_time = input("What is the current time (in hours)?")
+#prompt the user for the time to wait
+waiting_time = input("How many hours do you have to wait?")
+
+#convert the current time and the time to wait to integers
+current_time = int(current_time)
+waiting_time = int(waiting_time)
+
+#combine the two times
+hours = current_time + waiting_time
+
+#use the modulus operator to keep the time within 24 hours
+time_of_day = hours % 24
+
+#print the time of day that the alarm will go off
+print(time_of_day)
         </code>
-          </program>
-          <solution>
+        <tests/>
+      </program>
+    </solution>
+  </activity>
 
+  <activity label="var-wc-dog" xml:id="var-wc-dog">
+    <statement>
+      <p>
+        Assume that you have 24 slices of pizza and 7 people that are going to
+        share it.
+        There's been some arguments among your friends, so you've decided to
+        only give people whole slices.
+        Your pet dog Andy loves pizza.
+        Write a Python expression with the modulus operator that calculates how
+        many pizza slices will be left over for your dog after serving just
+        whole slices to 7 people.
+        Assign the result of that expression to <c>forAndy</c>.
+      </p>
+    </statement>
 
-    
-                        Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
-                            If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
-                            Write a Python program to solve the general version of the above problem. Ask the user
-                            for the time now (in hours), and then ask for the number of hours to wait for the alarm.
-                            Your program should output what the time will be on the clock when the alarm goes off.
-                            Using the ``int()`` function and modulus operator ``%`` could come in handy!
-
-    
-    <program xml:id="var-wc-timeA_editor" language="python"><code>
-
-#prompt the user for the current time
-current_time_string = input("What is the current time (in hours)?")
-#prompt the user for the time to wait
-waiting_time_string = input("How many hours do you have to wait?")
-
-#convert the current time and the time to wait to integers
-current_time_int = int(current_time_string)
-waiting_time_int = int(waiting_time_string)
-
-#combine the two times
-hours = current_time_int + waiting_time_int
-
-#use the modulus operator to keep the time within 24 hours
-timeofday = hours % 24
-
-#print the time of day that the alarm will go off
-print(timeofday)
-        </code></program>
-
-                    
-<!--
-<activity label="var-wc-timeA"><statement><p>Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
-                            If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
-                            Write a Python program to solve the general version of the above problem. Ask the user
-                            for the time now (in hours), and then ask for the number of hours to wait for the alarm.
-                            Your program should output what the time will be on the clock when the alarm goes off.
-                            <em>Using the ``int()`` function and modulus operator ``%`` could come in handy!</em></p></statement><program xml:id="var-wc-timeA_editor" interactive="activecode" language="python"><code>
-
-#prompt the user for the current time
-current_time_string = input("What is the current time (in hours)?")
-#prompt the user for the time to wait
-waiting_time_string = input("How many hours do you have to wait?")
-
-#convert the current time and the time to wait to integers
-current_time_int = int(current_time_string)
-waiting_time_int = int(waiting_time_string)
-
-#combine the two times
-hours = current_time_int + waiting_time_int
-
-#use the modulus operator to keep the time within 24 hours
-timeofday = hours % 24
-
-#print the time of day that the alarm will go off
-print(timeofday)
-    </code></program></activity>-->
-                    </solution>
-        </activity>
-
-        <activity label="var-wc-dog">
-          <statement>
-            <p>Assume that you have 24 slices of pizza and 7 people that are going to share it.
-                    There's been some arguments among your friends, so you've decided to only give people whole slices.
-                    Your pet dog Andy loves pizza. Write a Python expression with the modulus operator that calculates
-                    how many pizza slices will be left over for your dog after serving just whole slices to 7 people.
-                    Assign the result of that expression to <c>forAndy</c>.</p>
-          </statement>
-          <program xml:id="var-wc-dog_editor" interactive="activecode" language="python">
-            <code>
-
-
-
-====
+    <program interactive="activecode" language="python">
+      <code>
+slices = 24
+friends = 7
+forAndy =             
+      </code>
+      <tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
@@ -252,125 +306,168 @@ class myTests(TestCaseGui):
         self.assertEqual(forAndy,3)
 
 myTests().main()
+      </tests>
+    </program>
+  </activity>
+
+  <activity xml:id="var-wc-feetq" label="var-wc-feetq">
+    <statement>
+      <p>
+        Write a program that will convert a user entered number of inches to
+        feet.
+        Reminder: there are 12 inches in a foot.
+        Store the number of inches entered by the user in a variable called
+        <c>inches</c>, and store the result in a variable called <c>feet</c> and
+        print it.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="python">
+      <code/>
+      <tests>
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testVariablesExist(self):
+        try:
+            inches
+        except NameError:
+            self.fail("Checking that a variable named 'inches' was created")
+        try:
+            feet
+        except NameError:
+            self.fail("Checking that a variable named 'feet' was created")
+
+    def testConversion(self):
+        expected = float(inches) / 12
+        self.assertAlmostEqual(float(feet), expected, None,
+            "Checking that feet equals inches divided by 12", delta=0.01)
+
+
+    def testOutput(self):
+        self.assertIn(str(round(float(inches)/12, 1)), self.getOutput().replace(str(float(inches)), ""),
+            "Checking that the converted value appears in the printed output")
+
+myTests().main()
+      </tests>
+    </program>
+
+    <solution>
+      <program language="python">
+        <code>
+inches = float(input("Enter a number of inches: "))
+feet = inches / 12
+print(str(inches) + " inches is " + str(feet) + " feet.")
         </code>
-          </program>
-        </activity>
+      </program>
+    </solution>
+  </activity>
 
-        <activity>
-          <statement>
-            <p>Write a program that will convert inches to feet from user input.
-                            Reminder: there are 12 inches in a foot.</p>
-          </statement>
-          <program interactive="activecode" language="python" xml:id="var-wc-feetq_editor">
-            <code>
+  <activity xml:id="var-wc-inch" label="var-wc-inch">
+    <statement>
+      <p>
+        Write a program that will convert a user entered number of feet to
+        inches.
+        Reminder: there are 12 inches in a foot.
+        Store the number of feet entered by the user in a variable called
+        <c>feet</c>, and store the result in a variable called <c>inches</c> and
+        print it.
+      </p>
+    </statement>
 
-        </code>
-          </program>
-          <solution>
+    <program interactive="activecode" language="python">
+      <code/>
+      <tests>
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testVariablesExist(self):
+        try:
+            inches
+        except NameError:
+            self.fail("Checking that a variable named 'feet' was created")
+        try:
+            feet
+        except NameError:
+            self.fail("Checking that a variable named 'inches' was created")
+
+    def testConversion(self):
+        expected = float(feet) * 12
+        self.assertAlmostEqual(float(inches), expected, None,
+            "Checking that feet equals inches multiplied by 12", delta=0.01)
 
 
-    
-                        Write a program that will convert inches to feet from user input.
-                            Reminder: there are 12 inches in a foot.
+    def testOutput(self):
+        self.assertIn(str(round(float(feet)*12, 1)), self.getOutput().replace(str(float(feet)), ""),
+            "Checking that the converted value appears in the printed output")
 
-    
-    <program xml:id="var-wc-feetA_editor" language="python"><code>
+myTests().main()
+      </tests>
+    </program>
+  </activity>
 
-#prompt the user for the amount of inches they would like to convert
-inches = input("How many inches would you like to convert?")
+  <activity xml:id="var-wc-combine" label="var-wc-combine">
+    <statement>
+      <p>
+        Replace lines 4 and 5 below with a single <c>print()</c> statement that
+        combines them, so the program prints exactly:
+        <q>270 is 4.0 hours and 30 minutes.</q>
+      </p>
+    </statement>
 
-#convert the inches to an integer
-inches_int = int(inches)
-
-#convert to feet
-feet = inches_int / 12
-
-#print the amount of feet
-print(feet)
-        </code></program>
-
-                    
-<!--
-<activity label="var-wc-feetA"><statement><p>Write a program that will convert inches to feet from user input.
-                            Reminder: there are 12 inches in a foot.</p></statement><program xml:id="var-wc-feetA_editor" interactive="activecode" language="python"><code>
-
-#prompt the user for the amount of inches they would like to convert
-inches = input("How many inches would you like to convert?")
-
-#convert the inches to an integer
-inches_int = int(inches)
-
-#convert to feet
-feet = inches_int / 12
-
-#print the amount of feet
-print(feet)
-    </code></program></activity>-->
-                    </solution>
-        </activity>
-
-        <activity label="var-wc-inch">
-          <statement>
-            <p>Write a program that will convert feet to inches from user input.
-                    Reminder: there are 12 inches in a foot.</p>
-          </statement>
-          <program xml:id="var-wc-inch_editor" interactive="activecode" language="python">
-            <code>
-
-        </code>
-          </program>
-        </activity>
-
-        <activity>
-          <statement>
-            <p>Combine lines 4 and 5 in the code below to print: <q>270 is 4.0 hours and 30 minutes.</q>.</p>
-          </statement>
-          <program interactive="activecode" language="python" xml:id="var-wc-combine_editor">
-            <code>
+    <program interactive="activecode" language="python">
+      <code>
 totalMinutes = 270
 numMinutes = totalMinutes % 60
 numHours = (totalMinutes - numMinutes) / 60
 print(numHours)
 print(numMinutes)
-        </code>
-          </program>
-          <solution>
+      </code>
+      <tests>
+from unittest.gui import TestCaseGui
 
+class myTests(TestCaseGui):
+    def testOutput(self):
+        expected = "270 is 4.0 hours and 30 minutes."
+        actual = self.getOutput().strip()
+        self.assertEqual(actual, expected,
+                         "Checking that the program prints the correct sentence")
 
-    
-                        Combine lines 4 and 5 in the code below to print: <q>270 is 4.0 hours and 30 minutes.</q>.
+myTests().main()
+      </tests>
+    </program>
 
-    
-    <program xml:id="var-wc-combineA_editor" language="python"><code>
+    <solution>
+      <p>
+        Combine lines 4 and 5 in the code below to print:
+        <q>270 is 4.0 hours and 30 minutes.</q>.
+      </p>
+
+      <program interactive="activecode" language="python" label="var-wc-combine-sol">
+        <code>
 totalMinutes = 270
 numMinutes = totalMinutes % 60
 numHours = (totalMinutes - numMinutes) / 60
 # Use + and correctly spaced " " to write the variables out together
 print(str(totalMinutes) + " is " + str(numHours) + " hours and " + str(numMinutes) + " minutes.")
-        </code></program>
-
-                    
-<!--
-<activity label="var-wc-combineA"><statement><p>Combine lines 4 and 5 in the code below to print: <q>270 is 4.0 hours and 30 minutes.</q>.</p></statement><program xml:id="var-wc-combineA_editor" interactive="activecode" language="python"><code>
-totalMinutes = 270
-numMinutes = totalMinutes % 60
-numHours = (totalMinutes - numMinutes) / 60
-# Use + and correctly spaced " " to write the variables out together
-print(str(totalMinutes) + " is " + str(numHours) + " hours and " + str(numMinutes) + " minutes.")
-    </code></program></activity>-->
-                    </solution>
-        </activity>
-
-        <activity label="var-wc-madlibs">
-          <statement>
-            <p>Write code below to get at least 3 values from the user using the <c>input</c>
-                    function and output a mad lib (which will use the input to tell a silly story).</p>
-          </statement>
-          <program xml:id="var-wc-madlibs_editor" interactive="activecode" language="python">
-            <code>
-
         </code>
-          </program>
-        </activity>
-        </section>
+      </program>
+    </solution>
+  </activity>
 
+  <activity label="var-wc-madlibs" xml:id="var-wc-madlibs">
+    <statement>
+      <p>
+        Write code below to get at least 3 values from the user using the
+        <c>input</c> function and output a mad lib (which will use the input to
+        tell a silly story).
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="python">
+      <code/>
+    </program>
+  </activity>
+</section>

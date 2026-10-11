@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="regex_multiple-choice-questions">
   <title>Multiple Choice Questions</title>
+
   <activity label="re-exercise1">
     <statement>
       <p>11-9-1: What will the following code print?</p>

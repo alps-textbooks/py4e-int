@@ -59,7 +59,7 @@
       <statement>
         <p>Run the following code</p>
       </statement>
-      <program xml:id="mult_class_person_and_employee_editor" interactive="activecode" language="python">
+      <program label="mult_class_person_and_employee_editor" interactive="activecode" language="python">
         <code>
 class Person:
     def __init__(self, first, last):
@@ -176,7 +176,7 @@ main()
         </match>
       </cardsort>
     </activity>
-    <activity label="mult_class_car_sports_car_pp_v3" numbered="yes" adaptive="yes" indentation="hide" language="python">
+    <activity label="mult_class_car_sports_car_pp_v3" adaptive="yes" indentation="hide" language="python">
       <statement>
         <p>Drag the blocks from the left and put them in the correct order on the right to define two classes: <c>Car</c> and <c>SportsCar</c> that inherits from <c>Car</c>. Add an <c>__init__</c> method to the <c>Car</c> class that takes a <c>make</c> and sets the current object's <c>make</c>.  Add a <c>__str__</c> method to the <c>Car</c> class and return a string with the <c>make</c>.  Add an <c>__init__</c> method to the <c>SportsCar</c> class that calls the parent class <c>__init__</c> method.</p>
       </statement>
@@ -259,7 +259,7 @@ main()
       <statement>
         <p>Run the following code</p>
       </statement>
-      <program xml:id="mult_class_greeter_grumpr_editor" interactive="activecode" language="python">
+      <program label="mult_class_greeter_grumpr_editor" interactive="activecode" language="python">
         <code>
 class Greeter:
 
@@ -366,7 +366,7 @@ main()
       <statement>
         <p>Run the following code</p>
       </statement>
-      <program xml:id="mult_class_override_inherited_editor" interactive="activecode" language="python">
+      <program label="mult_class_override_inherited_editor" interactive="activecode" language="python">
         <code>
 class Student:
 

@@ -24,7 +24,7 @@ print(count)
             to 0 and then incremented each time an <q>r</q> is found. When the
             loop exits, <c>count</c> contains the result: the total number of
             rs.</p>
-  <activity label="str-count-mc-t">
+  <activity label="str-count-mc-t" xml:id="str-count-mc-t">
     <statement>
       <p>11-9-2: What is printed by the following:</p>
       <program language="python">
@@ -72,5 +72,47 @@ print(count)
         </feedback>
       </choice>
     </choices>
+  </activity>
+
+  <activity label="str-count-errors" xml:id="str-count-errors">
+    <statement>
+      <p>
+        There are four errors in the following code. Fix the function so it takes 
+        a string and a character as arguments and returns the count of the character 
+        within the string.
+      </p>
+    </statement>
+
+    <program label="stringCount-editor" interactive="activecode" language="python">
+      <code>
+def count(text, aChar):
+  count = 1
+  for c in text
+    if c = aChar:
+      count = count - 1
+  return count
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def testOne(self):
+        # Format: self.assertEqual(actual_expression, expected_value, feedback_string)
+        self.assertEqual(count('banana', 'a'), 3, "Tested 'a' in 'banana'")
+        self.assertEqual(count('pineapple', 'a'), 1, "Tested 'a' in 'pineapple'")
+        self.assertEqual(count('pepperoni pizza', 'p'), 4, "Tested 'p' in 'pepperoni pizza'")
+        self.assertEqual(count('racecar', 'r'), 2, "Tested 'r' in 'racecar'")
+
+myTests().main()
+      </code>
+    </program>
+
+    <solution>
+      <p>
+        To fix the function, ensure that the four syntax or logic errors are corrected: 
+        properly initialize the count variable to 0, use the correct loop syntax to 
+        iterate through the string, check for equality using the == operator, and 
+        properly increment the count before returning the final total.
+      </p>
+    </solution>
   </activity>
 </section>
