@@ -16,10 +16,6 @@
             <em>startswith</em> to select only those lines with the desired
             prefix:</p>
 
-  <datafile xml:id="mbox_search_file_id" label="mbox_search_file_id" filename='mbox-short.txt'>
-      <pre source="dictionaries/mbox-count.txt"></pre>
-  </datafile>
-
   <activity label="search-file-from">
   <program label="fileFrom" interactive="activecode" language="python" codelens="no" add-files="mbox-short-search-id">
     <code>
@@ -110,7 +106,7 @@ fhand.close()
             which contain the string <q>@uct.ac.za</q> (i.e., they come from the
             University of Cape Town in South Africa):</p>
   <activity label="file-find">
-  <program label="fileFind" interactive="activecode" language="python">
+  <program label="fileFind" interactive="activecode" language="python" add-files="mbox-short-search-id">
     <code>
 fhand = open('mbox-short.txt')
 for line in fhand:
