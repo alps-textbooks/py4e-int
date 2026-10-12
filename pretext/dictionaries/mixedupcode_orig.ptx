@@ -278,10 +278,8 @@ myTests().main()
           <cline>    discount_multiplier = (discount / 100) </cline>
         </choice>
       </block>
-      <block order="7">
-        <cline>    dictionary = {}</cline>
-      </block>
       <block order="3">
+        <cline>    dictionary = {}</cline>
         <cline>    for cost in list_of_costs:</cline>
       </block>
       <block order="5">
