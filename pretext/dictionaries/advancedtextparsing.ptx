@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <section xml:id="dictionaries_advanced-text-parsing">
   <title>Advanced Text Parsing</title>
-  <program label="fileOpen2" interactive="activecode" language="python">
+  <datafile xml:id="romeo2_id" label="romeo2_id" filename="romeo2.txt" hide="yes">
+    <pre source="dictionaries/romeo.txt"></pre>
+  </datafile>
+  <program label="fileOpen2" interactive="activecode" language="python" add-files="romeo2_id">
     <code>
 with open("romeo2.txt", "r") as filename:
     lines = filename.readlines()
