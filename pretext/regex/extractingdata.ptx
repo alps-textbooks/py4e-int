@@ -90,7 +90,7 @@ print(lst)
     <statement>
       <p>This code searches for lines that have an at-sign (@) between characters.</p>
     </statement>
-    <program label="re_data_ac1_editor" interactive="activecode" language="python">
+    <program label="re_data_ac1_editor" interactive="activecode" language="python" add-files="mbox-short-re-data-id">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -153,7 +153,7 @@ for line in hand:
     <statement>
       <p>This code searches for lines that have an at-sign (@) between letter or number characters.</p>
     </statement>
-    <program label="re_data_ac2_editor" interactive="activecode" language="python">
+    <program label="re_data_ac2_editor" interactive="activecode" language="python" add-files="mbox-short-re-data-id">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -213,4 +213,7 @@ for line in hand:
   </activity>
   <p>Also note that the output of the program is a Python list that has a
             string as the single element in the list.</p>
+  <datafile xml:id="mbox-short-re-data-id" label="mbox-short-re-data-id" filename="mbox-short.txt" hide="yes">
+    <pre source="files/mbox-short.txt"></pre>
+  </datafile>
 </section>

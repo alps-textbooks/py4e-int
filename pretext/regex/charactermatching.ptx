@@ -13,7 +13,7 @@
     <statement>
       <p>This code searches for lines that start with &#x2018;F', follow by 2 characters, followed by &#x2018;m:'</p>
     </statement>
-    <program label="re_char_ac1_editor" interactive="activecode" language="python">
+    <program label="re_char_ac1_editor" interactive="activecode" language="python" add-files="mbox-short-re-char-id">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -75,7 +75,7 @@ for line in hand:
     <statement>
       <p>This code searches for lines that start with &#x2018;From:' and have an &#x2018;@' symbol.</p>
     </statement>
-    <program label="re_char_ac2_editor" interactive="activecode" language="python">
+    <program label="re_char_ac2_editor" interactive="activecode" language="python" add-files="mbox-short-re-char-id">
       <code>
 import re
 hand = open('mbox-short.txt')
@@ -194,4 +194,7 @@ From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @iupui.edu
       </choice>
     </choices>
   </activity>
+  <datafile xml:id="mbox-short-re-char-id" label="mbox-short-re-char-id" filename="mbox-short.txt" hide="yes">
+    <pre source="files/mbox-short.txt"></pre>
+  </datafile>
 </section>
