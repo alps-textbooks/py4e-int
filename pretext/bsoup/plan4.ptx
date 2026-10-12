@@ -162,24 +162,26 @@ info = tag.text
         </statement>
         <blocks numbered="left">
           <block>
-            <p># Get first tag of a certain type from the soup</p>
-            <p>tag = soup.find('span', style='font-weight: 400;')</p>
+            <choice correct="yes">
+              <cline># Get first tag of a certain type from the soup</cline>
+              <cline>tag = soup.find('span', style='font-weight: 400;')</cline>
+            </choice>
+            <choice>
+              <cline># Get first tag of a certain type from the soup</cline>
+              <cline>tag = soup.find('span')</cline>
+            </choice>
           </block>
           <block>
-            <p># Get first tag of a certain type from the soup</p>
-            <p>tag = soup.find('span') #paired</p>
+            <cline># Get info from tag</cline>
+            <cline>info = tag.text</cline>
           </block>
-          <block>
-            <p># Get info from tag</p>
-            <p>info = tag.text</p>
+          <block correct="no">
+            <cline># Get info from tag</cline>
+            <cline>info = tag.get('href')</cline>
           </block>
-          <block>
-            <p># Get info from tag</p>
-            <p>info = tag.get('href') #distractor</p>
-          </block>
-          <block>
-            <p># Get all tags of a certain type from the soup</p>
-            <p>tags = soup.find_all('p')#distractor</p>
+          <block correct="no">
+            <cline># Get all tags of a certain type from the soup</cline>
+            <cline>tags = soup.find_all('p')</cline>
           </block>
         </blocks>
       </activity>
