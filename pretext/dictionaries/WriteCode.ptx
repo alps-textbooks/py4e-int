@@ -384,7 +384,7 @@ print(message_count['cwen@iupui.edu'])
           </statement>
           <program interactive="activecode" language="python" add-files="mbox_count_id">
             <code>
-with open("mbox-short.txt", "r") as filename:
+with open("mbox-count.txt", "r") as filename:
     message_count = {}
 
 print(message_count['iupui.edu'])
@@ -394,7 +394,7 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
     def testOne(self):
-        self.assertEqual(message_count['iupui.edu'], '8', "message_count['iupui.edu']")
+        self.assertEqual(message_count['iupui.edu'], 8, "message_count['iupui.edu']")
         self.assertEqual(len(message_count), 6, "len(message_count)")
 
 myTests().main()
