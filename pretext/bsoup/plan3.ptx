@@ -28,6 +28,7 @@
 # Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
+
 # Get a soup from multiple URLs
 base_url = 'https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/'
 endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
@@ -47,7 +48,7 @@ for ending in endings:
     <subsection xml:id="plan3-how-to-use-this-plan">
       <title>Plan3: How to use this plan</title>
       <p>
-        Look at the webpages you want to scrape and determine which parts they have in common, and which parts are different. The parts that they have in common are the <c>base_url</c>. The parts that are different are the <c>endings</c>.
+        Look at the urls for the webpages you want to scrape and determine which parts they have in common, and which parts are different. The parts that they have in common are the <c>base_url</c>. The parts that are different are the <c>endings</c>.
       </p>
     </subsection>
 
@@ -60,12 +61,15 @@ for ending in endings:
 
       <activity label="plan3_edit_brewer" xml:id="plan3_edit_brewer">
         <statement>
+          <p>Modify the code below to also include Dr Robin Brewer's page.</p>
+          </statement>
           <program language="python3" interactive="activecode" label="plan3_edit_brewer-editor">
-            <code xml:space="preserve">
-#Get the webpage
-# Load libraries for web scraping
+            <code>
+# Get the webpage
+#  Load libraries for web scraping
 from bs4 import BeautifulSoup
 import requests
+
 # Get a soup from multiple URLs
 base_url = 'https://web.archive.org/web/20230128074139/https://www.si.umich.edu/people/'
 endings = ['barbara-ericson', 'steve-oney', 'paul-resnick']
@@ -74,18 +78,18 @@ for ending in endings:
     r = requests.get(url)
     soup = BeautifulSoup(r.content, 'html.parser')
 
-    #Extract info from the page
-    # Get first tag of a certain type from the soup
+    # Extract info from the page
+    #  Get first tag of a certain type from the soup
     tag = soup.find('a', class_='item-teaser--heading-link')
+
     # Get link from tag
     info = tag.get('href')
 
-    #Do something with the info
-    # Print the info
+    # Do something with the info
+    #  Print the info
     print(info)
             </code>
           </program>
-        </statement>
       </activity>
 
       <note>
