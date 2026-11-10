@@ -213,7 +213,7 @@ for tag in tags:
           </program>
         </statement>
         <evaluation>
-        <evaluate submit="bsoup_aw3_1">
+        <evaluate submit="bsoup_plan5_1">
       <test correct="yes">
         <strcmp>'div', class_='headline'|"div", class_="headline"</strcmp>
       </test>
@@ -225,7 +225,7 @@ for tag in tags:
         </feedback>
       </test>
     </evaluate>
-    <evaluate submit="bsoup_aw3_2">
+    <evaluate submit="bsoup_plan5_2">
       <test correct="yes">
         <strcmp use-answer="yes"/>
       </test>
