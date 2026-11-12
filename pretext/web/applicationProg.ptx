@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<worksheet xml:id="web_application-programming-interfaces">
+<section xml:id="web_application-programming-interfaces">
   <title>Application Programming Interfaces</title>
   <introduction>
 <idx>API</idx>
@@ -19,7 +19,7 @@
             followed to access the services provided by the program.</p>
   </introduction>
 
-  <activity label="webAPI_fill1">
+  <activity label="webAPI_fill1" xml:id="webAPI_fill1">
     <statement>
       <p>APIs are <fillin width="20" mode="string" answer="contracts"/> between applications that exchange data using HTTP and representing complex data using XML or JSON. </p>
     </statement>
@@ -42,7 +42,7 @@
             services of other applications. A non-SOA approach is where the
             application is a single standalone application which contains all of the
             code necessary to implement the application.</p>
-  <activity label="webAPI_MC_tf">
+  <activity label="webAPI_MC_tf" xml:id="webAPI_MC_tf">
     <statement>
       <p>True or False? A service-oriented architecture makes use of other applications' services.</p>
     </statement>
@@ -86,7 +86,7 @@
             have good performance and meet the user's needs.</p>
   <p>When an application makes a set of services in its API available over
             the web, we call these <em>web services</em>.</p>
-  <activity label="webAPI_MC_soa">
+  <activity label="webAPI_MC_soa" xml:id="webAPI_MC_soa">
     <statement>
       <p>Which of the following is <term>not</term> an advantage of a service oriented architecture?</p>
     </statement>
@@ -126,12 +126,12 @@
     </choices>
   </activity>
 
-  <subexercises xml:id="web_getting-json-data-from-an-api">
+  <subsection xml:id="web_getting-json-data-from-an-api">
     <title>Getting JSON Data From an API</title>
     <p>There is a listing of free APIs that you can use
                 at <url href="https://github.com/public-apis/public-apis" visual="https://github.com/public-apis/public-apis">https://github.com/public-apis/public-apis</url></p>
     <p>One of the free APIs has dog facts.  You can get a dog fact by going to the
-                URL: <url href="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1" visual="https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1">https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1</url>.
+                URL: <url href="https://dogapi.dog/api/v2/facts?limit=1" visual="https://dogapi.dog/api/v2/facts?limit=1">https://dogapi.dog/api/v2/facts?limit=1</url>.
                 Try entering that in a browser window.  You can also use Python to the get data
                 from an API using a URL as shown below.</p>
     <program label="web-api-get-dog-fact" interactive="activecode" language="python3">
@@ -140,17 +140,17 @@ import requests
 import json
 
 # get the data
-response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1')
+response = requests.get('https://dogapi.dog/api/v2/facts?limit=1')
 data = response.text
 in_list = json.loads(data)
 in_dict = in_list[0]
 print(in_dict.get("fact"))
         </code>
     </program>
-  </subexercises>
-  <subexercises xml:id="web_using-a-dictionary-for-url-parameters">
+  </subsection>
+  <subsection xml:id="web_using-a-dictionary-for-url-parameters">
     <title>Using a Dictionary for URL Parameters</title>
-    <p>To add parameters to a URL you can just add them to the URL string as shown above (<c>?number=1</c>) but spaces in
+    <p>To add parameters to a URL you can just add them to the URL string as shown above (<c>?limit=1</c>) but spaces in
                 strings need to be replaced.  An easier way to add parameters to a URL is to
                 create a dictionary
                 with all the parameter names and values and then pass the dictionary to the
@@ -161,14 +161,14 @@ import requests
 import json
 
 # get the data
-parms = {'number': 1}
-response = requests.get('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs', parms)
+parms = {'limit': 1}
+response = requests.get('https://dogapi.dog/api/v2/facts', parms)
 data = response.text
 in_list = json.loads(data)
 in_dict = in_list[0]
 print(in_dict.get("fact"))
         </code>
     </program>
-  </subexercises>
+  </subsection>
 
-</worksheet>
+</section>
