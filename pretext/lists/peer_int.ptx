@@ -882,12 +882,12 @@ def max_segment_sum(L):
           <p>Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
         </feedback>
       </choice>
-      <choice>
+      <choice correct="yes">
         <statement>
           <p>[2, 1, 7, 10, 9, 1, 15]</p>
         </statement>
         <feedback>
-          <p>Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
+          <p>Correct. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
         </feedback>
       </choice>
       <choice>
@@ -903,7 +903,7 @@ def max_segment_sum(L):
           <p>[2, 1, 10, 7, 15, 1, 9]</p>
         </statement>
         <feedback>
-          <p>Correct. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
+          <p>Try Again. During the first pass, the list becomes [-,2,10,-,1,7,15,9,1], and then [2,-,10,1,-,7,15,9,1], and then [2,1,-,10,7,-,15,9,1], and then [2,1,7,-,10,15,-,9,1], and then [2,1,7,10,-,15,9,-,1], and then [2,1,7,10,9,-,15,1,-], and then [2,1,7,10,9,1,15]</p>
         </feedback>
       </choice>
     </choices>
@@ -930,10 +930,10 @@ def max_segment_sum(L):
           <p>Selection</p>
         </statement>
         <feedback>
-          <p>Try Again. During the first pass, selection sort would find the min value of the entire list, which is 2 in this case, and then swap with the first index, so after the first round it would be [2, 9, 0, 4, 6, 8, 5]</p>
+          <p>Try Again. During the first pass, selection sort would find the min value of the entire list, which is 0 in this case, and then swap with the first index, so after the first round it would be [0, 9, 5, 4, 6, 8, 2]</p>
         </feedback>
       </choice>
-      <choice>
+      <choice correct="yes">
         <statement>
           <p>Insertion</p>
         </statement>
