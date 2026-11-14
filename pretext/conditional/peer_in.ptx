@@ -120,11 +120,11 @@ else:
         <code>
 grade = 98
 if (grade &gt;= 90):
-   print(<q>You got an A!</q>)
+   print("You got an A!")
 if (grade &gt;= 80):
-   print(<q>You got a B!</q>)
+   print("You got a B!")
 else:
-   print(<q>You got something else</q>)
+   print("You got something else")
 </code>
       </program>
     </statement>
@@ -178,11 +178,11 @@ else:
         <code>
 grade = 98
 if (grade &gt;= 90):
-   print(<q>You got an A!</q>)
+   print("You got an A!")
 if (grade &gt;= 80 and grade &lt; 90):
-   print(<q>You got a B!</q>)
+   print("You got a B!")
 else:
-   print(<q>You got something else</q>)
+   print("You got something else")
 </code>
       </program>
     </statement>
