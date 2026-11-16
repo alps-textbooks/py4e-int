@@ -173,8 +173,8 @@ class Student(Person):
      return Person.__str__(self)+" '"+str(self.year%100)
 
 
-p = Person(<q>George</q>, <q>Williker</q>)
-s = Student(<q>Buddy</q>,</q>Bob</q>, "2014")
+p = Person("George", "Williker")
+s = Student("Buddy","Bob", "2014")
 s.study()
 p.study()
 </code></program>
@@ -184,7 +184,7 @@ p.study()
 
             <choice>
                 <statement>
-                    <p>"Need to study...but...Internet!</q> will print twice</p>
+                    <p><q>Need to study...but...Internet!</q> will print twice</p>
                 </statement>
                 <feedback>
                     <p>Incorrect! There's a "study" attribute in Student but not in Person.</p>
@@ -193,7 +193,7 @@ p.study()
 
             <choice correct="yes">
                 <statement>
-                    <p>"Need to study... but...Internet!</q> will print once</p>
+                    <p><q>Need to study... but...Internet!</q> will print once</p>
                 </statement>
                 <feedback>
                     <p>Correct! There's a "study" attribute in Student but not in Person.</p>
